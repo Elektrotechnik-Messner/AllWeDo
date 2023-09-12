@@ -1,0 +1,12 @@
+C:\Users\adria\Desktop\Coding\C\Schulmuseum\Schulmuseum\database_library\bin\Debug\net6.0\database_library.deps.json
+C:\Users\adria\Desktop\Coding\C\Schulmuseum\Schulmuseum\database_library\bin\Debug\net6.0\database_library.dll
+C:\Users\adria\Desktop\Coding\C\Schulmuseum\Schulmuseum\database_library\bin\Debug\net6.0\database_library.pdb
+C:\Users\adria\Desktop\Coding\C\Schulmuseum\Schulmuseum\database_library\obj\Debug\net6.0\database_library.csproj.AssemblyReference.cache
+C:\Users\adria\Desktop\Coding\C\Schulmuseum\Schulmuseum\database_library\obj\Debug\net6.0\database_library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adria\Desktop\Coding\C\Schulmuseum\Schulmuseum\database_library\obj\Debug\net6.0\database_library.AssemblyInfoInputs.cache
+C:\Users\adria\Desktop\Coding\C\Schulmuseum\Schulmuseum\database_library\obj\Debug\net6.0\database_library.AssemblyInfo.cs
+C:\Users\adria\Desktop\Coding\C\Schulmuseum\Schulmuseum\database_library\obj\Debug\net6.0\database_library.csproj.CoreCompileInputs.cache
+C:\Users\adria\Desktop\Coding\C\Schulmuseum\Schulmuseum\database_library\obj\Debug\net6.0\database_library.dll
+C:\Users\adria\Desktop\Coding\C\Schulmuseum\Schulmuseum\database_library\obj\Debug\net6.0\refint\database_library.dll
+C:\Users\adria\Desktop\Coding\C\Schulmuseum\Schulmuseum\database_library\obj\Debug\net6.0\database_library.pdb
+C:\Users\adria\Desktop\Coding\C\Schulmuseum\Schulmuseum\database_library\obj\Debug\net6.0\ref\database_library.dll
