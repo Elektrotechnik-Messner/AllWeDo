@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\AllWeKnow.csproj": {}
+    "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\AllWeKnow\\AllWeKnow.csproj": {}
   },
   "projects": {
-    "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\AllWeKnow.csproj": {
+    "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\AllWeKnow\\AllWeKnow.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\AllWeKnow.csproj",
+        "projectUniqueName": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\AllWeKnow\\AllWeKnow.csproj",
         "projectName": "AllWeKnow",
-        "projectPath": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\AllWeKnow.csproj",
+        "projectPath": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\AllWeKnow\\AllWeKnow.csproj",
         "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\obj\\",
+        "outputPath": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\AllWeKnow\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.151, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
