@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ecOX4jCv5VIC6DoikCKlLMqZtOqd+f19N8rAvW75k5s=",
+  "Hash": "kUokS98ByR6npXNJzRfox6ClFTU6hnkFusZMccFnjYI=",
   "Source": "Schulmuseum",
   "BasePath": "_content/Schulmuseum",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\not-found.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeDo\\AllWeKnow\\Schulmuseum\\wwwroot\\js\\main.js",
+      "SourceId": "Schulmuseum",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeDo\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "BasePath": "_content/Schulmuseum",
+      "RelativePath": "js/main.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\main.js"
     }
   ]
 }
