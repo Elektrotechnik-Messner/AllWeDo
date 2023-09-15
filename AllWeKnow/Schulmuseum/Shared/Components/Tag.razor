@@ -1,0 +1,9 @@
+<span class="tag@(Active ? " active" : "")">@Name</span>
+
+@code {
+    [Parameter]
+    public string Name { get; set; } = "";
+    
+    [Parameter]
+    public bool Active { get; set; } = false;
+}

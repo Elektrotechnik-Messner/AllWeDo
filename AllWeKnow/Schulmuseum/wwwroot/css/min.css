@@ -229,18 +229,19 @@ span.logo {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 40%;
     padding: 2rem 1.5rem 2rem 0.5rem;
 }
 .hero .featured .content .desc {
     font-size: 1rem;
     color: #666666;
 }
-.hero .featured .content button {
-    font-size: 1rem;
-}
 .hero .featured .content > * {
     width: -moz-fit-content;
     width: fit-content;
+}
+.hero .featured .content button {
+    font-size: 1rem;
 }
 .hero .featured .image {
     width: 60%;

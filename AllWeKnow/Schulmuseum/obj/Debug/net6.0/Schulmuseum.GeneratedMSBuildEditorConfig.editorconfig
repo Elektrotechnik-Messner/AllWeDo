@@ -24,12 +24,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/morit/Documents/Coding/C\#/AllWeDo/AllWeKnow/Schulmuseum/Shared/Components/Hero.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcSGVyby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/morit/Documents/Coding/C\#/AllWeDo/AllWeKnow/Schulmuseum/Shared/Components/NavBottom.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcTmF2Qm90dG9tLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/morit/Documents/Coding/C\#/AllWeDo/AllWeKnow/Schulmuseum/Shared/Components/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/morit/Documents/Coding/C\#/AllWeDo/AllWeKnow/Schulmuseum/Shared/Components/Tag.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcVGFnLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/morit/Documents/Coding/C\#/AllWeDo/AllWeKnow/Schulmuseum/Shared/Pages/Counter.razor]
