@@ -1,0 +1,28 @@
+<div class="post">
+  <img
+    src="https://images.unsplash.com/photo-1661051690325-d030d5b8aaec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1854&q=80"
+    alt="Img"
+    class="post-image"
+  />
+  <div class="description">
+    <div>
+      <span class="small-tag bold">@Category</span>
+      <h3 class="post-title">@Title</h3>
+    </div>
+    <a href="@Link" class="read-now">Read now</a>
+  </div>
+</div>
+
+@code {
+  [Parameter]
+  public string Title { get; set; } = "";
+  
+  [Parameter]
+  public string Category { get; set; } = "";
+  
+  [Parameter]
+  public string Link { get; set; } = "";
+
+  [Parameter]
+  public string ImageUrl { get; set; } = "/images/not-found.jpg";
+}

@@ -1,0 +1,35 @@
+<div class="hero">
+  <h1 class="title">@Title</h1>
+  <div class="featured">
+    <img
+      src="@ImageUrl"
+      alt="Image"
+      class="image"
+    />
+    <div class="content">
+      <h2 class="title">@PostTitle</h2>
+      <p class="desc">
+        @PostDesc
+      </p>
+      <a href="@PostLink"><button>Read Now</button></a>
+    </div>
+  </div>
+</div> 
+
+@code {
+  [Parameter]
+  public string Title { get; set; } = "";
+  
+  [Parameter]
+  public string PostTitle { get; set; } = "";
+  
+  [Parameter]
+  public string PostDesc { get; set; } = "";
+  
+  [Parameter]
+  public string PostLink { get; set; } = "";
+
+  [Parameter]
+  public string ImageUrl { get; set; } = "/images/not-found.jpg";
+
+}
