@@ -166,7 +166,6 @@ C:\Users\adria\Desktop\Coding\C\AllWeKnow\AllWeKnow\Schulmuseum\obj\Debug\net6.0
 C:\Users\adria\Desktop\Coding\C\AllWeKnow\AllWeKnow\Schulmuseum\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\adria\Desktop\Coding\C\AllWeKnow\AllWeKnow\Schulmuseum\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\adria\Desktop\Coding\C\AllWeKnow\AllWeKnow\Schulmuseum\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
-C:\Users\adria\Desktop\Coding\C\AllWeKnow\AllWeKnow\Schulmuseum\obj\Debug\net6.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 C:\Users\adria\Desktop\Coding\C\AllWeKnow\AllWeKnow\Schulmuseum\obj\Debug\net6.0\scopedcss\bundle\Schulmuseum.styles.css
 C:\Users\adria\Desktop\Coding\C\AllWeKnow\AllWeKnow\Schulmuseum\obj\Debug\net6.0\scopedcss\projectbundle\Schulmuseum.bundle.scp.css
 C:\Users\adria\Desktop\Coding\C\AllWeKnow\AllWeKnow\Schulmuseum\obj\Debug\net6.0\Schulmuseum.csproj.CopyComplete
