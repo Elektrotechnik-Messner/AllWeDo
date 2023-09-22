@@ -12,7 +12,7 @@
 <h3>ShowData</h3>
 
 
-@if (_users == null)
+@if (_users == null || _settings == null)
 {
    <h3>Loading.....</h3>
 }
@@ -25,12 +25,19 @@ else
       </p>
    }
    
-   <p>@_settingsDict["appname"]</p>
+   @foreach (var setting in _settings)
+   {
+      <p>
+         @setting.Name @setting.Value
+      </p>
+   }
+   
+   @*<p>@_settingsDict["appname"]</p>*@
 }
 
 @code {
    List<UserModel>? _users;
-   List<SettimgsModel>? _settings;
+   List<SettingsModel>? _settings;
    readonly IDictionary<string, string?> _settingsDict = new Dictionary<string, string?>();
    
    protected override async Task OnInitializedAsync()
@@ -40,7 +47,7 @@ else
       _users = await Data.LoadData<UserModel, dynamic>(sqlU, new { }, Config.GetConnectionString("main"));
       // Get all the settings form the database
       const string sqlS = "select * from settings";
-      _settings = await Data.LoadData<SettimgsModel, dynamic>(sqlS, new { }, Config.GetConnectionString("main"));
+      _settings = await Data.LoadData<SettingsModel, dynamic>(sqlS, new { }, Config.GetConnectionString("main"));
       // Put all the settings in a Dictionary for convenience
       foreach (var setting in _settings)
       {

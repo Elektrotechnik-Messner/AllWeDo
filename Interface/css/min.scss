@@ -7,23 +7,7 @@ $fast-transition: 200ms;
 $medium-transition: 600ms;
 $slow-transition: 1.2s;
 
-@font-face {
-  font-family: "SF-Pro-Regular";
-  src: url("../fonts/SF-Pro-Display-Regular.otf") format("opentype");
-}
-@font-face {
-  font-family: "SF-Pro-Regular-Italic";
-  src: url("../fonts/SF-Pro-Display-RegularItalic.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "SF-Pro-Bold";
-  src: url("../fonts/SF-Pro-Display-Bold.otf") format("opentype");
-}
-@font-face {
-  font-family: "SF-Pro-Bold-Italic";
-  src: url("../fonts/SF-Pro-Display-BoldItalic.otf") format("opentype");
-}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:wght@400;500&display=swap");
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
@@ -52,7 +36,7 @@ $slow-transition: 1.2s;
 }
 
 * {
-  font-family: "SF-Pro-Regular";
+  font-family: "Roboto";
   color: $text;
   margin: 0;
   padding: 0;
@@ -68,36 +52,6 @@ body {
   &.scrolled {
     background-color: darken($background, 5);
   }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-b,
-.bold,
-.b {
-  font-family: "SF-Pro-Bold";
-}
-
-i,
-.italic,
-.i {
-  font-family: "SF-Pro-Regular-Italic";
-}
-
-i.bold,
-b.italic,
-.bold.italic,
-h1.italic,
-h2.italic,
-h3.italic,
-h4.italic,
-h5.italic,
-h6.italic {
-  font-family: "SF-Pro-Bold-Italic";
 }
 
 h1 {
@@ -212,7 +166,7 @@ button {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10000000;
+  z-index: 1040;
 
   background-color: $background;
   transition: box-shadow $medium-transition;
@@ -260,6 +214,7 @@ button {
 
 .container {
   width: 100%;
+  min-height: 50vh;
   max-width: $main-width;
   margin: 5.5rem auto;
   margin-bottom: 2rem;
@@ -289,18 +244,19 @@ span.logo {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      width: 40%;
       padding: 2rem 1.5rem 2rem 0.5rem;
 
       & .desc {
         font-size: 1rem;
         color: lighten($color: $text, $amount: 40);
       }
-      & button {
-        font-size: 1rem;
-      }
-
       & > * {
         width: fit-content;
+      }
+
+      & button {
+        font-size: 1rem;
       }
     }
 
@@ -475,10 +431,10 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        z-index: 99999;
+        z-index: 1040;
         & > *,
         & > * {
-          z-index: 99999;
+          z-index: 1041;
         }
       }
 
@@ -530,4 +486,27 @@ footer {
       margin-bottom: 0.5rem;
     }
   }
+}
+
+#blazor-error-ui {
+  background: lightyellow;
+  bottom: 0;
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+  display: none;
+  left: 0;
+  padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+  cursor: pointer;
+  position: absolute;
+  right: 0.75rem;
+  top: 0.5rem;
+}
+
+.components-reconnect-modal {
+  z-index: 10000000000;
 }

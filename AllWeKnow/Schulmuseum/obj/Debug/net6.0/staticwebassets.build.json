@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "k+JxgtUJGc7daGwYuKTW81a//8nNn1GJeQJm6sUrxvQ=",
+  "Hash": "xXRF0CcfT1ggYBixhVjdD8Pe88qhFB9qGuR29cr3ZCo=",
   "Source": "Schulmuseum",
   "BasePath": "_content/Schulmuseum",
   "Mode": "Default",
@@ -10,51 +10,17 @@
     {
       "Name": "Schulmuseum\\wwwroot",
       "Source": "Schulmuseum",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeDo\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Schulmuseum.styles.css",
-      "SourceId": "Schulmuseum",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/Schulmuseum",
-      "RelativePath": "Schulmuseum.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Schulmuseum.styles.css"
-    },
-    {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Schulmuseum.bundle.scp.css",
-      "SourceId": "Schulmuseum",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/Schulmuseum",
-      "RelativePath": "Schulmuseum.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Schulmuseum.bundle.scp.css"
-    },
-    {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\css\\min.css",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeDo\\AllWeKnow\\Schulmuseum\\wwwroot\\css\\min.css",
       "SourceId": "Schulmuseum",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeDo\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "css/min.css",
       "AssetKind": "All",
@@ -68,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\css\\min.css"
     },
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeDo\\AllWeKnow\\Schulmuseum\\wwwroot\\favicon.ico",
       "SourceId": "Schulmuseum",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeDo\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -85,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\images\\not-found.jpg",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeDo\\AllWeKnow\\Schulmuseum\\wwwroot\\images\\not-found.jpg",
       "SourceId": "Schulmuseum",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeDo\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "images/not-found.jpg",
       "AssetKind": "All",
@@ -102,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\images\\not-found.jpg"
     },
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\js\\main.js",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeDo\\AllWeKnow\\Schulmuseum\\wwwroot\\js\\main.js",
       "SourceId": "Schulmuseum",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeDo\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "js/main.js",
       "AssetKind": "All",

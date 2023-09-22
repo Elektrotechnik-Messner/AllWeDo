@@ -1,19 +1,4 @@
-@font-face {
-  font-family: "SF-Pro-Regular";
-  src: url("../fonts/SF-Pro-Display-Regular.otf") format("opentype");
-}
-@font-face {
-  font-family: "SF-Pro-Regular-Italic";
-  src: url("../fonts/SF-Pro-Display-RegularItalic.otf") format("opentype");
-}
-@font-face {
-  font-family: "SF-Pro-Bold";
-  src: url("../fonts/SF-Pro-Display-Bold.otf") format("opentype");
-}
-@font-face {
-  font-family: "SF-Pro-Bold-Italic";
-  src: url("../fonts/SF-Pro-Display-BoldItalic.otf") format("opentype");
-}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:wght@400;500&display=swap");
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
@@ -41,7 +26,7 @@
 }
 
 * {
-  font-family: "SF-Pro-Regular";
+  font-family: "Roboto";
   color: #000000;
   margin: 0;
   padding: 0;
@@ -57,36 +42,6 @@ body {
 }
 body.scrolled {
   background-color: #f2f2f2;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-b,
-.bold,
-.b {
-  font-family: "SF-Pro-Bold";
-}
-
-i,
-.italic,
-.i {
-  font-family: "SF-Pro-Regular-Italic";
-}
-
-i.bold,
-b.italic,
-.bold.italic,
-h1.italic,
-h2.italic,
-h3.italic,
-h4.italic,
-h5.italic,
-h6.italic {
-  font-family: "SF-Pro-Bold-Italic";
 }
 
 h1 {
@@ -202,7 +157,7 @@ button:active {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10000000;
+  z-index: 1040;
   background-color: #ffffff;
   transition: box-shadow 600ms;
 }
@@ -246,6 +201,7 @@ button:active {
 
 .container {
   width: 100%;
+  min-height: 50vh;
   max-width: 1000px;
   margin: 5.5rem auto;
   margin-bottom: 2rem;
@@ -274,18 +230,19 @@ span.logo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 40%;
   padding: 2rem 1.5rem 2rem 0.5rem;
 }
 .hero .featured .content .desc {
   font-size: 1rem;
   color: #666666;
 }
-.hero .featured .content button {
-  font-size: 1rem;
-}
 .hero .featured .content > * {
   width: -moz-fit-content;
   width: fit-content;
+}
+.hero .featured .content button {
+  font-size: 1rem;
 }
 .hero .featured .image {
   width: 60%;
@@ -440,10 +397,10 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 99999;
+    z-index: 1040;
   }
   .navbar .content .bar > *, .navbar .content .bar > * {
-    z-index: 99999;
+    z-index: 1041;
   }
   .navbar .content .contents {
     display: block;
@@ -487,4 +444,26 @@ footer {
   div.tags .tag {
     margin-bottom: 0.5rem;
   }
+}
+#blazor-error-ui {
+  background: lightyellow;
+  bottom: 0;
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+  display: none;
+  left: 0;
+  padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+  cursor: pointer;
+  position: absolute;
+  right: 0.75rem;
+  top: 0.5rem;
+}
+
+.components-reconnect-modal {
+  z-index: 10000000000;
 }/*# sourceMappingURL=min.css.map */

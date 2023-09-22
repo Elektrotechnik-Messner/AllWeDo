@@ -23,9 +23,10 @@ container = document.querySelector(".navbtn .navbtn-container");
 contents = document.querySelector(".navbar .content .contents");
 
 btn.onclick = (event) => {
+  console.log("clicked");
   if (container.classList.contains("active")) {
     container.classList.remove("active");
-    contents.classList.remove("active");
+    contents.classList.remove("");
   } else {
     container.classList.add("active");
     contents.classList.add("active");
