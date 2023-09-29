@@ -3,4 +3,6 @@
 	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/FiltersState/=SpellingFilter/@EntryIndexedValue">On</s:String>
 	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/FiltersState/=NamingFilter/@EntryIndexedValue">On</s:String>
 	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/FiltersState/=CodeStyle/@EntryIndexedValue">On</s:String>
-	<s:Boolean x:Key="/Default/Environment/InlayHints/GeneralInlayHintsOptions/EnableInlayHints/@EntryValue">True</s:Boolean></wpf:ResourceDictionary>
+	<s:Boolean x:Key="/Default/Environment/InlayHints/GeneralInlayHintsOptions/EnableInlayHints/@EntryValue">True</s:Boolean>
+	
+	</wpf:ResourceDictionary>

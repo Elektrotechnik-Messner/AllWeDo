@@ -1,0 +1,53 @@
+@page "/upload"
+@using System.Net.Http.Headers
+@using Schulmuseum.Models
+@inject HttpClient Http
+
+<h3>UploadImage</h3>
+
+<InputFile OnChange="@OnInputFileChange" multiple></InputFile>
+
+@if (FileNames.Count > 0)
+{
+    <ul>
+        @foreach (var fileName in FileNames)
+        {
+            <li>
+                File: @fileName
+            </li>
+        }
+    </ul>
+}
+
+@code {
+    private readonly int _maxAllowedFiles = 5;
+    private readonly long _maxFileSize = 50000000; // 50MB
+    private List<string> FileNames = new();
+    private List<UploadResult> UploadResults = new();
+
+    private async Task OnInputFileChange(InputFileChangeEventArgs e)
+    {
+        using var content = new MultipartFormDataContent();
+
+        foreach (var file in e.GetMultipleFiles(_maxAllowedFiles))
+        {
+            var filecontent = new StreamContent(file.OpenReadStream(_maxFileSize));
+            filecontent.Headers.ContentType = new MediaTypeHeaderValue(file.ContentType);
+            
+            FileNames.Add(file.Name);
+            
+            content.Add(
+                content: filecontent,
+                name: "\"files\"",
+                fileName: file.Name
+            );
+        }
+        var response = await Http.PostAsync("/api/Files", content);
+        var newUploadResults = await response.Content.ReadFromJsonAsync<List<UploadResult>>();
+
+        if (newUploadResults is not null)
+        {
+            UploadResults = UploadResults.Concat(newUploadResults).ToList();
+        }
+    }
+}
