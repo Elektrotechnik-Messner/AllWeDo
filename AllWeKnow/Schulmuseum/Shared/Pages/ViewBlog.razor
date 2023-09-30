@@ -1,0 +1,19 @@
+
+@page "/viewpost/{PostId}"
+
+<h1>
+    Post:
+  
+    @if (string.IsNullOrEmpty(PostId))
+    {
+        @:Error 404
+    }
+    else
+    {
+        @PostId
+    }
+</h1>
+@code {
+    [Parameter]
+    public string? PostId { get; set; }
+}

@@ -1,4 +1,4 @@
-<span class="tag@(Active ? " active" : "")">@Name</span>
+<span class="tag@(Active ? " active" : "")" @onclick="IncrementCount">@Name</span>
 
 @code {
     [Parameter]
@@ -6,4 +6,9 @@
     
     [Parameter]
     public bool Active { get; set; } = false;
+    
+    private void IncrementCount()
+    {
+        Active = !Active;
+    }
 }

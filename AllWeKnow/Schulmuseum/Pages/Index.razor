@@ -7,7 +7,7 @@
 @inject DataAccess Data
 @inject IConfiguration Config
 
-@if (_settings == null || _subjects == null)
+@if (_settings == null || _subjects == null || _posts == null)
 {
    <h3>Loading.....</h3>
 } else
@@ -18,38 +18,73 @@
 <Hero Title="@_settingsDict["app-name"]" PostTitle="Post Title" PostDesc="Lorem ipsum dolor sit amet, consectetur adipisicing elit.Dignissimos fuga deleniti officia numquam totam, quo nostrum?" ImageUrl="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80" />
   
 <div class="tags">
-  <Tag Active="true" Name="All"/>
+  <span class="tag@(_categoryFilter[0] ? " active" : "")" @onclick="() => UpdateFilter(0)">All</span>
   @foreach (var subject in _subjects)
   {
-    <Tag Active="false" Name="@subject.Name"/>
+    <span class="tag@(_categoryFilter[(int)subject.Id!] ? " active" : "")" @onclick="() => UpdateFilter((int)subject.Id)">@subject.Name</span>
   }
+
+  
 </div>
 
   <div class="posts">
-    @for (var i = 0; i < 10; i++)
+    @if (_posts.Count <= MaxBlogCount)
     {
-      <Post Category="@_subjects[i%3].Name" Title="Title" ImageUrl="https://images.unsplash.com/photo-1661051690325-d030d5b8aaec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1854&q=80"/>
+      @foreach (var t in _posts)
+      {
+        string link = "/viewpost/" + @t.Id;
+        <Post Category="@_subjects[t.CategoryId].Name" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="@VisibleCategoryId" Link="@link"/>
+      }
+    }
+    else
+    {
+      @for (var i = 0; i < MaxBlogCount; i++)
+      {
+        string link = "/viewpost/" + @_posts[i].Id;
+        <Post Category="@_subjects[_posts[i].CategoryId].Name" Title="@_posts[i].Title" ImageUrl="@_posts[i].TitleImage" CategoryId="@_posts[i].CategoryId" VisibleId="@VisibleCategoryId" Link="@link"/>
+      }
     }
   </div>
 }
 
-@code {
+@code 
+{
   List<SettingsModel>? _settings;
   List<SubjectModel>? _subjects;
+  List<BlogPost>? _posts;
   readonly IDictionary<string, string?> _settingsDict = new Dictionary<string, string?>();
-   
+
+  private const int MaxBlogCount = 10; // Max number of displayed blogs on title page
+  private readonly List<bool> _categoryFilter = new List<bool>();
+  public int VisibleCategoryId = 0;
+
   protected override async Task OnInitializedAsync()
   {
   // Get all the settings form the database
-    const string sqlSu = "select * from subjects";
-    _subjects = await Data.LoadData<SubjectModel, dynamic>(sqlSu, new { }, Config.GetConnectionString("main"));
+    _subjects = await Data.LoadData<SubjectModel, dynamic>("SELECT * FROM subjects", new { }, Config.GetConnectionString("main"));
+    _categoryFilter.Add(true);
+    foreach (var subject in _subjects)
+    {
+      _categoryFilter.Add(false);
+    }
   // Get all the settings form the database
-    const string sqlS = "select * from settings";
-    _settings = await Data.LoadData<SettingsModel, dynamic>(sqlS, new { }, Config.GetConnectionString("main"));
+    _settings = await Data.LoadData<SettingsModel, dynamic>("SELECT * FROM settings", new { }, Config.GetConnectionString("main"));
   // Put all the settings in a Dictionary for convenience
     foreach (var setting in _settings)
     {
       if (setting.Name != null) _settingsDict.Add(setting.Name, setting.Value);
     }
+  // Get all the posts form the database
+    _posts = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts ORDER BY id DESC", new { }, Config.GetConnectionString("main"));
+  }
+
+  public void UpdateFilter(int value)
+  {
+    for (int i = 0; i < _categoryFilter.Count; i++)
+    {
+      _categoryFilter[i] = false;
+    }
+    _categoryFilter[value] = true;
+    VisibleCategoryId = value;
   }
 }
