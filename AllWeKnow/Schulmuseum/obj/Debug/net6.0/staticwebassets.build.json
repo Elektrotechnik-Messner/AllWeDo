@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FPfXvzKiOUHksvoFhPrD/wnng2q68Ltu491CyjjOuW8=",
+  "Hash": "tbf2Nr4VLfNEsh+bo0KiO5NOEwkKNqTYG62l3q55mWU=",
   "Source": "Schulmuseum",
   "BasePath": "_content/Schulmuseum",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\images\\logo.png",
+      "SourceId": "Schulmuseum",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "BasePath": "_content/Schulmuseum",
+      "RelativePath": "images/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
       "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\images\\not-found.jpg",
