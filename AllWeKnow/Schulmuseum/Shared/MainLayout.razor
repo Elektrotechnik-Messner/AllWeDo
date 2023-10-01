@@ -7,6 +7,8 @@
 @inject DataAccess Data
 @inject IConfiguration Config
 
+@inject NavigationManager NavigationManager
+
 
 @if (_settings == null)
 {
@@ -17,7 +19,13 @@ else
 {
   <PageTitle>@_settingsDict["app-name"]</PageTitle>
   <NavMenu Title="@_settingsDict["app-name"]"/>
+  
+  <HeadContent>
+      <meta property='og:title' content='@_settingsDict["app-name"] - @_settingsDict["page-title"]'/>
+       <meta name="description" content="Startseite - @_settingsDict["app-name"]">
+  </HeadContent>
 }
+
 
 
 
@@ -28,6 +36,14 @@ else
 <NavBottom/>
 
 @code {
+  
+  private string currentUrl = "";
+
+  protected override void OnInitialized()
+  {
+    currentUrl = NavigationManager.Uri;
+  }
+  
   List<SettingsModel>? _settings;
   readonly IDictionary<string, string?> _settingsDict = new Dictionary<string, string?>();
    

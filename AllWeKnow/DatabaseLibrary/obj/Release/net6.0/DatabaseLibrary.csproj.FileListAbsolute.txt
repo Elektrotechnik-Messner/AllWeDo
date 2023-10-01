@@ -1,0 +1,12 @@
+C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\DatabaseLibrary\bin\Release\net6.0\DatabaseLibrary.deps.json
+C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\DatabaseLibrary\bin\Release\net6.0\DatabaseLibrary.dll
+C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\DatabaseLibrary\bin\Release\net6.0\DatabaseLibrary.pdb
+C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\DatabaseLibrary\obj\Release\net6.0\DatabaseLibrary.csproj.AssemblyReference.cache
+C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\DatabaseLibrary\obj\Release\net6.0\DatabaseLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\DatabaseLibrary\obj\Release\net6.0\DatabaseLibrary.AssemblyInfoInputs.cache
+C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\DatabaseLibrary\obj\Release\net6.0\DatabaseLibrary.AssemblyInfo.cs
+C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\DatabaseLibrary\obj\Release\net6.0\DatabaseLibrary.csproj.CoreCompileInputs.cache
+C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\DatabaseLibrary\obj\Release\net6.0\DatabaseLibrary.dll
+C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\DatabaseLibrary\obj\Release\net6.0\refint\DatabaseLibrary.dll
+C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\DatabaseLibrary\obj\Release\net6.0\DatabaseLibrary.pdb
+C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\DatabaseLibrary\obj\Release\net6.0\ref\DatabaseLibrary.dll
