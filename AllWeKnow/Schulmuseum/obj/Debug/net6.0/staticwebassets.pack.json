@@ -1,19 +1,27 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeDo\\AllWeKnow\\Schulmuseum\\wwwroot\\css\\min.css",
+      "Id": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Schulmuseum.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Schulmuseum.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\css\\min.css",
       "PackagePath": "staticwebassets\\css\\min.css"
     },
     {
-      "Id": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeDo\\AllWeKnow\\Schulmuseum\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeDo\\AllWeKnow\\Schulmuseum\\wwwroot\\images\\not-found.jpg",
+      "Id": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\images\\not-found.jpg",
       "PackagePath": "staticwebassets\\images\\not-found.jpg"
     },
     {
-      "Id": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeDo\\AllWeKnow\\Schulmuseum\\wwwroot\\js\\main.js",
+      "Id": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\js\\main.js",
       "PackagePath": "staticwebassets\\js\\main.js"
     },
     {

@@ -9,13 +9,12 @@
 
 @if (_settings == null || _subjects == null || _posts == null)
 {
-   <h3>Loading.....</h3>
+  <h3>Lädt...</h3>
 } else
 
 {
-<PageTitle>@_settingsDict["page-title"]</PageTitle>
-    
-<Hero Title="@_settingsDict["app-name"]" PostTitle="Post Title" PostDesc="Lorem ipsum dolor sit amet, consectetur adipisicing elit.Dignissimos fuga deleniti officia numquam totam, quo nostrum?" ImageUrl="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80" />
+  <PageTitle>@_settingsDict["app-name"]</PageTitle>
+  <Hero Title="@_settingsDict["page-title"]" PostTitle="Post Title" PostDesc="Lorem ipsum dolor sit amet, consectetur adipisicing elit.Dignissimos fuga deleniti officia numquam totam, quo nostrum?" ImageUrl="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80" />
   
 <div class="tags">
   <span class="tag@(_categoryFilter[0] ? " active" : "")" @onclick="() => UpdateFilter(0)">All</span>
