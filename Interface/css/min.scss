@@ -208,6 +208,60 @@ button {
       gap: 3.5rem;
       display: flex;
       align-items: center;
+      & a > * {
+        color: lighten($text, 40);
+      }
+
+      & span.dropdown {
+        & a > i {
+          transform: rotate(90deg);
+          transition: transform $medium-transition;
+        }
+        & :hover > i {
+          transform: rotate(0deg);
+        }
+        & div.nav-dropdown {
+          position: absolute;
+          opacity: 0;
+          pointer-events: none;
+          display: block;
+          overflow: hidden;
+          transition: opacity $medium-transition;
+          background-color: $background;
+          padding: 0.5rem 1rem;
+          width: auto;
+          min-width: 3rem;
+          &.mobile {
+            height: 0;
+          }
+          & a {
+            display: block;
+            margin-top: 0.2rem;
+            &:first-child {
+              margin-top: 0.2rem;
+            }
+          }
+
+          &:hover {
+            &.mobile {
+              opacity: 0;
+            }
+            opacity: 1;
+            pointer-events: all;
+            overflow: auto;
+          }
+        }
+
+        & :hover + div.nav-dropdown {
+          &.mobile {
+            opacity: 0;
+          }
+          opacity: 1;
+          pointer-events: all;
+          height: fit-content;
+          overflow: auto;
+        }
+      }
     }
   }
 }
@@ -216,7 +270,7 @@ button {
   width: 100%;
   min-height: 50vh;
   max-width: $main-width;
-  margin: 5.5rem auto;
+  margin: 4.5rem auto;
   margin-bottom: 2rem;
   padding: 1rem 0;
   position: relative;
@@ -420,6 +474,9 @@ footer {
       flex-direction: column;
       gap: 1rem;
       padding: 0.5rem 0 1rem 0;
+      & .desc {
+        width: fit-content;
+      }
     }
   }
 

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog</title>
     <link rel="stylesheet" href="css/min.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav class="navbar">
@@ -23,7 +27,14 @@
           <div class="links">
             <a href="#">Home</a>
             <a href="#">Blog</a>
-            <a href="#">Contact</a>
+            <span class="dropdown"
+              ><a href="#">Contact <i class="bx bx-chevron-down"></i></a>
+              <div class="nav-dropdown">
+                <a class="dropdown-link" href="#">One</a>
+                <a class="dropdown-link" href="#">Two</a>
+              </div>
+            </span>
+
             <button>Login</button>
           </div>
         </div>
