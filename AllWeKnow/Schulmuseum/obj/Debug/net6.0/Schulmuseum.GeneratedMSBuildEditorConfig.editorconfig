@@ -28,10 +28,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcSGVyby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Components/NavBottom.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcTmF2Qm90dG9tLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Components/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -71,6 +67,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Components/NavBottom.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcTmF2Qm90dG9tLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-9bohhahj9r
 
 [C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
