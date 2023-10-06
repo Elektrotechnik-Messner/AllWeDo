@@ -198,12 +198,62 @@ button:active {
     display: flex;
     align-items: center;
 }
+.navbar .content .contents .links a > * {
+    color: #666666;
+}
+.navbar .content .contents .links span.dropdown a > i {
+    transform: rotate(90deg);
+    transition: transform 600ms;
+}
+.navbar .content .contents .links span.dropdown :hover > i {
+    transform: rotate(0deg);
+}
+.navbar .content .contents .links span.dropdown div.nav-dropdown {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+    overflow: hidden;
+    transition: opacity 600ms;
+    background-color: #ffffff;
+    padding: 0.5rem 1rem;
+    width: auto;
+    min-width: 3rem;
+}
+.navbar .content .contents .links span.dropdown div.nav-dropdown.mobile {
+    height: 0;
+}
+.navbar .content .contents .links span.dropdown div.nav-dropdown a {
+    display: block;
+    margin-top: 0.2rem;
+}
+.navbar .content .contents .links span.dropdown div.nav-dropdown a:first-child {
+    margin-top: 0.2rem;
+}
+.navbar .content .contents .links span.dropdown div.nav-dropdown:hover {
+    opacity: 1;
+    pointer-events: all;
+    overflow: auto;
+}
+.navbar .content .contents .links span.dropdown div.nav-dropdown:hover.mobile {
+    opacity: 0;
+}
+.navbar .content .contents .links span.dropdown :hover + div.nav-dropdown {
+    opacity: 1;
+    pointer-events: all;
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow: auto;
+}
+.navbar .content .contents .links span.dropdown :hover + div.nav-dropdown.mobile {
+    opacity: 0;
+}
 
 .container {
     width: 100%;
     min-height: 50vh;
     max-width: 1000px;
-    margin: 5.5rem auto;
+    margin: 4.5rem auto;
     margin-bottom: 2rem;
     padding: 1rem 0;
     position: relative;
@@ -390,6 +440,10 @@ footer {
         gap: 1rem;
         padding: 0.5rem 0 1rem 0;
     }
+    .hero .featured .content .desc {
+        width: -moz-fit-content;
+        width: fit-content;
+    }
     .navbar .content {
         display: block;
     }
@@ -432,6 +486,10 @@ footer {
     nav.bottom-nav .content {
         display: block;
     }
+    nav.bottom-nav .content img.logo {
+        width: 100%;
+        max-width: 400px;
+    }
     nav.bottom-nav .content div {
         margin-top: 1rem;
     }
@@ -466,4 +524,4 @@ footer {
 
 .components-reconnect-modal {
     z-index: 10000000000;
-}/*# sourceMappingURL=min.css.map */
+}
