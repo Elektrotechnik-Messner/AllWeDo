@@ -1,0 +1,36 @@
+@using Schulmuseum.Models
+@using DatabaseLibrary
+
+@inject DataAccess Data
+@inject IConfiguration Config
+
+@if (_settings != null)
+{
+    <PageTitle>@ChildContent - @_settingsDict["app-name"]</PageTitle>
+}
+else
+{
+    <PageTitle>Lädt...</PageTitle>
+}
+
+
+@code {
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    
+    List<SettingsModel>? _settings;
+    readonly IDictionary<string, string?> _settingsDict = new Dictionary<string, string?>();
+   
+    protected override async Task OnInitializedAsync()
+    {
+    // Get all the settings form the database
+        const string sqlS = "select * from settings";
+        _settings = await Data.LoadData<SettingsModel, dynamic>(sqlS, new { }, Config.GetConnectionString("main"));
+    // Put all the settings in a Dictionary for convenience
+        foreach (var setting in _settings)
+        {
+            if (setting.Name != null) _settingsDict.Add(setting.Name, setting.Value);
+        }
+    }
+}

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6KfTECOPjYFuKLBxG0wy6hILPFDr3sI25Y1ajCrLcDI=",
+  "Hash": "DAEqiTKSCPo7BAARqJBTfBBCzLEQJs/9lIZM1Uzn/uk=",
   "Source": "Schulmuseum",
   "BasePath": "_content/Schulmuseum",
   "Mode": "Default",
@@ -17,21 +17,38 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\css\\min.css",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Schulmuseum.styles.css",
       "SourceId": "Schulmuseum",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Schulmuseum",
-      "RelativePath": "css/min.css",
+      "RelativePath": "Schulmuseum.styles.css",
       "AssetKind": "All",
-      "AssetMode": "All",
+      "AssetMode": "CurrentProject",
       "AssetRole": "Primary",
       "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\min.css"
+      "OriginalItemSpec": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Schulmuseum.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Schulmuseum.bundle.scp.css",
+      "SourceId": "Schulmuseum",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/Schulmuseum",
+      "RelativePath": "Schulmuseum.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Schulmuseum.bundle.scp.css"
     },
     {
       "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\favicon.ico",
@@ -51,12 +68,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\images\\logo.png",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\css\\min.css",
       "SourceId": "Schulmuseum",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
-      "RelativePath": "images/logo.png",
+      "RelativePath": "resources/css/min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,15 +82,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\logo.png"
+      "OriginalItemSpec": "wwwroot\\resources\\css\\min.css"
     },
     {
-      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\images\\not-found.jpg",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\images\\logo.png",
       "SourceId": "Schulmuseum",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
-      "RelativePath": "images/not-found.jpg",
+      "RelativePath": "resources/images/logo.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -82,15 +99,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\not-found.jpg"
+      "OriginalItemSpec": "wwwroot\\resources\\images\\logo.png"
     },
     {
-      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\js\\main.js",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\images\\not-found.jpg",
       "SourceId": "Schulmuseum",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
-      "RelativePath": "js/main.js",
+      "RelativePath": "resources/images/not-found.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,7 +116,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\main.js"
+      "OriginalItemSpec": "wwwroot\\resources\\images\\not-found.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\js\\main.js",
+      "SourceId": "Schulmuseum",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "BasePath": "_content/Schulmuseum",
+      "RelativePath": "resources/js/main.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\resources\\js\\main.js"
     }
   ]
 }

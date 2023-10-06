@@ -13,11 +13,9 @@
 @if (_settings == null)
 {
   <NavMenu Title="Lädt..."/>
-  <PageTitle>Lädt...</PageTitle>
 }
 else
 {
-  <PageTitle>@_settingsDict["app-name"]</PageTitle>
   <NavMenu Title="@_settingsDict["app-name"]"/>
   
   <HeadContent>
