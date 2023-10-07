@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "knngmIlHWL3VOTjShuQvEQYqoXcRQrR/nlGIbe5/NHA=",
+  "Hash": "LZYtETVK5Oeoeaun36Gl3jW2rnSSx6WXPjWGW1avtQ4=",
   "Source": "Schulmuseum",
   "BasePath": "_content/Schulmuseum",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Schulmuseum\\wwwroot",
       "Source": "Schulmuseum",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Schulmuseum.styles.css",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Schulmuseum.styles.css",
       "SourceId": "Schulmuseum",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "Schulmuseum.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Schulmuseum.styles.css"
+      "OriginalItemSpec": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Schulmuseum.styles.css"
     },
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Schulmuseum.bundle.scp.css",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Schulmuseum.bundle.scp.css",
       "SourceId": "Schulmuseum",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "Schulmuseum.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Schulmuseum.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Schulmuseum.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\favicon.ico",
       "SourceId": "Schulmuseum",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\css\\min.css",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\css\\min.css",
       "SourceId": "Schulmuseum",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "resources/css/min.css",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\resources\\css\\min.css"
     },
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\images\\logo.png",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\images\\logo.png",
       "SourceId": "Schulmuseum",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "resources/images/logo.png",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\resources\\images\\logo.png"
     },
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\images\\not-found.jpg",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\images\\not-found.jpg",
       "SourceId": "Schulmuseum",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "resources/images/not-found.jpg",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\resources\\images\\not-found.jpg"
     },
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\js\\main.js",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\js\\main.js",
       "SourceId": "Schulmuseum",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "resources/js/main.js",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\resources\\js\\main.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\loading\\loadingjokes.txt",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\loading\\loadingjokes.txt",
       "SourceId": "Schulmuseum",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "resources/loading/loadingjokes.txt",
       "AssetKind": "All",
@@ -151,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\resources\\loading\\loadingjokes.txt"
+    },
+    {
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\loading\\loadingjokesshort.txt",
+      "SourceId": "Schulmuseum",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "BasePath": "_content/Schulmuseum",
+      "RelativePath": "resources/loading/loadingjokesshort.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\resources\\loading\\loadingjokesshort.txt"
     }
   ]
 }

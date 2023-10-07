@@ -5,8 +5,16 @@
     <NotFound>
         <PageTitle>Not found</PageTitle>
         <LayoutView Layout="@typeof(MainLayout)">
-            <h1 style="font-size: 4rem">Error 404</h1>
-            <p role="alert" >Page not found</p>
+            <h2 style="font-size: 4rem">Error 404</h2>
+            <h4 role="alert" >Diese Seite wurde nicht gefunden</h4>
+            <p>Hier ein zufälliger Witz:</p>
+            <span>"@joke"</span>
         </LayoutView>
     </NotFound>
 </Router>
+
+@code {
+
+    string joke = JokeGenerator.GetJoke();
+
+}

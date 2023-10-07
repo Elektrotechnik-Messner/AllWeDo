@@ -1,11 +1,13 @@
 @page "/jokes"
 
 <h1>@_test</h1>
+<p>@__test</p>
 
 @code {
 
 
     string _test = JokeGenerator.GetJoke();
+    string __test = JokeGenerator.GetShortJoke();
 
 
 

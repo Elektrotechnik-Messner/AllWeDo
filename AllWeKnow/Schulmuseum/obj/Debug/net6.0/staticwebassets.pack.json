@@ -25,6 +25,14 @@
       "PackagePath": "staticwebassets\\resources\\js\\main.js"
     },
     {
+      "Id": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\loading\\loadingjokes.txt",
+      "PackagePath": "staticwebassets\\resources\\loading\\loadingjokes.txt"
+    },
+    {
+      "Id": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\loading\\loadingjokesshort.txt",
+      "PackagePath": "staticwebassets\\resources\\loading\\loadingjokesshort.txt"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Schulmuseum.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

@@ -439,6 +439,7 @@ footer {
         flex-direction: column;
         gap: 1rem;
         padding: 0.5rem 0 1rem 0;
+        width: 100%;
     }
     .hero .featured .content .desc {
         width: -moz-fit-content;
@@ -486,13 +487,14 @@ footer {
     nav.bottom-nav .content {
         display: block;
     }
-    nav.bottom-nav .content img.logo {
-        width: 100%;
-        max-width: 400px;
-    }
     nav.bottom-nav .content div {
         margin-top: 1rem;
     }
+    .logo-div img {
+        width: 100%;
+        max-width: 400px;
+    }
+    
     footer {
         display: block;
     }
@@ -524,4 +526,4 @@ footer {
 
 .components-reconnect-modal {
     z-index: 10000000000;
-}
+}/*# sourceMappingURL=min.css.map */
