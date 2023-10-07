@@ -24,18 +24,18 @@ else
   </HeadContent>
 }
 
-
-
-
-<div class="container">
+{
+  <div class="container">
     @Body
-</div>
+  </div>
+
 
 <NavBottom/>
 
 @code {
   
   private string currentUrl = "";
+  public bool IsInitialised;
 
   protected override void OnInitialized()
   {
@@ -47,13 +47,14 @@ else
    
   protected override async Task OnInitializedAsync()
   {
-  // Get all the settings form the database
+    // Get all the settings form the database
     const string sqlS = "select * from settings";
     _settings = await Data.LoadData<SettingsModel, dynamic>(sqlS, new { }, Config.GetConnectionString("main"));
-  // Put all the settings in a Dictionary for convenience
+    // Put all the settings in a Dictionary for convenience
     foreach (var setting in _settings)
     {
       if (setting.Name != null) _settingsDict.Add(setting.Name, setting.Value);
     }
   }
+
 }

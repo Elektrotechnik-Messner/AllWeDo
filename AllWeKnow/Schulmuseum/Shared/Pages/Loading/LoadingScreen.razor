@@ -1,0 +1,25 @@
+@if (contentLoaded)
+{
+    @ChildContent
+}
+else
+{
+    <div style="position:absolute; top:30vh; width:100%; text-align:center">
+        <h3>Blazor Server Application</h3>
+        <p>The application is loading...</p>
+    </div>
+}
+
+@code {
+
+    bool contentLoaded;
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Delay(4000);
+        contentLoaded = true;
+    }
+}
