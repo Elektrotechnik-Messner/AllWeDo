@@ -297,4 +297,3 @@ C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\Schulmuseum\obj\Debug\net
 C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\Schulmuseum\obj\Debug\net6.0\scopedcss\Shared\Pages\Rechtskonformität\Datenschutz.razor.rz.scp.css
 C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\Schulmuseum\obj\Debug\net6.0\scopedcss\projectbundle\Schulmuseum.bundle.scp.css
 C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\Schulmuseum\obj\Debug\net6.0\scopedcss\Shared\Pages\Rechtskonformität\Copyright.razor.rz.scp.css
-C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\Schulmuseum\obj\Debug\net6.0\scopedcss\Shared\Components\Partials\LazyLoader.razor.rz.scp.css

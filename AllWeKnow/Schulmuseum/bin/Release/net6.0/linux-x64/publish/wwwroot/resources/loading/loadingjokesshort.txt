@@ -1,0 +1,4 @@
+Säure wird neutralisiert.
+Parteienspiegel wird auswendig gelernt
+sudo rm -rf
+Error: Unexpected ";" on line 32

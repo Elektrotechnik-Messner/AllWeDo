@@ -353,3 +353,6 @@ C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\Schulmuseum\obj\Release\n
 C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\Schulmuseum\obj\Release\net6.0\linux-x64\Schulmuseum.pdb
 C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\Schulmuseum\obj\Release\net6.0\linux-x64\Schulmuseum.genruntimeconfig.cache
 C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\Schulmuseum\obj\Release\net6.0\linux-x64\ref\Schulmuseum.dll
+C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\Schulmuseum\obj\Release\net6.0\linux-x64\scopedcss\Shared\Pages\Rechtskonformität\Copyright.razor.rz.scp.css
+C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\Schulmuseum\obj\Release\net6.0\linux-x64\scopedcss\Shared\Pages\Rechtskonformität\Datenschutz.razor.rz.scp.css
+C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\Schulmuseum\obj\Release\net6.0\linux-x64\scopedcss\projectbundle\Schulmuseum.bundle.scp.css

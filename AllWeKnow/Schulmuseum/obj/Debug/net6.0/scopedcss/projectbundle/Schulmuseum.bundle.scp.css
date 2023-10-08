@@ -1,31 +1,3 @@
-/* _content/Schulmuseum/Shared/Components/Partials/LazyLoader.razor.rz.scp.css */
-.loader-div[b-u96nhoh0qp] {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-}
-
-.loader[b-u96nhoh0qp] {
-    width: 2rem;
-    height: 2rem;
-    margin-bottom: 0.2rem;
-    border: 0.2rem solid #000000;
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    display: inline-block;
-    animation: rotation-b-u96nhoh0qp 1s linear infinite;
-}
-
-@keyframes rotation-b-u96nhoh0qp {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}/*# sourceMappingURL=test.css.map */
 /* _content/Schulmuseum/Shared/Pages/Rechtskonformität/Copyright.razor.rz.scp.css */
 p[b-lycv8z7lm6], h2[b-lycv8z7lm6] {
     padding-bottom: 1rem;
