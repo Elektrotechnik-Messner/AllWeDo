@@ -58,3 +58,15 @@ C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\DatabaseLibrary\obj\Debug
 C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\DatabaseLibrary\obj\Debug\net6.0\refint\DatabaseLibrary.dll
 C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\DatabaseLibrary\obj\Debug\net6.0\DatabaseLibrary.pdb
 C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\DatabaseLibrary\obj\Debug\net6.0\ref\DatabaseLibrary.dll
+C:\Users\adria\Desktop\Coding\C\AllWeDo\AllWeKnow\DatabaseLibrary\bin\Debug\net6.0\DatabaseLibrary.deps.json
+C:\Users\adria\Desktop\Coding\C\AllWeDo\AllWeKnow\DatabaseLibrary\bin\Debug\net6.0\DatabaseLibrary.dll
+C:\Users\adria\Desktop\Coding\C\AllWeDo\AllWeKnow\DatabaseLibrary\bin\Debug\net6.0\DatabaseLibrary.pdb
+C:\Users\adria\Desktop\Coding\C\AllWeDo\AllWeKnow\DatabaseLibrary\obj\Debug\net6.0\DatabaseLibrary.csproj.AssemblyReference.cache
+C:\Users\adria\Desktop\Coding\C\AllWeDo\AllWeKnow\DatabaseLibrary\obj\Debug\net6.0\DatabaseLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adria\Desktop\Coding\C\AllWeDo\AllWeKnow\DatabaseLibrary\obj\Debug\net6.0\DatabaseLibrary.AssemblyInfoInputs.cache
+C:\Users\adria\Desktop\Coding\C\AllWeDo\AllWeKnow\DatabaseLibrary\obj\Debug\net6.0\DatabaseLibrary.AssemblyInfo.cs
+C:\Users\adria\Desktop\Coding\C\AllWeDo\AllWeKnow\DatabaseLibrary\obj\Debug\net6.0\DatabaseLibrary.csproj.CoreCompileInputs.cache
+C:\Users\adria\Desktop\Coding\C\AllWeDo\AllWeKnow\DatabaseLibrary\obj\Debug\net6.0\DatabaseLibrary.dll
+C:\Users\adria\Desktop\Coding\C\AllWeDo\AllWeKnow\DatabaseLibrary\obj\Debug\net6.0\refint\DatabaseLibrary.dll
+C:\Users\adria\Desktop\Coding\C\AllWeDo\AllWeKnow\DatabaseLibrary\obj\Debug\net6.0\DatabaseLibrary.pdb
+C:\Users\adria\Desktop\Coding\C\AllWeDo\AllWeKnow\DatabaseLibrary\obj\Debug\net6.0\ref\DatabaseLibrary.dll

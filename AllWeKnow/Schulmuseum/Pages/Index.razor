@@ -7,9 +7,9 @@
 @inject DataAccess Data
 @inject IConfiguration Config
 
-@if (_settings == null || _subjects == null || _posts == null)
+@if (_settings == null || _subjects == null || _posts == null || Time > 0)
 {
-  <h3>Lädt...</h3>
+  <Loader Joke="@_joke"></Loader>
   <PageTitle>Home - Lädt</PageTitle>
 }
 else
@@ -54,6 +54,20 @@ else
       private const int MaxBlogCount = 10; // Max number of displayed blogs on title page
   private readonly List<bool> _categoryFilter = new List<bool>();
   public int VisibleCategoryId = 0;
+  readonly string _joke = @JokeGenerator.GetShortJoke();
+  
+  [Parameter] public int Time { get; set; } = 20;
+  public async void StartTimerAsync()
+  {
+    while (Time > 0)
+    {
+      Time--;
+      StateHasChanged();
+      await Task.Delay(100);
+    }
+  }
+  protected override void OnInitialized()
+    => StartTimerAsync();
 
   protected override async Task OnInitializedAsync()
   {
