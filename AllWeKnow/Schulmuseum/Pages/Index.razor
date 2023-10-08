@@ -11,50 +11,47 @@
 {
   <h3>Lädt...</h3>
   <PageTitle>Home - Lädt</PageTitle>
-} else
-
+}
+else
 {
   <HeadTitle>Home</HeadTitle>
-  <Hero Title="@_settingsDict["page-title"]" PostTitle="Post Title" PostDesc="Lorem ipsum dolor sit amet, consectetur adipisicing elit.Dignissimos fuga deleniti officia numquam totam, quo nostrum?" ImageUrl="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80" />
-  
-<div class="tags">
-  <span class="tag@(_categoryFilter[0] ? " active" : "")" @onclick="() => UpdateFilter(0)">All</span>
-  @foreach (var subject in _subjects)
-  {
-    <span class="tag@(_categoryFilter[(int)subject.Id!] ? " active" : "")" @onclick="() => UpdateFilter((int)subject.Id)">@subject.Name</span>
-  }
+  <Hero Title="@_settingsDict["page-title"]" PostTitle="Post Title" PostDesc="Lorem ipsum dolor sit amet, consectetur adipisicing elit.Dignissimos fuga deleniti officia numquam totam, quo nostrum?" ImageUrl="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80"/>
 
-  
-</div>
+  <div class="tags">
+    <span class="tag@(_categoryFilter[0] ? " active" : "")" @onclick="() => UpdateFilter(0)">All</span>
+    @foreach (var subject in _subjects)
+    {
+      <span class="tag@(_categoryFilter[(int)subject.Id!] ? " active" : "")" @onclick="() => UpdateFilter((int)subject.Id)">@subject.Name</span>
+    }
 
-  <div class="posts">
-    @if (_posts.Count <= MaxBlogCount)
-    {
-      @foreach (var t in _posts)
-      {
-        string link = "/viewpost/" + @t.Id;
-        <Post Category="@_subjects[t.CategoryId].Name" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="@VisibleCategoryId" Link="@link"/>
-      }
-    }
-    else
-    {
-      @for (var i = 0; i < MaxBlogCount; i++)
-      {
-        string link = "/viewpost/" + @_posts[i].Id;
-        <Post Category="@_subjects[_posts[i].CategoryId].Name" Title="@_posts[i].Title" ImageUrl="@_posts[i].TitleImage" CategoryId="@_posts[i].CategoryId" VisibleId="@VisibleCategoryId" Link="@link"/>
-      }
-    }
   </div>
-}
-
-@code 
+  <div class="posts">
+      @if (_posts.Count <= MaxBlogCount)
+      {
+        @foreach (var t in _posts)
+        {
+          string link = "/viewpost/" + @t.Id;
+          <Post Category="@_subjects[t.CategoryId].Name" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="@VisibleCategoryId" Link="@link"/>
+        }
+      }
+      else
+      {
+        @for (var i = 0; i < MaxBlogCount; i++)
+        {
+          string link = "/viewpost/" + @_posts[i].Id;
+          <Post Category="@_subjects[_posts[i].CategoryId].Name" Title="@_posts[i].Title" ImageUrl="@_posts[i].TitleImage" CategoryId="@_posts[i].CategoryId" VisibleId="@VisibleCategoryId" Link="@link"/>
+        }
+      }
+    </div>
+    }
+@code
 {
   List<SettingsModel>? _settings;
   List<SubjectModel>? _subjects;
   List<BlogPost>? _posts;
   readonly IDictionary<string, string?> _settingsDict = new Dictionary<string, string?>();
 
-  private const int MaxBlogCount = 10; // Max number of displayed blogs on title page
+      private const int MaxBlogCount = 10; // Max number of displayed blogs on title page
   private readonly List<bool> _categoryFilter = new List<bool>();
   public int VisibleCategoryId = 0;
 
@@ -87,4 +84,5 @@
     _categoryFilter[value] = true;
     VisibleCategoryId = value;
   }
+}
 }
