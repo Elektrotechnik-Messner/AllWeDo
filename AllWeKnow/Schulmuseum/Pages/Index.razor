@@ -11,7 +11,6 @@
 
 @if (_settings == null || _subjects == null || _posts == null || Time > 0)
 {
-  
   <PageTitle>Home - Lädt</PageTitle>
   <Loader Joke="@_joke"></Loader>
 }
@@ -53,13 +52,17 @@ else
   List<SubjectModel>? _subjects;
   List<BlogPost>? _posts;
   readonly IDictionary<string, string?> _settingsDict = new Dictionary<string, string?>();
-
-      private const int MaxBlogCount = 10; // Max number of displayed blogs on title page
+      
+  private const int MaxBlogCount = 10; // Max number of displayed blogs on title page
   private readonly List<bool> _categoryFilter = new List<bool>();
   public int VisibleCategoryId = 0;
   readonly string _joke = @JokeGenerator.GetShortJoke();
   
-  [Parameter] public int Time { get; set; } = 20;
+  public int Time = 20;
+  
+
+  
+  
   public async void StartTimerAsync()
   {
     while (Time > 0)
