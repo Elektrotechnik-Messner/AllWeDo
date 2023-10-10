@@ -7,10 +7,13 @@
 @inject DataAccess Data
 @inject IConfiguration Config
 
+
+
 @if (_settings == null || _subjects == null || _posts == null || Time > 0)
 {
-  <Loader Joke="@_joke"></Loader>
+  
   <PageTitle>Home - Lädt</PageTitle>
+  <Loader Joke="@_joke"></Loader>
 }
 else
 {
