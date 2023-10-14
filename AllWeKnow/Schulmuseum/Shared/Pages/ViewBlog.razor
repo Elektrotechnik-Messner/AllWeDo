@@ -1,19 +1,52 @@
 
 @page "/viewpost/{PostId}"
 
-<h1>
-    Post:
-  
-    @if (string.IsNullOrEmpty(PostId))
+@using DatabaseLibrary
+@using Schulmuseum.Models
+@using Microsoft.Extensions.Configuration
+
+@inject DataAccess Data
+@inject IConfiguration Config
+
+
+@if (string.IsNullOrEmpty(PostId))
+{
+    <h1>Error 404</h1>
+}
+else
+{
+    <h1>Post: @PostId</h1>
+    <br/>
+    @if (_content == null)
     {
-        @:Error 404
+        <h1>...Loading</h1>
     }
     else
     {
-        @PostId
+        var content = _content[0].Content;
+        if (content != null)
+        {
+            @ToRawHtml(content)
+        }
     }
-</h1>
+}
+
 @code {
+
     [Parameter]
     public string? PostId { get; set; }
+
+    List<BlogPost>? _content;
+
+    protected override async Task OnInitializedAsync()
+    {
+    // Get all the content of the blog by id from the database
+        _content = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE id = " + PostId, new { }, Config.GetConnectionString("main"));
+    }
+
+    public static MarkupString ToRawHtml(string html)
+    {
+        return (MarkupString)html;
+    }
+
 }

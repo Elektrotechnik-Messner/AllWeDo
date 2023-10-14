@@ -19,32 +19,26 @@ else
   <HeadTitle>Home</HeadTitle>
   <Hero Title="@_settingsDict["page-title"]" PostTitle="Post Title" PostDesc="Lorem ipsum dolor sit amet, consectetur adipisicing elit.Dignissimos fuga deleniti officia numquam totam, quo nostrum?" ImageUrl="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80"/>
 
-  <div class="tags">
-    <span class="tag@(_categoryFilter[0] ? " active" : "")" @onclick="() => UpdateFilter(0)">All</span>
-    @foreach (var subject in _subjects)
-    {
-      <span class="tag@(_categoryFilter[(int)subject.Id!] ? " active" : "")" @onclick="() => UpdateFilter((int)subject.Id)">@subject.Name</span>
-    }
-
-  </div>
+  <h2>Die neusten Artikel</h2>
+  <br/>
   <div class="posts">
-      @if (_posts.Count <= MaxBlogCount)
-      {
-        @foreach (var t in _posts)
+    @if (_posts.Count <= MaxBlogCount)
         {
-          string link = "/viewpost/" + @t.Id;
-          <Post Category="@_subjects[t.CategoryId].Name" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="@VisibleCategoryId" Link="@link"/>
+          @foreach (var t in _posts)
+          {
+            string link = "/viewpost/" + @t.Id;
+            <Post Category="@_subjects[t.CategoryId].Name" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="0" Link="@link"/>
+          }
         }
-      }
-      else
-      {
-        @for (var i = 0; i < MaxBlogCount; i++)
+        else
         {
-          string link = "/viewpost/" + @_posts[i].Id;
-          <Post Category="@_subjects[_posts[i].CategoryId].Name" Title="@_posts[i].Title" ImageUrl="@_posts[i].TitleImage" CategoryId="@_posts[i].CategoryId" VisibleId="@VisibleCategoryId" Link="@link"/>
+          @for (var i = 0; i < MaxBlogCount; i++)
+          {
+            string link = "/viewpost/" + @_posts[i].Id;
+            <Post Category="@_subjects[_posts[i].CategoryId].Name" Title="@_posts[i].Title" ImageUrl="@_posts[i].TitleImage" CategoryId="@_posts[i].CategoryId" VisibleId="0" Link="@link"/>
+          }
         }
-      }
-    </div>
+  </div>
     
 @code
 {
@@ -54,15 +48,9 @@ else
   readonly IDictionary<string, string?> _settingsDict = new Dictionary<string, string?>();
       
   private const int MaxBlogCount = 10; // Max number of displayed blogs on title page
-  private readonly List<bool> _categoryFilter = new List<bool>();
-  public int VisibleCategoryId = 0;
   readonly string _joke = @JokeGenerator.GetShortJoke();
-  
-  public int Time = 20;
-  
+  public int Time = 10;
 
-  
-  
   public async void StartTimerAsync()
   {
     while (Time > 0)
@@ -77,13 +65,8 @@ else
 
   protected override async Task OnInitializedAsync()
   {
-  // Get all the settings form the database
+  // Get all the subjects form the database
     _subjects = await Data.LoadData<SubjectModel, dynamic>("SELECT * FROM subjects", new { }, Config.GetConnectionString("main"));
-    _categoryFilter.Add(true);
-    foreach (var subject in _subjects)
-    {
-      _categoryFilter.Add(false);
-    }
   // Get all the settings form the database
     _settings = await Data.LoadData<SettingsModel, dynamic>("SELECT * FROM settings", new { }, Config.GetConnectionString("main"));
   // Put all the settings in a Dictionary for convenience
@@ -93,16 +76,6 @@ else
     }
   // Get all the posts form the database
     _posts = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts ORDER BY id DESC", new { }, Config.GetConnectionString("main"));
-  }
-
-  public void UpdateFilter(int value)
-  {
-    for (int i = 0; i < _categoryFilter.Count; i++)
-    {
-      _categoryFilter[i] = false;
     }
-    _categoryFilter[value] = true;
-    VisibleCategoryId = value;
   }
-}
 }

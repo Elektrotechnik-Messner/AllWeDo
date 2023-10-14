@@ -357,3 +357,4 @@ C:\Users\adria\Desktop\Coding\C\AllWeDo\AllWeKnow\Schulmuseum\obj\Debug\net6.0\S
 C:\Users\adria\Desktop\Coding\C\AllWeDo\AllWeKnow\Schulmuseum\obj\Debug\net6.0\Schulmuseum.genruntimeconfig.cache
 C:\Users\adria\Desktop\Coding\C\AllWeDo\AllWeKnow\Schulmuseum\obj\Debug\net6.0\ref\Schulmuseum.dll
 C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\Schulmuseum\obj\Debug\net6.0\scopedcss\Shared\Components\Loader.razor.rz.scp.css
+C:\Users\adria\Desktop\Coding\C\AllWeDo\AllWeKnow\Schulmuseum\obj\Debug\net6.0\scopedcss\Shared\Components\Loader.razor.rz.scp.css

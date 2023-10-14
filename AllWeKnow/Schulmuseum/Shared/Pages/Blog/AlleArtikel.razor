@@ -13,8 +13,8 @@
 {
    <h3>Loading.....</h3>
 } else
-
 {
+  <h2>Alle Artikel</h2>
 <div class="tags">
   <span class="tag@(_categoryFilter[0] ? " active" : "")" @onclick="() => UpdateFilter(0)">All</span>
   @foreach (var subject in _subjects)
@@ -49,7 +49,7 @@
   List<SubjectModel>? _subjects;
   List<BlogPost>? _posts;
 
-  private const int MaxBlogCount = 15; // Max number of displayed blogs on title page
+      private const int MaxBlogCount = 15; // Max number of displayed blogs on title page
   private readonly List<bool> _categoryFilter = new List<bool>();
   public int VisibleCategoryId = 0;
 
