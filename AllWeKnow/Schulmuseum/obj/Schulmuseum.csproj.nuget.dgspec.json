@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeDo\\AllWeKnow\\Schulmuseum\\Schulmuseum.csproj": {}
+    "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\Schulmuseum.csproj": {}
   },
   "projects": {
-    "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeDo\\AllWeKnow\\DatabaseLibrary\\DatabaseLibrary.csproj": {
+    "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\DatabaseLibrary\\DatabaseLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeDo\\AllWeKnow\\DatabaseLibrary\\DatabaseLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\DatabaseLibrary\\DatabaseLibrary.csproj",
         "projectName": "DatabaseLibrary",
-        "projectPath": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeDo\\AllWeKnow\\DatabaseLibrary\\DatabaseLibrary.csproj",
+        "projectPath": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\DatabaseLibrary\\DatabaseLibrary.csproj",
         "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeDo\\AllWeKnow\\DatabaseLibrary\\obj\\",
+        "outputPath": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\DatabaseLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -67,14 +67,14 @@
         }
       }
     },
-    "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeDo\\AllWeKnow\\Schulmuseum\\Schulmuseum.csproj": {
+    "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\Schulmuseum.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeDo\\AllWeKnow\\Schulmuseum\\Schulmuseum.csproj",
+        "projectUniqueName": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\Schulmuseum.csproj",
         "projectName": "Schulmuseum",
-        "projectPath": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeDo\\AllWeKnow\\Schulmuseum\\Schulmuseum.csproj",
+        "projectPath": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\Schulmuseum.csproj",
         "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeDo\\AllWeKnow\\Schulmuseum\\obj\\",
+        "outputPath": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -89,8 +89,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeDo\\AllWeKnow\\DatabaseLibrary\\DatabaseLibrary.csproj": {
-                "projectPath": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeDo\\AllWeKnow\\DatabaseLibrary\\DatabaseLibrary.csproj"
+              "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\DatabaseLibrary\\DatabaseLibrary.csproj": {
+                "projectPath": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\DatabaseLibrary\\DatabaseLibrary.csproj"
               }
             }
           }

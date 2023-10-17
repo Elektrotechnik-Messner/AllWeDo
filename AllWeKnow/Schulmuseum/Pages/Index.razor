@@ -8,8 +8,7 @@
 @inject IConfiguration Config
 
 
-
-@if (_settings == null || _subjects == null || _posts == null || Time > 0)
+@if (_settings == null || _subjects == null || _posts == null || Time > 0 || _randomPost == null)
 {
   <PageTitle>Home - Lädt</PageTitle>
   <Loader Joke="@_joke"></Loader>
@@ -17,8 +16,9 @@
 else
 {
   <HeadTitle>Home</HeadTitle>
-  <Hero Title="@_settingsDict["page-title"]" PostTitle="Post Title" PostDesc="Lorem ipsum dolor sit amet, consectetur adipisicing elit.Dignissimos fuga deleniti officia numquam totam, quo nostrum?" ImageUrl="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80"/>
-
+  // @_randomPost.Title instead of @_randomPost.Id.ToString() that is used for testing
+  <Hero Title="@_settingsDict["page-title"]" PostTitle="@_randomPost.Id.ToString()" PostDesc="@_randomPost.Description" ImageUrl="@_randomPost.TitleImage"/>
+  
   <h2>Die neusten Artikel</h2>
   <br/>
   <div class="posts">
@@ -45,6 +45,7 @@ else
   List<SettingsModel>? _settings;
   List<SubjectModel>? _subjects;
   List<BlogPost>? _posts;
+  BlogPost? _randomPost;
   readonly IDictionary<string, string?> _settingsDict = new Dictionary<string, string?>();
       
   private const int MaxBlogCount = 10; // Max number of displayed blogs on title page
@@ -76,6 +77,9 @@ else
     }
   // Get all the posts form the database
     _posts = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts ORDER BY id DESC", new { }, Config.GetConnectionString("main"));
-    }
+  // Get random post
+    List<BlogPost>? temporary = await Data.LoadData<BlogPost, dynamic>("SELECT DISTINCT * FROM posts ORDER BY RAND() LIMIT 1", new { }, Config.GetConnectionString("main"));
+    _randomPost = temporary[0];
+  }
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K9Pz2EMEnmd85FEh6eHJmPEWEFTg/ie3B0opHdJYXpGCp78s1sPaHgobZIXatnBn8MoXd5lGRt9qwidcETUS6g==",
+  "dgSpecHash": "4D/31MKV7XIM/hUnpLTpsJEDyZBBf03eo3e5pmHB6guYsPzlvdF1uDPuUHp9wote5s8kndyyCTuKpXytzbEuTw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeDo\\AllWeKnow\\DatabaseLibrary\\DatabaseLibrary.csproj",
+  "projectFilePath": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\DatabaseLibrary\\DatabaseLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adria\\.nuget\\packages\\dapper\\2.0.151\\dapper.2.0.151.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",

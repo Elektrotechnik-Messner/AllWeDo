@@ -1,4 +1,4 @@
-@if (contentLoaded)
+@if (_contentLoaded)
 {
     @ChildContent
 }
@@ -12,14 +12,14 @@ else
 
 @code {
 
-    bool contentLoaded;
+    bool _contentLoaded;
 
     [Parameter]
-    public RenderFragment ChildContent { get; set; }
+    public RenderFragment? ChildContent { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         await Task.Delay(4000);
-        contentLoaded = true;
+        _contentLoaded = true;
     }
 }

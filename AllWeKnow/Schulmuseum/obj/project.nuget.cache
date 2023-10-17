@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hG9PqRbWNV79K2RfsPxuCRBm4HdJ/NAxann5c6+7SSNBpTSlu7M0Jvkj+wy87Gh97DeSJuwIvBQbi7l9cCH2Fw==",
+  "dgSpecHash": "Xr/Q/9eMW3vqb/y0jOMTkSM88f2jK2Th5jzHbqIdE2iIG0dtbAyz5pFbK/IiLqbtkSwK61eQlrRrFd4gL1uzgg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeDo\\AllWeKnow\\Schulmuseum\\Schulmuseum.csproj",
+  "projectFilePath": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\Schulmuseum.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adria\\.nuget\\packages\\dapper\\2.0.151\\dapper.2.0.151.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
