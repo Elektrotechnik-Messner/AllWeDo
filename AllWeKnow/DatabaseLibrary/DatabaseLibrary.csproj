@@ -10,6 +10,8 @@
     <ItemGroup>
       <PackageReference Include="Dapper" Version="2.0.151" />
       <PackageReference Include="MySql.Data" Version="8.1.0" />
+      <PackageReference Include="Syncfusion.Blazor.Core" Version="23.1.41" />
+      <PackageReference Include="Syncfusion.Blazor.Inputs" Version="23.1.41" />
     </ItemGroup>
 
 </Project>

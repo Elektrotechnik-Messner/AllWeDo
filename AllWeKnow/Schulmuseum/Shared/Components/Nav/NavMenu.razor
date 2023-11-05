@@ -1,8 +1,13 @@
+@using Schulmuseum.Authentication
+
+@inject AuthenticationStateProvider authStateProvider
+@inject NavigationManager navManager
+
 <nav class="navbar">
       <div class="content">
         <div class="bar">
           <div class="logo"><span class="logo"></span><b>@Title</b></div>
-          <span class="navbtn" @onclick="ToggleUnfold ">
+          <span class="navbtn" @onclick="ToggleUnfold">
             <span class="navbtn-container">
               <span class="bar1"></span>
               <span class="bar2"></span>
@@ -15,7 +20,15 @@
             <a href="/">Home</a>
             <a href="/alle-artikel">Alle Artikel</a>
             <a href="/alle-fächer">Alle Fächer</a>
-            <button>Login</button>
+            <AuthorizeView>
+              <Authorized>
+                <a @onclick="Logout" title="@context.User.Identity.Name" href="javascript:void(0)"><button>Logout</button></a>
+              </Authorized>
+              <NotAuthorized>
+                <a href="/login" ><button>Login</button></a>
+              </NotAuthorized>
+            </AuthorizeView>
+            
           </div>
         </div>
       </div>
@@ -32,5 +45,12 @@
   {
     Unfolded = !Unfolded;
   }
-  
+
+  private async Task Logout()
+  {
+    var customAuthStateProvider = (CustomAuthenticationStateProvider)authStateProvider;
+    await customAuthStateProvider.UpdateAuthenticationState(null);
+    navManager.NavigateTo("/", true);
+  }
+
 }

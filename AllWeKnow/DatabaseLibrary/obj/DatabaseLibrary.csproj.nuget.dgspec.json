@@ -45,6 +45,14 @@
             "MySql.Data": {
               "target": "Package",
               "version": "[8.1.0, )"
+            },
+            "Syncfusion.Blazor.Core": {
+              "target": "Package",
+              "version": "[23.1.41, )"
+            },
+            "Syncfusion.Blazor.Inputs": {
+              "target": "Package",
+              "version": "[23.1.41, )"
             }
           },
           "imports": [

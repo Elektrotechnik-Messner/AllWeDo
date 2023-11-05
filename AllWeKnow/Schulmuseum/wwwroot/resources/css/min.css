@@ -134,7 +134,7 @@ button {
     padding: 0.7rem 1rem;
     font-size: 0.8rem;
     background-color: black;
-    color: white;
+    color: white !important;
     border: none;
     border-radius: 0.4rem;
     transition: color 600ms, background-color 600ms ease;

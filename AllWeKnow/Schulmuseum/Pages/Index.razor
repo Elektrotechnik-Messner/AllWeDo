@@ -7,6 +7,7 @@
 @inject DataAccess Data
 @inject IConfiguration Config
 
+@* @attribute [Authorize(Roles = "Administrator,User")] // this site is only accessible for Users and admins*@
 
 @if (_settings == null || _subjects == null || _posts == null || Time > 0 || _randomPost == null)
 {
@@ -18,6 +19,9 @@ else
   <HeadTitle>Home</HeadTitle>
   // @_randomPost.Title instead of @_randomPost.Id.ToString() that is used for testing
   <Hero Title="@_settingsDict["page-title"]" PostTitle="@_randomPost.Id.ToString()" PostDesc="@_randomPost.Description" ImageUrl="@_randomPost.TitleImage"/>
+  
+  
+  
   
   <h2>Die neusten Artikel</h2>
   <br/>
@@ -42,13 +46,15 @@ else
     
 @code
 {
+  
+  
   List<SettingsModel>? _settings;
   List<SubjectModel>? _subjects;
   List<BlogPost>? _posts;
   BlogPost? _randomPost;
   readonly IDictionary<string, string?> _settingsDict = new Dictionary<string, string?>();
       
-  private const int MaxBlogCount = 10; // Max number of displayed blogs on title page
+  private const int MaxBlogCount = 6; // Max number of displayed blogs on title page
   readonly string _joke = @JokeGenerator.GetShortJoke();
   public int Time = 10;
 

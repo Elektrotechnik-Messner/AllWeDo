@@ -1,18 +1,23 @@
-﻿
-<Router AppAssembly="@typeof(App).Assembly">
-    <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
-    </Found>
-    <NotFound>
-        <PageTitle>Not found</PageTitle>
-        <LayoutView Layout="@typeof(MainLayout)">
-            <h2 style="font-size: 4rem">Error 404</h2>
-            <h4 role="alert" >Diese Seite wurde nicht gefunden</h4>
-            <p>Hier ein zufälliger Witz:</p>
-            <span>"@joke"</span>
-        </LayoutView>
-    </NotFound>
-</Router>
+﻿<CascadingAuthenticationState>
+    <Router AppAssembly="@typeof(App).Assembly">
+        <Found Context="routeData">
+            <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
+                <NotAuthorized>
+                    Lol, Nein!
+                </NotAuthorized>
+            </AuthorizeRouteView>
+        </Found>
+        <NotFound>
+            <PageTitle>Not found</PageTitle>
+            <LayoutView Layout="@typeof(MainLayout)">
+                <h2 style="font-size: 4rem">Error 404</h2>
+                <h4 role="alert" >Diese Seite wurde nicht gefunden</h4>
+                <p>Hier ein zufälliger Witz:</p>
+                <span>"@joke"</span>
+            </LayoutView>
+        </NotFound>
+    </Router>
+</CascadingAuthenticationState>
 
 
 @code {
