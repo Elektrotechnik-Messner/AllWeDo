@@ -12,13 +12,18 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddAuthenticationCore();
+
+builder.Services.AddHttpClient();
+builder.Services.AddSyncfusionBlazor();
+
+// Database
 builder.Services.AddSingleton<DataAccess>();
+
+// Users
+builder.Services.AddAuthenticationCore();
 builder.Services.AddScoped<ProtectedSessionStorage>();
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
 builder.Services.AddSingleton<UserAccountService>();
-builder.Services.AddHttpClient();
-builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
 

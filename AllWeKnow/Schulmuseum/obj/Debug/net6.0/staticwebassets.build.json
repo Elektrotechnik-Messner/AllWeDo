@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4PRkT9NQtgHalDMaK9uc0Opur0dil9S7HE+vpo6p+hM=",
+  "Hash": "lxIWNgX6AXSzi/5/kesThhIitxWcsAvIW8rQHOr3vAw=",
   "Source": "Schulmuseum",
   "BasePath": "_content/Schulmuseum",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Schulmuseum\\wwwroot",
       "Source": "Schulmuseum",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.buttons\\23.1.41\\staticwebassets\\scripts\\sf-floating-action-button.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.buttons\\23.1.41\\staticwebassets\\scripts\\sf-floating-action-button.min.js",
       "SourceId": "Syncfusion.Blazor.Buttons",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.buttons\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.buttons\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Buttons",
       "RelativePath": "scripts/sf-floating-action-button.min.js",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.buttons\\23.1.41\\staticwebassets\\scripts\\sf-floating-action-button.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.buttons\\23.1.41\\staticwebassets\\scripts\\sf-floating-action-button.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.buttons\\23.1.41\\staticwebassets\\scripts\\sf-speeddial.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.buttons\\23.1.41\\staticwebassets\\scripts\\sf-speeddial.min.js",
       "SourceId": "Syncfusion.Blazor.Buttons",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.buttons\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.buttons\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Buttons",
       "RelativePath": "scripts/sf-speeddial.min.js",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.buttons\\23.1.41\\staticwebassets\\scripts\\sf-speeddial.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.buttons\\23.1.41\\staticwebassets\\scripts\\sf-speeddial.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\compression.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\compression.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/compression.min.js",
       "AssetKind": "All",
@@ -65,13 +65,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\compression.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\compression.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\excelexport.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\excelexport.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/excelexport.min.js",
       "AssetKind": "All",
@@ -82,13 +82,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\excelexport.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\excelexport.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\fileutils.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\fileutils.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/fileutils.min.js",
       "AssetKind": "All",
@@ -99,13 +99,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\fileutils.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\fileutils.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\pdfexport.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\pdfexport.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/pdfexport.min.js",
       "AssetKind": "All",
@@ -116,13 +116,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\pdfexport.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\pdfexport.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\popup.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\popup.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/popup.min.js",
       "AssetKind": "All",
@@ -133,13 +133,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\popup.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\popup.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\popupsbase.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\popupsbase.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/popupsbase.min.js",
       "AssetKind": "All",
@@ -150,13 +150,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\popupsbase.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\popupsbase.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\sf-svg-export.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\sf-svg-export.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/sf-svg-export.min.js",
       "AssetKind": "All",
@@ -167,13 +167,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\sf-svg-export.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\sf-svg-export.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\svgbase.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\svgbase.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/svgbase.min.js",
       "AssetKind": "All",
@@ -184,13 +184,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\svgbase.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\svgbase.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\syncfusion-blazor-base.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\syncfusion-blazor-base.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/syncfusion-blazor-base.min.js",
       "AssetKind": "All",
@@ -201,13 +201,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\syncfusion-blazor-base.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\syncfusion-blazor-base.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\syncfusion-blazor-extended.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\syncfusion-blazor-extended.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/syncfusion-blazor-extended.min.js",
       "AssetKind": "All",
@@ -218,13 +218,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\syncfusion-blazor-extended.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\syncfusion-blazor-extended.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\syncfusion-blazor.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\syncfusion-blazor.min.js",
       "SourceId": "Syncfusion.Blazor.Core",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Core",
       "RelativePath": "scripts/syncfusion-blazor.min.js",
       "AssetKind": "All",
@@ -235,13 +235,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\syncfusion-blazor.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.core\\23.1.41\\staticwebassets\\scripts\\syncfusion-blazor.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.data\\23.1.41\\staticwebassets\\scripts\\data.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.data\\23.1.41\\staticwebassets\\scripts\\data.min.js",
       "SourceId": "Syncfusion.Blazor.Data",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.data\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.data\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Data",
       "RelativePath": "scripts/data.min.js",
       "AssetKind": "All",
@@ -252,13 +252,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.data\\23.1.41\\staticwebassets\\scripts\\data.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.data\\23.1.41\\staticwebassets\\scripts\\data.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-colorpicker.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-colorpicker.min.js",
       "SourceId": "Syncfusion.Blazor.Inputs",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Inputs",
       "RelativePath": "scripts/sf-colorpicker.min.js",
       "AssetKind": "All",
@@ -269,13 +269,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-colorpicker.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-colorpicker.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-maskedtextbox.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-maskedtextbox.min.js",
       "SourceId": "Syncfusion.Blazor.Inputs",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Inputs",
       "RelativePath": "scripts/sf-maskedtextbox.min.js",
       "AssetKind": "All",
@@ -286,13 +286,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-maskedtextbox.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-maskedtextbox.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-numerictextbox.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-numerictextbox.min.js",
       "SourceId": "Syncfusion.Blazor.Inputs",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Inputs",
       "RelativePath": "scripts/sf-numerictextbox.min.js",
       "AssetKind": "All",
@@ -303,13 +303,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-numerictextbox.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-numerictextbox.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-rating.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-rating.min.js",
       "SourceId": "Syncfusion.Blazor.Inputs",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Inputs",
       "RelativePath": "scripts/sf-rating.min.js",
       "AssetKind": "All",
@@ -320,13 +320,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-rating.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-rating.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-signature.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-signature.min.js",
       "SourceId": "Syncfusion.Blazor.Inputs",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Inputs",
       "RelativePath": "scripts/sf-signature.min.js",
       "AssetKind": "All",
@@ -337,13 +337,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-signature.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-signature.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-slider.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-slider.min.js",
       "SourceId": "Syncfusion.Blazor.Inputs",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Inputs",
       "RelativePath": "scripts/sf-slider.min.js",
       "AssetKind": "All",
@@ -354,13 +354,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-slider.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-slider.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-textbox.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-textbox.min.js",
       "SourceId": "Syncfusion.Blazor.Inputs",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Inputs",
       "RelativePath": "scripts/sf-textbox.min.js",
       "AssetKind": "All",
@@ -371,13 +371,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-textbox.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-textbox.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-uploader.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-uploader.min.js",
       "SourceId": "Syncfusion.Blazor.Inputs",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Inputs",
       "RelativePath": "scripts/sf-uploader.min.js",
       "AssetKind": "All",
@@ -388,13 +388,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-uploader.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.inputs\\23.1.41\\staticwebassets\\scripts\\sf-uploader.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.popups\\23.1.41\\staticwebassets\\scripts\\sf-dialog.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.popups\\23.1.41\\staticwebassets\\scripts\\sf-dialog.min.js",
       "SourceId": "Syncfusion.Blazor.Popups",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.popups\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.popups\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Popups",
       "RelativePath": "scripts/sf-dialog.min.js",
       "AssetKind": "All",
@@ -405,13 +405,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.popups\\23.1.41\\staticwebassets\\scripts\\sf-dialog.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.popups\\23.1.41\\staticwebassets\\scripts\\sf-dialog.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.popups\\23.1.41\\staticwebassets\\scripts\\sf-tooltip.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.popups\\23.1.41\\staticwebassets\\scripts\\sf-tooltip.min.js",
       "SourceId": "Syncfusion.Blazor.Popups",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.popups\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.popups\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Popups",
       "RelativePath": "scripts/sf-tooltip.min.js",
       "AssetKind": "All",
@@ -422,13 +422,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.popups\\23.1.41\\staticwebassets\\scripts\\sf-tooltip.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.popups\\23.1.41\\staticwebassets\\scripts\\sf-tooltip.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.spinner\\23.1.41\\staticwebassets\\scripts\\sf-spinner.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.spinner\\23.1.41\\staticwebassets\\scripts\\sf-spinner.min.js",
       "SourceId": "Syncfusion.Blazor.Spinner",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.spinner\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.spinner\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Spinner",
       "RelativePath": "scripts/sf-spinner.min.js",
       "AssetKind": "All",
@@ -439,13 +439,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.spinner\\23.1.41\\staticwebassets\\scripts\\sf-spinner.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.spinner\\23.1.41\\staticwebassets\\scripts\\sf-spinner.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.spinner\\23.1.41\\staticwebassets\\scripts\\spinner.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.spinner\\23.1.41\\staticwebassets\\scripts\\spinner.min.js",
       "SourceId": "Syncfusion.Blazor.Spinner",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.spinner\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.spinner\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.Spinner",
       "RelativePath": "scripts/spinner.min.js",
       "AssetKind": "All",
@@ -456,13 +456,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.spinner\\23.1.41\\staticwebassets\\scripts\\spinner.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.spinner\\23.1.41\\staticwebassets\\scripts\\spinner.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\23.1.41\\staticwebassets\\scripts\\sf-drop-down-button.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\23.1.41\\staticwebassets\\scripts\\sf-drop-down-button.min.js",
       "SourceId": "Syncfusion.Blazor.SplitButtons",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.SplitButtons",
       "RelativePath": "scripts/sf-drop-down-button.min.js",
       "AssetKind": "All",
@@ -473,13 +473,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\23.1.41\\staticwebassets\\scripts\\sf-drop-down-button.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\23.1.41\\staticwebassets\\scripts\\sf-drop-down-button.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\23.1.41\\staticwebassets\\scripts\\splitbuttonsbase.min.js",
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\23.1.41\\staticwebassets\\scripts\\splitbuttonsbase.min.js",
       "SourceId": "Syncfusion.Blazor.SplitButtons",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\23.1.41\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\23.1.41\\staticwebassets\\",
       "BasePath": "_content/Syncfusion.Blazor.SplitButtons",
       "RelativePath": "scripts/splitbuttonsbase.min.js",
       "AssetKind": "All",
@@ -490,13 +490,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\23.1.41\\staticwebassets\\scripts\\splitbuttonsbase.min.js"
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\23.1.41\\staticwebassets\\scripts\\splitbuttonsbase.min.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Schulmuseum.styles.css",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Schulmuseum.styles.css",
       "SourceId": "Schulmuseum",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "Schulmuseum.styles.css",
       "AssetKind": "All",
@@ -507,13 +507,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Schulmuseum.styles.css"
+      "OriginalItemSpec": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Schulmuseum.styles.css"
     },
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Schulmuseum.bundle.scp.css",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Schulmuseum.bundle.scp.css",
       "SourceId": "Schulmuseum",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "Schulmuseum.bundle.scp.css",
       "AssetKind": "All",
@@ -524,13 +524,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Schulmuseum.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Schulmuseum.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\favicon.ico",
       "SourceId": "Schulmuseum",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\css\\min.css",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\css\\min.css",
       "SourceId": "Schulmuseum",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "resources/css/min.css",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\resources\\css\\min.css"
     },
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\images\\logo.png",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\images\\logo.png",
       "SourceId": "Schulmuseum",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "resources/images/logo.png",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\resources\\images\\logo.png"
     },
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\images\\not-found.jpg",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\images\\not-found.jpg",
       "SourceId": "Schulmuseum",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "resources/images/not-found.jpg",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\resources\\images\\not-found.jpg"
     },
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\js\\main.js",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\js\\main.js",
       "SourceId": "Schulmuseum",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "resources/js/main.js",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\resources\\js\\main.js"
     },
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\loading\\loadingjokes.txt",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\loading\\loadingjokes.txt",
       "SourceId": "Schulmuseum",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "resources/loading/loadingjokes.txt",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\resources\\loading\\loadingjokes.txt"
     },
     {
-      "Identity": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\loading\\loadingjokesshort.txt",
+      "Identity": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\resources\\loading\\loadingjokesshort.txt",
       "SourceId": "Schulmuseum",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\wwwroot\\",
       "BasePath": "_content/Schulmuseum",
       "RelativePath": "resources/loading/loadingjokesshort.txt",
       "AssetKind": "All",

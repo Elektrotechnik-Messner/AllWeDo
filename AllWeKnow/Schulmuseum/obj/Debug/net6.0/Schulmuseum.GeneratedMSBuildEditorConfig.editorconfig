@@ -5,104 +5,113 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Schulmuseum
 build_property.RootNamespace = Schulmuseum
-build_property.ProjectDir = C:\Users\adria\Desktop\Coding\C\AllWeKnow\AllWeKnow\Schulmuseum\
+build_property.ProjectDir = C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\Schulmuseum\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\adria\Desktop\Coding\C\AllWeKnow\AllWeKnow\Schulmuseum
+build_property.MSBuildProjectDirectory = C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\Schulmuseum
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/App.razor]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Pages/Index.razor]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Components/HeadTitle.razor]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Components/Errors/NoAccess.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcRXJyb3JzXE5vQWNjZXNzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Components/Errors/NotFound.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcRXJyb3JzXE5vdEZvdW5kLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Components/HeadTitle.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcSGVhZFRpdGxlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Components/Hero.razor]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Components/Hero.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcSGVyby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Components/Nav/NavBottom.razor]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Components/Nav/NavBottom.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcTmF2XE5hdkJvdHRvbS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Components/Nav/NavMenu.razor]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Components/Nav/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcTmF2XE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Components/Post.razor]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Components/Post.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcUG9zdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Shared/MainLayout.razor]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Pages/Blog/AlleArtikel.razor]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Pages/Blog/AlleArtikel.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXEJsb2dcQWxsZUFydGlrZWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Pages/Blog/AlleFaecher.razor]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Pages/Blog/AlleFaecher.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXEJsb2dcQWxsZUZhZWNoZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Pages/Jokes.razor]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Pages/Jokes.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXEpva2VzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Pages/Loading/LoadingScreen.razor]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Pages/Loading/LoadingScreen.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXExvYWRpbmdcTG9hZGluZ1NjcmVlbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Pages/Rechtskonformität/Imprint.razor]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Pages/Rechtskonformität/Imprint.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXFJlY2h0c2tvbmZvcm1pdMOkdFxJbXByaW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Pages/UploadImage.razor]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Pages/UploadImage.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXFVwbG9hZEltYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Pages/UserArea/Login.razor]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Pages/UserArea/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXFVzZXJBcmVhXExvZ2luLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Pages/ViewBlog.razor]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Pages/ViewBlog.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXFZpZXdCbG9nLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/_Imports.razor]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Components/Loader.razor]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Components/Loader.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcTG9hZGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-poo0qcpv1q
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Pages/Rechtskonformität/Copyright.razor]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Pages/Rechtskonformität/Copyright.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXFJlY2h0c2tvbmZvcm1pdMOkdFxDb3B5cmlnaHQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-lycv8z7lm6
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Pages/Rechtskonformität/Datenschutz.razor]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Shared/Pages/Rechtskonformität/Datenschutz.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXFJlY2h0c2tvbmZvcm1pdMOkdFxEYXRlbnNjaHV0ei5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-6bqdc33sou
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Pages/Error.cshtml]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Pages/_Host.cshtml]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adria/Desktop/Coding/C/AllWeKnow/AllWeKnow/Schulmuseum/Pages/_Layout.cshtml]
+[C:/Users/morit/Documents/Coding/C\#/AllWeKnow/AllWeKnow/Schulmuseum/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
