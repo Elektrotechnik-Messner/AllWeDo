@@ -1,7 +1,7 @@
 @page "/New"
 
 
-<BlazoredTextEditor @ref="@QuillHtml" EditorCssStyle="min-height: 30vh;" Placeholder="Dein Epischer Artikel...">
+<BlazoredTextEditor @ref="@_quillHtml" EditorCssStyle="min-height: 30vh;" Placeholder="Dein Epischer Artikel...">
     <ToolbarContent>
         <select class="ql-header">
             <option selected=""></option>
@@ -35,25 +35,25 @@
 </BlazoredTextEditor>
 <br />
 <button class="btn btn-primary" 
-        @onclick="GetHTML">Get HTML</button>
+        @onclick="GetHtml">Get HTML</button>
 
 <div>
     <br />
     @*ADRIAN: HTML sting werrt aso wido als html girendert*@
-    @((MarkupString)QuillHTMLContent)
+    @((MarkupString)_quillHtmlContent)
     @*ADRIAN: So werrt do pure string girendert (also die tags als text)*@
-    @QuillHTMLContent
+    @_quillHtmlContent
 </div>
 <br />
 
 @code {
 
-    BlazoredTextEditor QuillHtml;
-    string QuillHTMLContent;
+    BlazoredTextEditor _quillHtml = null!;
+    string _quillHtmlContent = null!;
 
-    public async void GetHTML()
+    private async void GetHtml()
     {
-        QuillHTMLContent = await this.QuillHtml.GetHTML();
+        _quillHtmlContent = await this._quillHtml.GetHTML();
         StateHasChanged();
     }
 
