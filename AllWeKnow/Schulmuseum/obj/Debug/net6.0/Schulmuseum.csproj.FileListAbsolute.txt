@@ -392,3 +392,4 @@ C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\Schulmuseum\bin\Debug\net
 C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\Schulmuseum\bin\Debug\net6.0\Syncfusion.Blazor.Spinner.dll
 C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\Schulmuseum\bin\Debug\net6.0\Syncfusion.Blazor.SplitButtons.dll
 C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\Schulmuseum\bin\Debug\net6.0\Syncfusion.Licensing.dll
+C:\Users\morit\Documents\Coding\C#\AllWeKnow\AllWeKnow\Schulmuseum\bin\Debug\net6.0\Blazored.TextEditor.dll

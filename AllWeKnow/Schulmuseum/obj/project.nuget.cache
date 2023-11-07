@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "GQUTsqEtQnnmTs5RpHb0T+D/VVTl7KwvLcef2T7/ryr/HpR5FQ7Vn5LB/++EyQGxs8cXUJGPL+8Yd34V7IJ0hg==",
+  "dgSpecHash": "TKXqqjYcX4IuhsRFkdlZTv/QDasTwQt8Wa4i8hVDM83EFp1R+gsjuxutBJnvzk0DE0Ufqr7JwVdyCx5+ljmhtw==",
   "success": true,
   "projectFilePath": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\Schulmuseum\\Schulmuseum.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\morit\\.nuget\\packages\\blazored.texteditor\\1.1.0\\blazored.texteditor.1.1.0.nupkg.sha512",
     "C:\\Users\\morit\\.nuget\\packages\\dapper\\2.0.151\\dapper.2.0.151.nupkg.sha512",
     "C:\\Users\\morit\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\morit\\.nuget\\packages\\k4os.compression.lz4\\1.3.5\\k4os.compression.lz4.1.3.5.nupkg.sha512",

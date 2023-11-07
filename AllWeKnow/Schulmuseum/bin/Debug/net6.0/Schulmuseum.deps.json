@@ -8,12 +8,23 @@
     ".NETCoreApp,Version=v6.0": {
       "Schulmuseum/1.0.0": {
         "dependencies": {
-          "DatabaseLibrary": "1.0.0",
-          "Syncfusion.Blazor.Core": "23.1.41",
-          "Syncfusion.Blazor.Inputs": "23.1.41"
+          "Blazored.TextEditor": "1.1.0",
+          "DatabaseLibrary": "1.0.0"
         },
         "runtime": {
           "Schulmuseum.dll": {}
+        }
+      },
+      "Blazored.TextEditor/1.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "6.0.5",
+          "Microsoft.AspNetCore.Components.Web": "6.0.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Blazored.TextEditor.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Dapper/2.0.151": {
@@ -556,6 +567,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Blazored.TextEditor/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-f2aC1vQlYCYmRXkXr66XF9B8i/QpODtbq7GR1AWmRVcY1NR7HgN7jvgPOObzfu6r8IDod6B3YDkH+KSEh+QiUg==",
+      "path": "blazored.texteditor/1.1.0",
+      "hashPath": "blazored.texteditor.1.1.0.nupkg.sha512"
     },
     "Dapper/2.0.151": {
       "type": "package",

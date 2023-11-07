@@ -1,0 +1,61 @@
+@page "/New"
+
+
+<BlazoredTextEditor @ref="@QuillHtml" EditorCssStyle="min-height: 30vh;" Placeholder="Dein Epischer Artikel...">
+    <ToolbarContent>
+        <select class="ql-header">
+            <option selected=""></option>
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5"></option>
+        </select>
+        <span class="ql-formats">
+            <button class="ql-bold ql-btn"></button>
+            <button class="ql-italic ql-btn" ></button>
+            <button class="ql-underline ql-btn"></button>
+            <button class="ql-strike ql-btn"></button>
+        </span>
+        <span class="ql-formats">
+            <select class="ql-color ql-btn"></select>
+            <select class="ql-background ql-btn"></select>
+        </span>
+        <span class="ql-formats">
+            <button class="ql-list ql-btn" value="ordered"></button>
+            <button class="ql-list ql-btn" value="bullet"></button>
+        </span>
+        <span class="ql-formats">
+            <button class="ql-link ql-btn"></button>
+        </span>
+    </ToolbarContent>
+    <EditorContent>
+        
+    </EditorContent>
+</BlazoredTextEditor>
+<br />
+<button class="btn btn-primary" 
+        @onclick="GetHTML">Get HTML</button>
+
+<div>
+    <br />
+    @*ADRIAN: HTML sting werrt aso wido als html girendert*@
+    @((MarkupString)QuillHTMLContent)
+    @*ADRIAN: So werrt do pure string girendert (also die tags als text)*@
+    @QuillHTMLContent
+</div>
+<br />
+
+@code {
+
+    BlazoredTextEditor QuillHtml;
+    string QuillHTMLContent;
+
+    public async void GetHTML()
+    {
+        QuillHTMLContent = await this.QuillHtml.GetHTML();
+        StateHasChanged();
+    }
+
+   
+}

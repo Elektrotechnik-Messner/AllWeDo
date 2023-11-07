@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lxIWNgX6AXSzi/5/kesThhIitxWcsAvIW8rQHOr3vAw=",
+  "Hash": "QlQ0wTF/SnbEyeSjzLULc9l1mMJZ1paeKma5TKR2QE8=",
   "Source": "Schulmuseum",
   "BasePath": "_content/Schulmuseum",
   "Mode": "Default",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\blazored.texteditor\\1.1.0\\staticwebassets\\Blazored-BlazorQuill.js",
+      "SourceId": "Blazored.TextEditor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\blazored.texteditor\\1.1.0\\staticwebassets\\",
+      "BasePath": "_content/Blazored.TextEditor",
+      "RelativePath": "Blazored-BlazorQuill.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\blazored.texteditor\\1.1.0\\staticwebassets\\Blazored-BlazorQuill.js"
+    },
+    {
+      "Identity": "C:\\Users\\morit\\.nuget\\packages\\blazored.texteditor\\1.1.0\\staticwebassets\\quill-blot-formatter.min.js",
+      "SourceId": "Blazored.TextEditor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\morit\\.nuget\\packages\\blazored.texteditor\\1.1.0\\staticwebassets\\",
+      "BasePath": "_content/Blazored.TextEditor",
+      "RelativePath": "quill-blot-formatter.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\morit\\.nuget\\packages\\blazored.texteditor\\1.1.0\\staticwebassets\\quill-blot-formatter.min.js"
+    },
     {
       "Identity": "C:\\Users\\morit\\.nuget\\packages\\syncfusion.blazor.buttons\\23.1.41\\staticwebassets\\scripts\\sf-floating-action-button.min.js",
       "SourceId": "Syncfusion.Blazor.Buttons",

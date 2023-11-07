@@ -2,6 +2,25 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Blazored.TextEditor/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.0",
+          "Microsoft.AspNetCore.Components.Web": "3.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Blazored.TextEditor.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Blazored.TextEditor.dll": {}
+        },
+        "build": {
+          "buildTransitive/Blazored.TextEditor.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Blazored.TextEditor.props": {}
+        }
+      },
       "Dapper/2.0.151": {
         "type": "package",
         "compile": {
@@ -939,6 +958,25 @@
     }
   },
   "libraries": {
+    "Blazored.TextEditor/1.1.0": {
+      "sha512": "f2aC1vQlYCYmRXkXr66XF9B8i/QpODtbq7GR1AWmRVcY1NR7HgN7jvgPOObzfu6r8IDod6B3YDkH+KSEh+QiUg==",
+      "type": "package",
+      "path": "blazored.texteditor/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazored.texteditor.1.1.0.nupkg.sha512",
+        "blazored.texteditor.nuspec",
+        "build/Blazored.TextEditor.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Blazored.TextEditor.props",
+        "buildTransitive/Blazored.TextEditor.props",
+        "icon.png",
+        "lib/netstandard2.0/Blazored.TextEditor.dll",
+        "staticwebassets/Blazored-BlazorQuill.js",
+        "staticwebassets/quill-blot-formatter.min.js"
+      ]
+    },
     "Dapper/2.0.151": {
       "sha512": "mMcZgx1lim0/i1Ozu+lgnBM4GwNIHpCuxV6BV2ovsEfZAXRAq4jb6RIhxGDcVjtmXMLPpdp85jHPdDjBMMwejw==",
       "type": "package",
@@ -2665,9 +2703,8 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "DatabaseLibrary >= 1.0.0",
-      "Syncfusion.Blazor.Core >= 23.1.41",
-      "Syncfusion.Blazor.Inputs >= 23.1.41"
+      "Blazored.TextEditor >= 1.1.0",
+      "DatabaseLibrary >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2711,13 +2748,9 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
-          "Syncfusion.Blazor.Core": {
+          "Blazored.TextEditor": {
             "target": "Package",
-            "version": "[23.1.41, )"
-          },
-          "Syncfusion.Blazor.Inputs": {
-            "target": "Package",
-            "version": "[23.1.41, )"
+            "version": "[1.1.0, )"
           }
         },
         "imports": [
