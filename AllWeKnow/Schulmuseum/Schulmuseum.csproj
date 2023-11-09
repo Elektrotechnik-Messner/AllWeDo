@@ -28,6 +28,10 @@
       <PackageReference Include="Blazored.TextEditor" Version="1.1.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Shared\Pages\Admin\" />
+    </ItemGroup>
+
 
 
 

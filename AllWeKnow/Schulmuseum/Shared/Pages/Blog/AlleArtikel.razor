@@ -7,8 +7,6 @@
 @inject DataAccess Data
 @inject IConfiguration Config
 
-@attribute [Authorize(Roles = "Administrator,User")]
-
 <HeadTitle>Alle Artikel</HeadTitle>
 
 @if (_subjects == null || _posts == null)

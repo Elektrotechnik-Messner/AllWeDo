@@ -1,7 +1,8 @@
 @page "/New"
 
+@attribute [Authorize(Roles = "admin,teacher,student")]
 
-<BlazoredTextEditor @ref="@_quillHtml" EditorCssStyle="min-height: 30vh;" Placeholder="Dein Epischer Artikel...">
+<BlazoredTextEditor @ref="@_quillHtml" EditorCssStyle="min-height: 30vh;" Placeholder="Dein Artikel...">
     <ToolbarContent>
         <select class="ql-header">
             <option selected=""></option>
@@ -27,6 +28,8 @@
         </span>
         <span class="ql-formats">
             <button class="ql-link ql-btn"></button>
+            <button class="ql-video ql-btn"></button>
+            <button class="ql-image ql-btn"></button>
         </span>
     </ToolbarContent>
     <EditorContent>
