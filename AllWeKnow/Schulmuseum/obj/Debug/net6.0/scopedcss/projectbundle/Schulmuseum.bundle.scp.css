@@ -1,0 +1,52 @@
+/* _content/Schulmuseum/Shared/Components/Loader.razor.rz.scp.css */
+div.loader[b-poo0qcpv1q] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    z-index: 23984092384;
+}
+
+.loader-div[b-poo0qcpv1q] {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.spinner[b-poo0qcpv1q] {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.5rem;
+    border: 0.2rem solid #8b8b8b;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    animation: rotation-b-poo0qcpv1q 1s linear infinite;
+}
+
+@keyframes rotation-b-poo0qcpv1q {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* _content/Schulmuseum/Shared/Pages/Rechtskonformität/Copyright.razor.rz.scp.css */
+p[b-lycv8z7lm6], h2[b-lycv8z7lm6] {
+    padding-bottom: 1rem;
+}
+
+li[b-lycv8z7lm6] {
+    margin-left: 1rem;
+}
+/* _content/Schulmuseum/Shared/Pages/Rechtskonformität/Datenschutz.razor.rz.scp.css */
+li[b-6bqdc33sou] {
+    margin-left: 1rem;
+}

@@ -1,7 +1,7 @@
 @using Schulmuseum.Authentication
 
-@inject AuthenticationStateProvider authStateProvider
-@inject NavigationManager navManager
+@inject AuthenticationStateProvider AuthStateProvider
+@inject NavigationManager NavManager
 
 <nav class="navbar">
       <div class="content">
@@ -48,9 +48,9 @@
 
   private async Task Logout()
   {
-    var customAuthStateProvider = (CustomAuthenticationStateProvider)authStateProvider;
+    var customAuthStateProvider = (CustomAuthenticationStateProvider)AuthStateProvider;
     await customAuthStateProvider.UpdateAuthenticationState(null!);
-    navManager.NavigateTo("/", true);
+    NavManager.NavigateTo("/", true);
   }
 
 }

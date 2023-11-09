@@ -19,6 +19,7 @@ builder.Services.AddSyncfusionBlazor();
 // Database
 builder.Services.AddSingleton<DataAccess>();
 
+
 // Users
 builder.Services.AddAuthenticationCore();
 builder.Services.AddScoped<ProtectedSessionStorage>();

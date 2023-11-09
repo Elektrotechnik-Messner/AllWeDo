@@ -13,7 +13,8 @@
 
 @if (_subjects == null || _posts == null)
 {
-   <h3>Loading.....</h3>
+  <PageTitle>Alle Artikel - Lädt</PageTitle>
+  <Loader Joke="Noch zu implementieren..."></Loader>
 } else
 {
   <h2>Alle Artikel</h2>
@@ -50,8 +51,8 @@
 {
   List<SubjectModel>? _subjects;
   List<BlogPost>? _posts;
-
-      private const int MaxBlogCount = 15; // Max number of displayed blogs on title page
+      
+  private const int MaxBlogCount = 15; // Max number of displayed blogs on title page
   private readonly List<bool> _categoryFilter = new List<bool>();
   public int VisibleCategoryId = 0;
 

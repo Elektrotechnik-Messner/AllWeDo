@@ -1,49 +1,51 @@
 @page "/login"
 @using Schulmuseum.Authentication
 
-@inject UserAccountService userAccountService
-@inject IJSRuntime js
-@inject AuthenticationStateProvider authStateProvider
-@inject NavigationManager navManager
+@inject UserAccountService UserAccountService
+@inject IJSRuntime Js
+@inject AuthenticationStateProvider AuthStateProvider
+@inject NavigationManager NavManager
 
 
 <HeadTitle>Login</HeadTitle>
 
-
 <div class="login">
-    <input type="text" @bind="model.UserName" name=""  placeholder="Benutzername">
-    <input type="password" @bind="model.Password" name=""  placeholder="Passwort">
+    <input type="text" @bind="_model.UserName" name=""  placeholder="Benutzername">
+    <input type="password" @bind="_model.Password" name=""  placeholder="Passwort">
     <button type="submit" @onclick="Authenticate">Login</button>
-
-</div>
-
+</div>   
 
 @code {
-
     private class Model
     {
         public string UserName { get; set; } = null!;
         public string Password { get; set; }= null!;
     }
 
-    private Model model = new Model();
+    private Model _model = new Model();
 
     private async Task Authenticate()
     {
-        var userAccount = userAccountService.GetByUserName(model.UserName);
-        if (userAccount == null || userAccount.Password != model.Password)
+        if (UserAccountService.GotData())
         {
-            await js.InvokeVoidAsync("alert", "Invalid Username or Password");
+        var userAccount = UserAccountService.GetByUserName(_model.UserName);
+        if (userAccount == null || userAccount.Password != _model.Password)
+        {
+            await Js.InvokeVoidAsync("alert", "Falsches Passwort oder Benutzername");
             return;
         }
 
-        var customAuthStateProvider = (CustomAuthenticationStateProvider)authStateProvider;
+        var customAuthStateProvider = (CustomAuthenticationStateProvider)AuthStateProvider;
         await customAuthStateProvider.UpdateAuthenticationState(new UserSession
         {
             UserName = userAccount.UserName,
             Role = userAccount.Role
         });
-        navManager.NavigateTo("/", true);
+        NavManager.NavigateTo("/", true);
+        }
+        else
+        {
+            await Js.InvokeVoidAsync("alert", "Verbindung zum Server fehlgeschlagen.");
+        }
     }
-
 }

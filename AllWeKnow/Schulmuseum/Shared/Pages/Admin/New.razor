@@ -40,22 +40,24 @@
 <div>
     <br />
     @*ADRIAN: HTML sting werrt aso wido als html girendert*@
-    @((MarkupString)_quillHtmlContent)
-    @*ADRIAN: So werrt do pure string girendert (also die tags als text)*@
-    @_quillHtmlContent
+    @if (_quillHtmlContent != null)
+    {
+        @((MarkupString)_quillHtmlContent)
+        /*ADRIAN: So werrt do pure string girendert (also die tags als text)*/
+        @_quillHtmlContent
+    }
+ 
 </div>
 <br />
 
 @code {
 
-    BlazoredTextEditor _quillHtml = null!;
-    string _quillHtmlContent = null!;
+    BlazoredTextEditor _quillHtml = new BlazoredTextEditor();
+    string? _quillHtmlContent;
 
     private async void GetHtml()
     {
         _quillHtmlContent = await this._quillHtml.GetHTML();
         StateHasChanged();
     }
-
-   
 }
