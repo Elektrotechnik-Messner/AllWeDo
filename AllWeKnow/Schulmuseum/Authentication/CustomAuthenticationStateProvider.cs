@@ -29,7 +29,7 @@ public class CustomAuthenticationStateProvider : AuthenticationStateProvider
             {
                 new Claim(ClaimTypes.Name, userSession.UserName),
                 new Claim(ClaimTypes.Role, userSession.Role)
-            }, "CustomAuth"));
+            }, userSession.Role));
             return await Task.FromResult(new AuthenticationState(claimsPrincipal));
         }
         catch
@@ -38,7 +38,7 @@ public class CustomAuthenticationStateProvider : AuthenticationStateProvider
         }
     }
 
-    public async Task UpdateAuthenticationState(UserSession userSession)
+    public async Task UpdateAuthenticationState(UserSession? userSession)
     {
         ClaimsPrincipal claimsPrincipal;
 

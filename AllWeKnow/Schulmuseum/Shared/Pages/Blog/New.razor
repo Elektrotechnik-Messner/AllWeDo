@@ -1,4 +1,6 @@
 @page "/New"
+@inject AuthenticationStateProvider AuthStateProvider
+@inject NavigationManager NavManager
 
 @attribute [Authorize(Roles = "admin,teacher,student")]
 
@@ -37,9 +39,9 @@
     </EditorContent>
 </BlazoredTextEditor>
 <br />
-<button class="btn btn-primary" 
-        @onclick="GetHtml">Get HTML</button>
-
+<button class="btn btn-primary" @onclick="GetHtml">Get HTML</button>
+<button class="btn btn-primary">Speichern</button>
+        
 <div>
     <br />
     @*ADRIAN: HTML sting werrt aso wido als html girendert*@
