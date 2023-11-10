@@ -18,21 +18,11 @@
         <div class="contents@(Unfolded ? " active" : "")">
           <div class="links">
             <a href="/">Home</a>
-            <AuthorizeView>
+            <AuthorizeView Roles="user,teacher,admin">
               <Authorized>
-                @if (@context.User.Identity!.AuthenticationType == "student")
-                {
-                  <a href="/my-posts">Meine Beiträge</a>
-                }else if (@context.User.Identity!.AuthenticationType == "teacher")
-                {
-                  <a href="/teachertool">Teachertool</a>
-                  <a href="/my-posts">Meine Beiträge</a>
-                }else if (@context.User.Identity!.AuthenticationType == "admin")
-                {
-                  <a href="/teachertool">Teachertool</a>
-                  <a href="/accounts">Kontenverwaltung</a>
-                  <a href="/my-posts">Meine Beiträge</a>
-                }
+                <a href="/my-posts">Meine Beiträge</a>
+                
+                
                 <a @onclick="Logout" title="@context.User.Identity!.Name" href="javascript:void(0)"><button>Logout</button></a>
               </Authorized>
               <NotAuthorized>
