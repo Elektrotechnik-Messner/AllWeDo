@@ -38,8 +38,10 @@
         var customAuthStateProvider = (CustomAuthenticationStateProvider)AuthStateProvider;
         await customAuthStateProvider.UpdateAuthenticationState(new UserSession
         {
-            UserName = userAccount.UserName,
-            Role = userAccount.Role
+            UserName = userAccount.Username,
+            Role = userAccount.Role,
+            Id = userAccount.Id,
+            FullName = userAccount.Fullname
         });
         NavManager.NavigateTo("/", true);
         }

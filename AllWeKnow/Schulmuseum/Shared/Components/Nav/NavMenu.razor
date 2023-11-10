@@ -32,7 +32,7 @@
             </AuthorizeView>
             <AuthorizeView Roles="admin">
                <Authorized>
-                 <a href="/">Admin</a>
+                 <a href="/admin">Admin</a>
                </Authorized>
              </AuthorizeView>
             
@@ -40,7 +40,7 @@
               <Authorized>
                 <a href="/my-posts">Meine Beiträge</a>
                 
-                <a @onclick="Logout" title="@context.User.Identity!.Name" href="javascript:void(0)"><button>Logout</button></a>
+                <a @onclick="Logout" title="@context.User.Identity!.AuthenticationType" href="javascript:void(0)"><button>Logout</button></a>
               </Authorized>
               <NotAuthorized>
                 <a href="/login"><button>Login</button></a>

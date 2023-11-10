@@ -21,16 +21,17 @@ public class UserAccountService
         _dbUsers = await _data.LoadData<UserModel, dynamic>("SELECT * FROM users ORDER BY id DESC", new { },"Server=root02.oc.host.endelon.link;Port=3306;database=mainblogdb; user id=mainblogdb;password=i6u0rlxn9gg7we4");
         foreach (var user in _dbUsers)
         {
-            if (user.Username is not null && user.Password is not null && user.Rights is not null)
+            if (user.Username is not null && user.Password is not null && user.Rights is not null && user.Fullname is not null)
             {
-                _users.Add(new UserAccount{UserName = user.Username, Password = user.Password, Role = user.Rights}); 
+                _users.Add(new UserAccount{Username = user.Username, Password = user.Password, Role = user.Rights, Fullname = user.Fullname, Id = user.Id}); 
+                Console.WriteLine(user.Id);
             }
         }
         _loadedFromdb = true;
     }
     public UserAccount? GetByUserName(string userName)
     {
-        return _users.FirstOrDefault(x => x.UserName == userName);
+        return _users.FirstOrDefault(x => x.Username == userName);
     }
     public bool GotData()
     {
