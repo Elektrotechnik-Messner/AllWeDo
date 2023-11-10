@@ -1,4 +1,4 @@
-@page "/New"
+@page "/new"
 @inject AuthenticationStateProvider AuthStateProvider
 @inject NavigationManager NavManager
 
@@ -39,30 +39,28 @@
     </EditorContent>
 </BlazoredTextEditor>
 <br />
-<button class="btn btn-primary" @onclick="GetHtml">Get HTML</button>
-<button class="btn btn-primary">Speichern</button>
-        
+<button @onclick="GetHtml">Get HTML</button>
+
 <div>
     <br />
     @*ADRIAN: HTML sting werrt aso wido als html girendert*@
-    @if (_quillHtmlContent != null)
-    {
-        @((MarkupString)_quillHtmlContent)
-        /*ADRIAN: So werrt do pure string girendert (also die tags als text)*/
-        @_quillHtmlContent
-    }
+
+    @((MarkupString)_html)
+    @_html
+
  
 </div>
 <br />
 
 @code {
 
-    BlazoredTextEditor _quillHtml = new BlazoredTextEditor();
-    string? _quillHtmlContent;
+    BlazoredTextEditor _quillHtml = null!;
+    private string? _html = "";
 
     private async void GetHtml()
     {
-        _quillHtmlContent = await this._quillHtml.GetHTML();
+        _html = await this._quillHtml.GetHTML();
         StateHasChanged();
+        
     }
 }
