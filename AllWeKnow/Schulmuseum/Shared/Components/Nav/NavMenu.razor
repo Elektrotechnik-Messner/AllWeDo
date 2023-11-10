@@ -18,16 +18,31 @@
         <div class="contents@(Unfolded ? " active" : "")">
           <div class="links">
             <a href="/">Home</a>
-            <AuthorizeView Roles="user,teacher,admin">
+            
+
+            <a href="/alle-artikel">Alle Artikel</a>
+            <a href="/alle-fächer">Alle Fächer</a>
+
+
+            
+            <AuthorizeView Roles="teacher">
+              <Authorized>
+                <a href="/teachertool">Teachertool</a>
+              </Authorized>
+            </AuthorizeView>
+            <AuthorizeView Roles="admin">
+               <Authorized>
+                 <a href="/">Admin</a>
+               </Authorized>
+             </AuthorizeView>
+            
+            <AuthorizeView Roles="student,teacher,admin">
               <Authorized>
                 <a href="/my-posts">Meine Beiträge</a>
-                
                 
                 <a @onclick="Logout" title="@context.User.Identity!.Name" href="javascript:void(0)"><button>Logout</button></a>
               </Authorized>
               <NotAuthorized>
-                <a href="/alle-artikel">Alle Artikel</a>
-                <a href="/alle-fächer">Alle Fächer</a>
                 <a href="/login"><button>Login</button></a>
               </NotAuthorized>
             </AuthorizeView>
