@@ -18,13 +18,13 @@
 x64/
 x86/
 bld/
-[Bb]in/
-[Oo]bj/
-[Ll]og/
+AllWeKnow/Schulmuseum/[Bb]in/
+AllWeKnow/Schulmuseum/[Oo]bj/
+AllWeKnow/Schulmuseum/[Ll]og/
 
 
-[Bb]in/[Dd]ebug/
-[0o]bj/[Dd]ebug/
+AllWeKnow/Schulmuseum/[Bb]in/[Dd]ebug/
+AllWeKnow/Schulmuseum/[0o]bj/[Dd]ebug/
 # Visual Studio 2015 cache/options directory
 .vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
