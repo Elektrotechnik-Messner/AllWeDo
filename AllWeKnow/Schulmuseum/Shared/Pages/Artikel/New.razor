@@ -45,9 +45,10 @@
     <br />
     @*ADRIAN: HTML sting werrt aso wido als html girendert*@
 
-    @((MarkupString)_html)
-    @_html
-
+    @if(_html != null){
+        @((MarkupString)_html)
+        @_html
+    }
  
 </div>
 <br />
@@ -55,7 +56,7 @@
 @code {
 
     BlazoredTextEditor _quillHtml = null!;
-    private string? _html = "";
+    private string? _html;
 
     private async void GetHtml()
     {

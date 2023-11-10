@@ -23,8 +23,7 @@ public class UserAccountService
         {
             if (user.Username is not null && user.Password is not null && user.Rights is not null && user.Fullname is not null)
             {
-                _users.Add(new UserAccount{Username = user.Username, Password = user.Password, Role = user.Rights, Fullname = user.Fullname, Id = user.Id}); 
-                Console.WriteLine(user.Id);
+                _users.Add(new UserAccount{Username = user.Username, Password = user.Password, Role = user.Rights, Fullname = user.Fullname, Id = user.Id});
             }
         }
         _loadedFromdb = true;

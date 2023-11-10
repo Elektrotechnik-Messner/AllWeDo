@@ -25,17 +25,25 @@ public class CustomAuthenticationStateProvider : AuthenticationStateProvider
                 return await Task.FromResult(new AuthenticationState(_anonymous));
             }
 
-            var claimsPrincipal = new ClaimsPrincipal(new ClaimsIdentity(new List<Claim>
+            if (userSession.UserName != null)
             {
-                new Claim(ClaimTypes.Name, userSession.UserName),
-                new Claim(ClaimTypes.Role, userSession.Role)
-            }, userSession.Role + ";" + userSession.Id + ";" + userSession.FullName));
-            return await Task.FromResult(new AuthenticationState(claimsPrincipal));
+                if (userSession.Role != null)
+                {
+                    var claimsPrincipal = new ClaimsPrincipal(new ClaimsIdentity(new List<Claim>
+                    {
+                        new Claim(ClaimTypes.Name, userSession.UserName),
+                        new Claim(ClaimTypes.Role, userSession.Role)
+                    }, userSession.Role + ";" + userSession.Id + ";" + userSession.FullName));
+                    return await Task.FromResult(new AuthenticationState(claimsPrincipal));
+                }
+            }
         }
         catch
         {
             return await Task.FromResult(new AuthenticationState(_anonymous));
         }
+
+        throw new InvalidOperationException();
     }
 
     public async Task UpdateAuthenticationState(UserSession? userSession)

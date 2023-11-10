@@ -30,7 +30,7 @@
     {
       @foreach (var t in _posts)
       {
-        string link = "/viewpost/" + @t.Id;
+        string link = "/artikel/" + @t.Id;
         <Post Category="@_subjects[t.CategoryId].Name" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="@VisibleCategoryId" Link="@link"/>
       }
     }
@@ -38,7 +38,7 @@
     {
       @for (var i = 0; i < MaxBlogCount; i++)
       {
-        string link = "/viewpost/" + @_posts[i].Id;
+        string link = "/artikel/" + @_posts[i].Id;
         <Post Category="@_subjects[_posts[i].CategoryId].Name" Title="@_posts[i].Title" ImageUrl="@_posts[i].TitleImage" CategoryId="@_posts[i].CategoryId" VisibleId="@VisibleCategoryId" Link="@link"/>
       }
     }

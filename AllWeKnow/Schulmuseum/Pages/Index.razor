@@ -18,7 +18,8 @@ else
 {
   <HeadTitle>Home</HeadTitle>
   // @_randomPost.Title instead of @_randomPost.Id.ToString() that is used for testing
-  <Hero Title="@_settingsDict["page-title"]" PostTitle="@_randomPost.Id.ToString()" PostDesc="@_randomPost.Description" ImageUrl="@_randomPost.TitleImage"/>
+  string RPostLink = "/artikel/" + _randomPost.Id.ToString();
+  <Hero Title="@_settingsDict["page-title"]" PostTitle="@_randomPost.Title" PostDesc="@_randomPost.Description" ImageUrl="@_randomPost.TitleImage" PostLink="@RPostLink"/>
   
   
   <h2>Die neusten Artikel</h2>
@@ -28,7 +29,7 @@ else
         {
           @foreach (var t in _posts)
           {
-            string link = "/viewpost/" + @t.Id;
+            string link = "/artikel/" + @t.Id;
             <Post Category="@_subjects[t.CategoryId].Name" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="0" Link="@link"/>
           }
         }
@@ -36,7 +37,7 @@ else
         {
           @for (var i = 0; i < MaxBlogCount; i++)
           {
-            string link = "/viewpost/" + @_posts[i].Id;
+            string link = "/artikel/" + @_posts[i].Id;
             <Post Category="@_subjects[_posts[i].CategoryId].Name" Title="@_posts[i].Title" ImageUrl="@_posts[i].TitleImage" CategoryId="@_posts[i].CategoryId" VisibleId="0" Link="@link"/>
           }
         }
@@ -54,6 +55,7 @@ else
   readonly string _joke = @JokeGenerator.GetShortJoke();
   public int Time = 10;
 
+  
   public async void StartTimerAsync()
   {
     while (Time > 0)
@@ -82,6 +84,7 @@ else
   // Get random post
     List<BlogPost>? temporary = await Data.LoadData<BlogPost, dynamic>("SELECT DISTINCT * FROM posts ORDER BY RAND() LIMIT 1", new { }, Config.GetConnectionString("main"));
     _randomPost = temporary[0];
+    string RPostLink = "/artikel/" + _randomPost.Id.ToString();
   }
   }
 }
