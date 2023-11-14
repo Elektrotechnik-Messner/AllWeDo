@@ -4,10 +4,7 @@
 
 @attribute [Authorize(Roles = "admin,teacher,student")]
 
-@if (_titleImageName != null){
-    <img src="/bucket/images/@_titleImageName" alt="Title Image"/>
-}
-<InputFile OnChange="@LoadFiles" accept=".png,.jpg,.jpeg,.gif"/>
+<InputFile OnChange="@LoadFiles" accept=".png,.jpg,.jpeg,.gif,.svg"/>
 
 <BlazoredTextEditor @ref="@_quillHtml" EditorCssStyle="min-height: 30vh;" Placeholder="Dein Artikel...">
     <ToolbarContent>
@@ -41,27 +38,30 @@
         
     </EditorContent>
 </BlazoredTextEditor>
-<br />
-<button @onclick="GetHtml">Get HTML</button>
 
-<div>
-    <br />
-    @if(_html != null){
-        @((MarkupString)_html)
-        @_html
-    }
- 
-</div>
-<br />
+<AuthorizeView>
+    <Authorized>
+        @{
+            _creatorid = int.Parse(context.User.Identity!.AuthenticationType!);
+        }
+    </Authorized>
+    
+</AuthorizeView>
 
 @code {
 
+    string _posttitle = "";
+    string _postdesc = "";
+    int _creatorid;
+    private string? _postcontent;
+    
+    
     BlazoredTextEditor _quillHtml = null!;
-    private string? _html;
+    
 
     private async void GetHtml()
     {
-        _html = await this._quillHtml.GetHTML();
+        _postcontent = await this._quillHtml.GetHTML();
         StateHasChanged();
         
     }
@@ -100,6 +100,19 @@
         }
         
         
+    }
+
+    // adrian in der function konnsche olls in di db speichon
+    private void Submit()
+    {
+        // de variablen brauchsche (bitte nix ändon des missat aso gien)
+        var imagepath = "bucket/images/" + _titleImageName; // des isch do Pfad zin bild und werrt noa aso in img tag inne gitun
+        var posttitle = _posttitle; // do titl fan post
+        var postdescription = _postdesc; // die beschreibung fan post
+        var postcontent = _postcontent; // is html fan post
+        var authorid = _creatorid;
+
+        // to db
     }
     
 

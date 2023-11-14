@@ -33,7 +33,7 @@ public class CustomAuthenticationStateProvider : AuthenticationStateProvider
                     {
                         new Claim(ClaimTypes.Name, userSession.UserName),
                         new Claim(ClaimTypes.Role, userSession.Role)
-                    }, userSession.Role + ";" + userSession.Id + ";" + userSession.FullName));
+                    }, userSession.Id + ""));
                     return await Task.FromResult(new AuthenticationState(claimsPrincipal));
                 }
             }
