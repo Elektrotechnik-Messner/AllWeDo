@@ -142,11 +142,14 @@ a {
 button {
   padding: 0.7rem 1rem;
   font-size: 0.8rem;
-  background-color: darken($background, 100) !important;
+  background-color: darken($background, 100);
   color: lighten($text, 100) !important;
   border: none;
   border-radius: 0.4rem;
   transition: color $medium-transition, background-color $medium-transition ease;
+  &.ql-btn {
+    background-color: transparent !important;
+  }
   &:hover {
     cursor: pointer;
     background-color: darken($background, 80);
