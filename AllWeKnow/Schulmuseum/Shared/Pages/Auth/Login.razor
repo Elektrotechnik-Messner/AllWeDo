@@ -2,12 +2,19 @@
 @using Schulmuseum.Authentication
 
 @inject UserAccountService UserAccountService
-@inject IJSRuntime Js
 @inject AuthenticationStateProvider AuthStateProvider
 @inject NavigationManager NavManager
 
 
 <HeadTitle>Login</HeadTitle>
+
+<AuthorizeView>
+    <Authorized>
+        @{
+            NavManager.NavigateTo("/", true);
+        }
+    </Authorized>
+</AuthorizeView>
 
 <div class="login">
   <span class="text">Login</span>
