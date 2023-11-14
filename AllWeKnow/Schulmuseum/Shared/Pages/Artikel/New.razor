@@ -4,9 +4,16 @@
 
 @attribute [Authorize(Roles = "admin,teacher,student")]
 
-<InputFile OnChange="@LoadFiles" accept=".png,.jpg,.jpeg,.gif,.svg"/>
 
-<BlazoredTextEditor @ref="@_quillHtml" EditorCssStyle="min-height: 30vh;" Placeholder="Dein Artikel...">
+<input type="text" placeholder="Der Titel des Artikels" class="inp-l  m-b" @bind="_posttitle"/><br/>
+<input type="text" placeholder="Eine Kurze Beschreibung des Artikels" class="m-b" @bind="_postdesc"/>
+
+<div class="upload m-b">
+    @((MarkupString)previewimage)
+    <label for="input">Titelbild hochladen</label>
+</div>
+
+<BlazoredTextEditor @ref="@_quillHtml" EditorCssStyle="min-height: 30vh;" Placeholder="Dein Artikel..." EditorCssClass="m-b">
     <ToolbarContent>
         <select class="ql-header">
             <option selected=""></option>
@@ -35,9 +42,12 @@
         </span>
     </ToolbarContent>
     <EditorContent>
-        
     </EditorContent>
 </BlazoredTextEditor>
+
+<InputFile OnChange="@LoadFiles" accept=".png,.jpg,.jpeg,.gif,.svg" id='input'/>
+
+<button @onclick="Submit">Neuer Artikel</button>
 
 <AuthorizeView>
     <Authorized>
@@ -54,7 +64,8 @@
     string _postdesc = "";
     int _creatorid;
     private string? _postcontent;
-    
+
+    string previewimage = "<div class='image-placeholder'></div>";
     
     BlazoredTextEditor _quillHtml = null!;
     
@@ -90,7 +101,9 @@
             await using FileStream fs = new(path, FileMode.Create);
 
             await file.OpenReadStream(MaxFileSize).CopyToAsync(fs);
-            
+
+            previewimage = "<img src='bucket/images/" + _titleImageName + "'/>";
+
         }
         catch (Exception exception)
         {
