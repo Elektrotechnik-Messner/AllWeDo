@@ -12,6 +12,7 @@
         <h3 class="post-title">@Title</h3>
       </div>
       <a href="@Link" class="read-now">zum Artikel</a>
+      <p>@(Convert.ToBoolean(Qualified) ? "Genehmigt" : "Nicht genehmigt")</p>
     </div>
   </div>
 }
@@ -35,4 +36,7 @@
   
   [Parameter]
   public int VisibleId { get; set; } = 0;
+  
+  [Parameter]
+  public int Qualified { get; set; } = 0;
 }

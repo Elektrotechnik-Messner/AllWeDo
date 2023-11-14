@@ -1,0 +1,78 @@
+@using DatabaseLibrary
+@using Schulmuseum.Models
+@using Microsoft.Extensions.Configuration
+
+@inject DataAccess Data
+@inject IConfiguration Config
+@inject NavigationManager navMan
+
+@if (CategoryId + 1 == VisibleId || VisibleId == 0)
+{
+    <div class="post">
+        <img
+            src="@ImageUrl"
+            alt="Img"
+            class="post-image"
+        />
+        <div class="description">
+            <div>
+                <span class="small-tag bold">@Category</span>
+                <h3 class="post-title">@Title</h3>
+            </div>
+            
+            @if (Convert.ToBoolean(Qualified))
+            {
+                <button @onclick="args => Dequalify(Idp)">Genehmigung entziehen</button>
+            }
+            else
+            {
+                <button @onclick="args => Qualify(Idp)">Genehmigen</button>
+            }
+        </div>
+    </div>
+}
+
+
+@code {
+    
+    private async Task Qualify(int idc)
+    {
+        Console.WriteLine(idc);
+        string sql = "update posts set qualified = 1 where id = @Id";
+        await Data.SaveData(sql, new {Id = idc}, Config.GetConnectionString("main"));
+        navMan.NavigateTo("/teacher", true);
+    }
+    
+    private async Task Dequalify(int idc)
+    {
+        Console.WriteLine(idc);
+        string sql = "update posts set qualified = 0 where id = @Id";
+        await Data.SaveData(sql, new {Id = idc}, Config.GetConnectionString("main"));
+        navMan.NavigateTo("/teacher", true);
+    }
+    
+    
+    [Parameter]
+    public string Title { get; set; } = "";
+    
+    [Parameter]
+    public int Idp { get; set; } = 0;
+  
+    [Parameter]
+    public string Category { get; set; } = "";
+  
+    [Parameter]
+    public string Link { get; set; } = "";
+
+    [Parameter]
+    public string ImageUrl { get; set; } = "resources/images/not-found.jpg";
+  
+    [Parameter]
+    public int CategoryId { get; set; } = 0;
+  
+    [Parameter]
+    public int VisibleId { get; set; } = 0;
+  
+    [Parameter]
+    public int Qualified { get; set; } = 0;
+}

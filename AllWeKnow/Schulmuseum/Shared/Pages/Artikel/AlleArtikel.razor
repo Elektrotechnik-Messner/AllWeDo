@@ -30,8 +30,8 @@
     {
       @foreach (var t in _posts)
       {
-        string link = "/artikel/" + @t.Id;
-        <Post Category="@_subjects[t.CategoryId].Name" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="@VisibleCategoryId" Link="@link"/>
+          string link = "/artikel/" + @t.Id;
+          <Post Category="@_subjects[t.CategoryId].Name" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="@VisibleCategoryId" Link="@link"/>
       }
     }
     else
@@ -50,7 +50,7 @@
   List<SubjectModel>? _subjects;
   List<BlogPost>? _posts;
       
-  private const int MaxBlogCount = 15; // Max number of displayed blogs on title page
+  private const int MaxBlogCount = 25; // Max number of displayed blogs on title page
   private readonly List<bool> _categoryFilter = new List<bool>();
   public int VisibleCategoryId = 0;
 
@@ -64,7 +64,7 @@
       _categoryFilter.Add(false);
     }
   // Get all the posts form the database
-    _posts = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts ORDER BY id DESC", new { }, Config.GetConnectionString("main"));
+    _posts = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE qualified='1' ORDER BY id DESC ", new { }, Config.GetConnectionString("main"));
   }
 
   public void UpdateFilter(int value)

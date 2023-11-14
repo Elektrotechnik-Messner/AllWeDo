@@ -2,7 +2,8 @@ namespace Schulmuseum.Models;
 
 public class BlogPost
 {
-    public int? Id { get; set; }
+    public int Id { get; set; }
+    public int Qualified { get; set; }
     public int CategoryId { get; set; }
     public int CreatorId { get; set; }
     public string? Title { get; set; }

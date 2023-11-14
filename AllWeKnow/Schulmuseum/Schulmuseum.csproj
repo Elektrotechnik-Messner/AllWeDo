@@ -33,6 +33,12 @@
       <Folder Include="wwwroot\bucket\images\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Remove="wwwroot\bucket\images\2qsbfhtd.png" />
+      <Content Remove="wwwroot\bucket\images\4cjc2c2e.png" />
+      <Content Remove="wwwroot\bucket\images\dsn5144g.png" />
+    </ItemGroup>
+
 
 
 

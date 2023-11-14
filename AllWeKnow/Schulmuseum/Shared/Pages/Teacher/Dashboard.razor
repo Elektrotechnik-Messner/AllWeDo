@@ -1,9 +1,110 @@
 @page "/teacher"
 @attribute [Authorize(Roles = "admin,teacher")]
 
-<h3>teachertool</h3>
-<p>testlol</p>
+@using DatabaseLibrary
+@using Schulmuseum.Models
+@using Microsoft.Extensions.Configuration
 
-@code {
-    
+@inject DataAccess Data
+@inject IConfiguration Config
+
+<HeadTitle>Teachertool</HeadTitle>
+
+@if (_subjects == null || _posts == null)
+{
+  <PageTitle>Alle Artikel - Lädt</PageTitle>
+  <Loader Joke="Noch zu implementieren..."></Loader>
+} else
+{
+  <h2>Alle Artikel</h2>
+  <div class="tags">
+  <span class="tag@(_categoryFilter[0] ? " active" : "")" @onclick="() => UpdateFilter(0)">All</span>
+  @foreach (var subject in _subjects)
+  {
+    <span class="tag@(_categoryFilter[(int)subject.Id!] ? " active" : "")" @onclick="() => UpdateFilter((int)subject.Id)">@subject.Name</span>
+  }
+   </div>
+  <h3>Artikel ohne Genehmigung</h3>
+  <br>
+  <div class="posts">
+    @if (_posts.Count <= MaxBlogCount)
+    {
+      @foreach (var t in _posts)
+      {
+        if (t.Qualified == 0){
+          string link = "/artikel/" + @t.Id;
+          <PostTeacherView Category="@_subjects[t.CategoryId].Name" Idp="@t.Id" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Qualified="@t.Qualified"/>
+        }
+      }
+    }
+    else
+    {
+      @for (var i = 0; i < MaxBlogCount; i++)
+      {
+        if (_posts[i].Qualified == 0)
+        {
+          string link = "/artikel/" + @_posts[i].Id;
+          <PostTeacherView Category="@_subjects[_posts[i].CategoryId].Name" Idp="@_posts[i].Id" Title="@_posts[i].Title" ImageUrl="@_posts[i].TitleImage" CategoryId="@_posts[i].CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Qualified="@_posts[i].Qualified"/>
+        }
+      }
+    }
+  </div>
+  <h3>Artikel mit Genehmigung</h3>
+  <br>
+  <div class="posts">
+    @if (_posts.Count <= MaxBlogCount)
+    {
+      @foreach (var t in _posts)
+      {
+        if (t.Qualified == 1){
+          string link = "/artikel/" + @t.Id;
+          <PostTeacherView Category="@_subjects[t.CategoryId].Name" Idp="@t.Id" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Qualified="@t.Qualified"/>
+        }
+      }
+    }
+    else
+    {
+      @for (var i = 0; i < MaxBlogCount; i++)
+      {
+        if (_posts[i].Qualified == 1)
+        {
+          string link = "/artikel/" + @_posts[i].Id;
+          <PostTeacherView Category="@_subjects[_posts[i].CategoryId].Name" Idp="@_posts[i].Id" Title="@_posts[i].Title" ImageUrl="@_posts[i].TitleImage" CategoryId="@_posts[i].CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Qualified="@_posts[i].Qualified"/>
+        }
+      }
+    }
+  </div>
+}
+
+@code 
+{
+  List<SubjectModel>? _subjects;
+  List<BlogPost>? _posts;
+      
+  private const int MaxBlogCount = 25; // Max number of displayed blogs on title page
+  private readonly List<bool> _categoryFilter = new List<bool>();
+  public int VisibleCategoryId = 0;
+
+  protected override async Task OnInitializedAsync()
+  {
+  // Get all the settings form the database
+    _subjects = await Data.LoadData<SubjectModel, dynamic>("SELECT * FROM subjects", new { }, Config.GetConnectionString("main"));
+    _categoryFilter.Add(true);
+    foreach (var subject in _subjects)
+    {
+      _categoryFilter.Add(false);
+    }
+  // Get all the posts form the database
+    _posts = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts ORDER BY id DESC", new { }, Config.GetConnectionString("main"));
+  }
+
+  public void UpdateFilter(int value)
+  {
+    for (int i = 0; i < _categoryFilter.Count; i++)
+    {
+      _categoryFilter[i] = false;
+    }
+    _categoryFilter[value] = true;
+    VisibleCategoryId = value;
+  }
 }

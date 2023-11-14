@@ -2,14 +2,22 @@
 @inject AuthenticationStateProvider AuthStateProvider
 @inject NavigationManager NavManager
 
+@using DatabaseLibrary
+@using Microsoft.Extensions.Configuration
+@using Schulmuseum.Models
+@using ZstdSharp.Unsafe
+@inject DataAccess Data
+@inject IConfiguration Config
+@inject NavigationManager navMan
+
 @attribute [Authorize(Roles = "admin,teacher,student")]
 
 
-<input type="text" placeholder="Der Titel des Artikels" class="inp-l  m-b" @bind="_posttitle"/><br/>
-<input type="text" placeholder="Eine Kurze Beschreibung des Artikels" class="m-b" @bind="_postdesc"/>
+<input type="text" placeholder="Der Titel des Artikels" class="inp-l  m-b" @bind="_postTitle"/><br/>
+<input type="text" placeholder="Eine Kurze Beschreibung des Artikels" class="m-b" @bind="_postDesc"/>
 
 <div class="upload m-b">
-    @((MarkupString)previewimage)
+    @((MarkupString)_previewImage)
     <label for="input">Titelbild hochladen</label>
 </div>
 
@@ -46,63 +54,51 @@
 </BlazoredTextEditor>
 
 <InputFile OnChange="@LoadFiles" accept=".png,.jpg,.jpeg,.gif,.svg" id='input'/>
-
-<button @onclick="Submit">Neuer Artikel</button>
+<br/>
+<button @onclick="Submit">Artikel speichern</button>
 
 <AuthorizeView>
     <Authorized>
         @{
-            _creatorid = int.Parse(context.User.Identity!.AuthenticationType!);
+            _creatorId = int.Parse(context.User.Identity!.AuthenticationType!);
         }
     </Authorized>
-    
 </AuthorizeView>
 
 @code {
+    string? _postTitle = "";
+    string? _postDesc = "";
+    int _creatorId;
+    private string? _postContent;
 
-    string _posttitle = "";
-    string _postdesc = "";
-    int _creatorid;
-    private string? _postcontent;
-
-    string previewimage = "<div class='image-placeholder'></div>";
+    string _previewImage = "<div class='image-placeholder'></div>";
     
     BlazoredTextEditor _quillHtml = null!;
-    
 
     private async void GetHtml()
     {
-        _postcontent = await this._quillHtml.GetHTML();
+        _postContent = await this._quillHtml.GetHTML();
         StateHasChanged();
-        
     }
 
     private const long MaxFileSize = 1024 * 1024 * 10;
-    private string _titleImageName = null!;
+    private string? _titleImageName;
 
     private async Task LoadFiles (InputFileChangeEventArgs e)
     {
         var file = e.File;
-        
         Console.WriteLine(file.Name);
-
-
         try
         {
             _titleImageName = Path.ChangeExtension(
                 Path.GetRandomFileName(),
                 Path.GetExtension(file.Name.ToLower())
                 );
-
             string path = Path.Combine(Config.GetValue<string>("FileStorage")!, "images", _titleImageName);
-
             Directory.CreateDirectory(Path.Combine(Config.GetValue<string>("FileStorage")!, "images"));
-
             await using FileStream fs = new(path, FileMode.Create);
-
             await file.OpenReadStream(MaxFileSize).CopyToAsync(fs);
-
-            previewimage = "<img src='bucket/images/" + _titleImageName + "'/>";
+            _previewImage = "<img src='bucket/images/" + _titleImageName + "'/>";
 
         }
         catch (Exception exception)
@@ -111,22 +107,23 @@
             Console.WriteLine(exception);
             throw;
         }
-        
-        
-    }
-
-    // adrian in der function konnsche olls in di db speichon
-    private void Submit()
-    {
-        // de variablen brauchsche (bitte nix ändon des missat aso gien)
-        var imagepath = "bucket/images/" + _titleImageName; // des isch do Pfad zin bild und werrt noa aso in img tag inne gitun
-        var posttitle = _posttitle; // do titl fan post
-        var postdescription = _postdesc; // die beschreibung fan post
-        var postcontent = _postcontent; // is html fan post
-        var authorid = _creatorid;
-
-        // to db
     }
     
-
+    private async Task Submit()
+    {
+        _postContent = await this._quillHtml.GetHTML();
+        StateHasChanged();
+        string imagepath = "bucket/images/" + _titleImageName;
+        if (_postDesc is not null && _postContent is not "" && _postContent is not null && _titleImageName is not null && _postTitle is not "")
+        {
+            string sql = "insert into posts (Qualified, CategoryId, CreatorId, Title, Description, TitleImage, Username, Date, Content) values (@Qualified, @CategoryId, @CreatorId, @Title, @Description, @TitleImage, @Username, @Date, @Content);";
+            await Data.SaveData(sql, new { Qualified = 0, CategoryId = 1, CreatorId = _creatorId, Title = _postTitle, Description = _postDesc, TitleImage = imagepath, Username = "Test", Date = DateTime.Now, Content = _postContent}, Config.GetConnectionString("main"));
+            await Js.InvokeVoidAsync("alert", "Erfolgreich gespeichert");
+            navMan.NavigateTo("/meine-artikel", true);
+        }
+        else
+        {
+            await Js.InvokeVoidAsync("alert", "Alle Felder müssen ausgefüllt sein!");
+        }
+    }
 }
