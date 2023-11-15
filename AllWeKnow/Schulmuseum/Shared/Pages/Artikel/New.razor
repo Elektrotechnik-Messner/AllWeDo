@@ -12,6 +12,8 @@
 
 @attribute [Authorize(Roles = "admin,teacher,student")]
 
+<HeadTitle>Neuer Artikel</HeadTitle>
+
 
 <input type="text" placeholder="Der Titel des Artikels" class="inp-l  m-b" @bind="_postTitle"/><br/>
 <input type="text" placeholder="Eine Kurze Beschreibung des Artikels" class="m-b" @bind="_postDesc"/>

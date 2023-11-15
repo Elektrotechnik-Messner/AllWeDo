@@ -11,7 +11,7 @@
       <p class="desc">
         @PostDesc
       </p>
-      <a href="@PostLink"><button>Read Now</button></a>
+      <a href="@PostLink"><button>@LinkText</button></a>
     </div>
   </div>
 </div> 
@@ -28,6 +28,9 @@
   
   [Parameter]
   public string PostLink { get; set; } = "";
+
+  [Parameter]
+  public string LinkText { get; set; } = "Zum Artikel";
 
   [Parameter]
   public string ImageUrl { get; set; } = "/images/not-found.jpg";

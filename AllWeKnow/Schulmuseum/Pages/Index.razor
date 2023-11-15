@@ -17,8 +17,9 @@
 else
 {
   <HeadTitle>Home</HeadTitle>
-  // @_randomPost.Title instead of @_randomPost.Id.ToString() that is used for testing
+  
   string RPostLink = "/artikel/" + _randomPost.Id.ToString();
+  
   <Hero Title="@_settingsDict["page-title"]" PostTitle="@_randomPost.Title" PostDesc="@_randomPost.Description" ImageUrl="@_randomPost.TitleImage" PostLink="@RPostLink"/>
   
   
@@ -82,7 +83,11 @@ else
   // Get all the posts form the database
     _posts = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE qualified='1' ORDER BY id DESC ", new { }, Config.GetConnectionString("main"));
   // Get random post
-    List<BlogPost>? temporary = await Data.LoadData<BlogPost, dynamic>("SELECT DISTINCT * FROM posts ORDER BY RAND() LIMIT 1", new { }, Config.GetConnectionString("main"));
+
+    
+    
+    List<BlogPost>? temporary = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE qualified = 1 ORDER BY RAND() LIMIT 1", new { }, Config.GetConnectionString("main"));
+    
     _randomPost = temporary[0];
     string RPostLink = "/artikel/" + _randomPost.Id.ToString();
   }
