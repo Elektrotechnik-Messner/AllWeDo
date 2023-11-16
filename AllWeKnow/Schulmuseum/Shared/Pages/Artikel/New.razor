@@ -25,12 +25,13 @@
 </div>
 
 
-<TextEditor Toolbar="new Toolbar { ShowFullToolbar=true }" EditorContainerId="TestId" @ref="@_quillHtml"
+<TextEditor Toolbar="new Toolbar { ShowFullToolbar=true }" @ref="@_quillHtml" 
                     Placeholder="Dein Epischer Artikel">
 </TextEditor>
 
 
 <InputFile OnChange="@LoadFiles" accept=".png,.jpg,.jpeg,.gif,.svg" id='input'/>
+
 <br/>
 <button @onclick="Submit">Artikel speichern</button>
 
@@ -84,7 +85,7 @@
     
     private async Task Submit()
     {
-        _postContent = await this._quillHtml.GetHTML();
+        _postContent = await this._quillHtml!.GetHTML()!;
         StateHasChanged();
         string imagepath = "bucket/images/" + _titleImageName;
         if (_postDesc is not null && _postContent is not "" && _postContent is not null && _titleImageName is not null && _postTitle is not "")
