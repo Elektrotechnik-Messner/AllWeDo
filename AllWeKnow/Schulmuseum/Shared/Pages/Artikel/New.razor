@@ -6,6 +6,7 @@
 @using Microsoft.Extensions.Configuration
 @using Schulmuseum.Models
 @using ZstdSharp.Unsafe
+@using System.Net.Mime
 @inject DataAccess Data
 @inject IConfiguration Config
 @inject NavigationManager navMan
@@ -23,37 +24,11 @@
     <label for="input">Titelbild hochladen</label>
 </div>
 
-<BlazoredTextEditor @ref="@_quillHtml" EditorCssStyle="min-height: 30vh;" Placeholder="Dein Artikel..." EditorCssClass="m-b">
-    <ToolbarContent>
-        <select class="ql-header">
-            <option selected=""></option>
-            <option value="1"></option>
-            <option value="2"></option>
-            <option value="3"></option>
-        </select>
-        <span class="ql-formats">
-            <button class="ql-bold ql-btn"></button>
-            <button class="ql-italic ql-btn" ></button>
-            <button class="ql-underline ql-btn"></button>
-            <button class="ql-strike ql-btn"></button>
-        </span>
-        <span class="ql-formats">
-            <select class="ql-color ql-btn"></select>
-            <select class="ql-background ql-btn"></select>
-        </span>
-        <span class="ql-formats">
-            <button class="ql-list ql-btn" value="ordered"></button>
-            <button class="ql-list ql-btn" value="bullet"></button>
-        </span>
-        <span class="ql-formats">
-            <button class="ql-link ql-btn"></button>
-            <button class="ql-video ql-btn"></button>
-            <button class="ql-image ql-btn"></button>
-        </span>
-    </ToolbarContent>
-    <EditorContent>
-    </EditorContent>
-</BlazoredTextEditor>
+
+<TextEditor Toolbar="new Toolbar { ShowFullToolbar=true }" EditorContainerId="TestId" @ref="@_quillHtml"
+                    Placeholder="Dein Epischer Artikel">
+</TextEditor>
+
 
 <InputFile OnChange="@LoadFiles" accept=".png,.jpg,.jpeg,.gif,.svg" id='input'/>
 <br/>
@@ -73,16 +48,12 @@
     int _creatorId;
     private string? _postContent;
 
+
+
     string _previewImage = "<div class='image-placeholder'></div>";
     
-    BlazoredTextEditor _quillHtml = null!;
-
-    private async void GetHtml()
-    {
-        _postContent = await this._quillHtml.GetHTML();
-        StateHasChanged();
-    }
-
+    TextEditor? _quillHtml;
+        
     private const long MaxFileSize = 1024 * 1024 * 10;
     private string? _titleImageName;
 

@@ -27,6 +27,7 @@
 
     <ItemGroup>
       <PackageReference Include="Blazored.TextEditor" Version="1.1.0" />
+      <PackageReference Include="WYSIWYGTextEditor" Version="1.0.1" />
     </ItemGroup>
 
     <ItemGroup>

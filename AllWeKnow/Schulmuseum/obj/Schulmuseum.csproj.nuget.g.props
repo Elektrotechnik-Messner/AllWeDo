@@ -13,6 +13,7 @@
     <SourceRoot Include="C:\Users\morit\.nuget\packages\" />
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)wysiwygtexteditor\1.0.1\buildTransitive\WYSIWYGTextEditor.props" Condition="Exists('$(NuGetPackageRoot)wysiwygtexteditor\1.0.1\buildTransitive\WYSIWYGTextEditor.props')" />
     <Import Project="$(NuGetPackageRoot)syncfusion.blazor.core\23.1.41\buildTransitive\Syncfusion.Blazor.Core.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.core\23.1.41\buildTransitive\Syncfusion.Blazor.Core.props')" />
     <Import Project="$(NuGetPackageRoot)syncfusion.blazor.spinner\23.1.41\buildTransitive\Syncfusion.Blazor.Spinner.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.spinner\23.1.41\buildTransitive\Syncfusion.Blazor.Spinner.props')" />
     <Import Project="$(NuGetPackageRoot)syncfusion.blazor.buttons\23.1.41\buildTransitive\Syncfusion.Blazor.Buttons.props" Condition="Exists('$(NuGetPackageRoot)syncfusion.blazor.buttons\23.1.41\buildTransitive\Syncfusion.Blazor.Buttons.props')" />
