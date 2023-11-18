@@ -7,11 +7,16 @@
     <link rel="stylesheet" href="css/min.min.css" />
   </head>
   <body>
-    <div class="upload">
-      <img
-        src="https://images.unsplash.com/photo-1682687982502-b05f0565753a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D!"
-      />
-      <label for="input">Titelbild hochladen</label>
-    </div>
+    <main class="container">
+      <div class="edit-post">
+        <span class="title">@Title, @Category</span>
+        <span class="actions">
+          <p>Genehmigt</p>
+          <a href="/edit/@Id">🖊️</a>
+          <a href="/artikel/@Id">👁️</a>
+          <button @onclick="Delete">🗑️</button>
+        </span>
+      </div>
+    </main>
   </body>
 </html>

@@ -1,4 +1,5 @@
 ﻿@using System.Net.Http
+@using DatabaseLibrary
 @using Microsoft.AspNetCore.Authorization
 @using Microsoft.AspNetCore.Components.Authorization
 @using Microsoft.AspNetCore.Components.Forms
@@ -6,15 +7,20 @@
 @using Microsoft.AspNetCore.Components.Web
 @using Microsoft.AspNetCore.Components.Web.Virtualization
 @using Microsoft.JSInterop
+@using WYSIWYGTextEditor
+
 @using Schulmuseum
+@using Schulmuseum.Models
 @using Schulmuseum.Shared
 @using Schulmuseum.Shared.Components
 @using Schulmuseum.Shared.Components.Nav
 @using Schulmuseum.Shared.Components.Errors
-
 @using Schulmuseum.Shared.Pages
 
-@using WYSIWYGTextEditor
-
+@inject NavigationManager NavManager
+@inject DataAccess Data
 @inject IJSRuntime Js
 @inject IConfiguration Config
+
+
+

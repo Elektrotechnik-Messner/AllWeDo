@@ -2,14 +2,10 @@
 @inject AuthenticationStateProvider AuthStateProvider
 @inject NavigationManager NavManager
 
-@using DatabaseLibrary
+
 @using Microsoft.Extensions.Configuration
-@using Schulmuseum.Models
-@using ZstdSharp.Unsafe
-@using System.Net.Mime
-@inject DataAccess Data
-@inject IConfiguration Config
-@inject NavigationManager navMan
+
+
 
 @attribute [Authorize(Roles = "admin,teacher,student")]
 
@@ -93,7 +89,7 @@
             string sql = "insert into posts (Qualified, CategoryId, CreatorId, Title, Description, TitleImage, Username, Date, Content) values (@Qualified, @CategoryId, @CreatorId, @Title, @Description, @TitleImage, @Username, @Date, @Content);";
             await Data.SaveData(sql, new { Qualified = 0, CategoryId = 1, CreatorId = _creatorId, Title = _postTitle, Description = _postDesc, TitleImage = imagepath, Username = "Test", Date = DateTime.Now, Content = _postContent}, Config.GetConnectionString("main"));
             await Js.InvokeVoidAsync("alert", "Erfolgreich gespeichert");
-            navMan.NavigateTo("/meine-artikel", true);
+            NavManager.NavigateTo("/meine-artikel", true);
         }
         else
         {

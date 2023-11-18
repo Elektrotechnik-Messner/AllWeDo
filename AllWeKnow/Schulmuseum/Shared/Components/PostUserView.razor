@@ -1,24 +1,22 @@
 @if (CategoryId + 1 == VisibleId || VisibleId == 0)
 {
-  <div class="post">
-    <img
-      src="@ImageUrl"
-      alt="Img"
-      class="post-image"
-    />
-    <div class="description">
-      <div>
-        <span class="small-tag bold">@Category</span>
-        <h3 class="post-title">@Title</h3>
-      </div>
-      <a href="@Link" class="read-now">zum Artikel</a>
-      <p>@(Convert.ToBoolean(Qualified) ? "Genehmigt" : "Nicht genehmigt")</p>
-    </div>
+  <div class="edit-post">
+    <span class="title">@Title, @Category</span>
+    <span class="actions">
+      <p>@(Convert.ToBoolean(Qualified) ? "Genehmigt" : "Nicht Genehmigt")</p>
+      <a href="/edit/@Id">🖊️</a>
+      <a href="/artikel/@Id">👁️</a>
+      <button @onclick="Delete">🗑️</button>
+    </span>
   </div>
 }
 
 
 @code {
+  
+  [Parameter]
+  public int Id { get; set; } = 0;
+  
   [Parameter]
   public string Title { get; set; } = "";
   
@@ -39,4 +37,10 @@
   
   [Parameter]
   public int Qualified { get; set; } = 0;
+
+  public void Delete()
+  {
+    int id = Id;
+    Js.InvokeVoidAsync("alert", "Noch nicht implementiert.");
+  }
 }

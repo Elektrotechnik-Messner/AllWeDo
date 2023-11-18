@@ -11,42 +11,21 @@
 @if (_subjects == null || _posts == null)
 {
   <PageTitle>Alle Artikel - Lädt</PageTitle>
-  <Loader Joke="Noch zu implementieren..."></Loader>
+  <Loader Joke="To be implemented..."></Loader>
 } else
 {
-  <a href="/new"><button>Artikel erstellen</button></a>
-  <div class="tags">
-  <span class="tag@(_categoryFilter[0] ? " active" : "")" @onclick="() => UpdateFilter(0)">All</span>
-    @foreach (var subject in _subjects)
-    {
-      <span class="tag@(_categoryFilter[(int)subject.Id!] ? " active" : "")" @onclick="() => UpdateFilter((int)subject.Id)">@subject.Name</span>
-    }
-    
-</div>
-  <div class="posts">
-    @if (_posts.Count <= MaxBlogCount)
-    {
+  <h3 class="m-b">Meine Artikel</h3>
+  <a href="/new" ><button class="m-b">Artikel erstellen</button></a>
+
+
       @foreach (var t in _posts)
       {
         if (t.CreatorId == _creatorId){
           string link = "/artikel/" + @t.Id;
-          <PostUserView Category="@_subjects[t.CategoryId].Name" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Qualified="@t.Qualified"/>
+          <PostUserView Id="@t.Id" Category="@_subjects[t.CategoryId].Name" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Qualified="@t.Qualified"/>
         }
       }
     }
-    else
-    {
-      @for (var i = 0; i < MaxBlogCount; i++)
-      {
-        if (_posts[i].CreatorId == _creatorId)
-        {
-          string link = "/artikel/" + @_posts[i].Id;
-          <PostUserView Category="@_subjects[_posts[i].CategoryId].Name" Title="@_posts[i].Title" ImageUrl="@_posts[i].TitleImage" CategoryId="@_posts[i].CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Qualified="@_posts[i].Qualified"/>
-        }
-      }
-    }
-  </div>
-}
 
 <AuthorizeView>
     <Authorized>
