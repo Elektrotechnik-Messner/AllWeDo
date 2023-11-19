@@ -71,18 +71,22 @@ else
 
   protected override async Task OnInitializedAsync()
   {
-  // Get all the subjects form the database
+    
+    // Get all the subjects form the database
     _subjects = await Data.LoadData<SubjectModel, dynamic>("SELECT * FROM subjects", new { }, Config.GetConnectionString("main"));
-  // Get all the settings form the database
+    
+    // Get all the settings form the database
     _settings = await Data.LoadData<SettingsModel, dynamic>("SELECT * FROM settings", new { }, Config.GetConnectionString("main"));
-  // Put all the settings in a Dictionary for convenience
+    
+    // Put all the settings in a Dictionary for convenience
     foreach (var setting in _settings)
     {
       if (setting.Name != null) _settingsDict.Add(setting.Name, setting.Value);
     }
-  // Get all the posts form the database
+    
+    // Get all the posts form the database
     _posts = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE qualified='1' ORDER BY id DESC ", new { }, Config.GetConnectionString("main"));
-  // Get random post
+    // Get random post
 
     
     

@@ -1,6 +1,7 @@
 @page "/edit/{PostId}"
 @attribute [Authorize(Roles = "admin,teacher,student")]
 
+@*
 @if (Loaded is not true)
 {
     <Loader Joke="@JokeGenerator.GetShortJoke()"/>
@@ -8,7 +9,7 @@
 }
 else
 {
-    <HeadTitle>Lädt</HeadTitle>
+    <HeadTitle>Post "@_post![0].Title" bearbeiten</HeadTitle>
     <input type="text" placeholder="Der Titel des Artikels" class="inp-l  m-b" @bind="_postTitle"/><br/>
     <input type="text" placeholder="Eine Kurze Beschreibung des Artikels" class="m-b" @bind="_postDesc"/>
 
@@ -39,6 +40,51 @@ else
     </Authorized>
     </AuthorizeView>
 }
+*@
+
+
+<LazyLoader Load="Load" Text="Wird geladen">
+    
+    @if (Loaded is not true)
+    {
+        <Loader Joke="@JokeGenerator.GetShortJoke()"/>
+        <HeadTitle>Lädt</HeadTitle>
+    }
+    else
+    {
+        <HeadTitle>Post "@_post![0].Title" bearbeiten</HeadTitle>
+        <input type="text" placeholder="Der Titel des Artikels" class="inp-l  m-b" @bind="_postTitle"/><br/>
+        <input type="text" placeholder="Eine Kurze Beschreibung des Artikels" class="m-b" @bind="_postDesc"/>
+    
+        <div class="upload m-b">
+        @((MarkupString)_previewImage)
+        <label for="input">Titelbild hochladen</label>
+        </div>
+    
+    
+    <TextEditor Toolbar="new Toolbar { ShowFullToolbar = true }" @ref="@_quillHtml"
+                Placeholder="Dein Epischer Artikel">
+        <EditorContent>
+            @ToRawHtml(_post?[0].Content!)
+        </EditorContent>
+    </TextEditor>
+    
+    
+        <InputFile OnChange="@LoadFiles" accept=".png,.jpg,.jpeg,.gif,.svg" id='input'/>
+    
+        <br/>
+        <button @onclick="Submit">Artikel speichern</button>
+    
+        <AuthorizeView>
+        <Authorized>
+            @{
+                _creatorId = int.Parse(context.User.Identity!.AuthenticationType!);
+            }
+        </Authorized>
+        </AuthorizeView>
+    }
+    
+</LazyLoader>
 
 @code {
     
@@ -46,6 +92,7 @@ else
     public string? PostId { get; set; }
 
     public bool Loaded = false;
+    private LazyLoader LazyLoader;
     
     string? _postTitle = "";
     string? _postDesc = "";
@@ -56,7 +103,7 @@ else
 
     public string Newimagepath = "";
     
-    protected override async Task OnInitializedAsync()
+    private async Task Load(LazyLoader arg)
     {
     // Get all the content of the blog by id from the database
         _post = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE id = " + PostId, new { }, Config.GetConnectionString("main"));

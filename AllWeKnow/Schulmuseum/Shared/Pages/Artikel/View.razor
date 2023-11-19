@@ -11,23 +11,19 @@
 
 @if (string.IsNullOrEmpty(PostId))
 {
-    <h1>Error 404</h1>
+    <NotFound/>
 }
 else
 {
-    <br/>
-    @if (_content == null)
-    {
-        <h1>...Loading</h1>
-    }
-    else
-    {
-        var content = _content[0].Content;
-        if (content != null)
-        {
-            @ToRawHtml(content)
-        }
-    }
+    <LazyLoader Load="Load" Text="Wird geladen...">
+            @{
+                var content = _content![0].Content;
+                @if (content != null)
+                {
+                    @ToRawHtml(content)
+                }
+            }
+    </LazyLoader>
 }
 
 @code {
@@ -36,8 +32,9 @@ else
     public string? PostId { get; set; }
 
     List<BlogPost>? _content;
+    LazyLoader? LazyLoader;
 
-    protected override async Task OnInitializedAsync()
+    private async Task Load(LazyLoader arg)
     {
     // Get all the content of the blog by id from the database
         _content = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE id = " + PostId, new { }, Config.GetConnectionString("main"));
