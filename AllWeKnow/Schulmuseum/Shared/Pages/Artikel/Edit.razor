@@ -1,16 +1,16 @@
 @page "/edit/{PostId}"
 @attribute [Authorize(Roles = "admin,teacher,student")]
 
-@if (post == null)
+@if (Loaded is not true)
 {
     <Loader Joke="@JokeGenerator.GetShortJoke()"/>
+    <HeadTitle>Lädt</HeadTitle>
 }
 else
 {
-
-}
-    <input type="text" value="@post[0].Title" placeholder="Der Titel des Artikels" class="inp-l  m-b" @bind="_postTitle"/><br/>
-    <input type="text" value="@post[0].Description" placeholder="Eine Kurze Beschreibung des Artikels" class="m-b" @bind="_postDesc"/>
+    <HeadTitle>Lädt</HeadTitle>
+    <input type="text" placeholder="Der Titel des Artikels" class="inp-l  m-b" @bind="_postTitle"/><br/>
+    <input type="text" placeholder="Eine Kurze Beschreibung des Artikels" class="m-b" @bind="_postDesc"/>
 
     <div class="upload m-b">
     @((MarkupString)_previewImage)
@@ -21,7 +21,7 @@ else
 <TextEditor Toolbar="new Toolbar { ShowFullToolbar = true }" @ref="@_quillHtml"
             Placeholder="Dein Epischer Artikel">
     <EditorContent>
-        @post[0].Content
+        @ToRawHtml(_post?[0].Content!)
     </EditorContent>
 </TextEditor>
 
@@ -38,26 +38,33 @@ else
         }
     </Authorized>
     </AuthorizeView>
-
 }
+
 @code {
     
     [Parameter]
     public string? PostId { get; set; }
+
+    public bool Loaded = false;
     
     string? _postTitle = "";
     string? _postDesc = "";
     int _creatorId;
     private string? _postContent;
-    List<BlogPost>? post;
+    List<BlogPost>? _post;
     string _previewImage = "<div class='image-placeholder'></div>";
 
-
+    public string Newimagepath = "";
+    
     protected override async Task OnInitializedAsync()
     {
     // Get all the content of the blog by id from the database
-        post = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE id = " + PostId, new { }, Config.GetConnectionString("main"));
-        _previewImage = "<img src='"+ post[0].TitleImage +"'></img>";
+        _post = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE id = " + PostId, new { }, Config.GetConnectionString("main"));
+        _previewImage = "<img src='"+ _post[0].TitleImage +"'></img>";
+        _postTitle = _post[0].Title;
+        _postDesc = _post[0].Description;
+        
+        Loaded = true;
     }
     
 
@@ -66,12 +73,11 @@ else
     TextEditor? _quillHtml;
         
     private const long MaxFileSize = 1024 * 1024 * 10;
-    private string? _titleImageName;
+    private string _titleImageName = "";
 
     private async Task LoadFiles (InputFileChangeEventArgs e)
     {
         var file = e.File;
-        Console.WriteLine(file.Name);
         try
         {
             _titleImageName = Path.ChangeExtension(
@@ -95,28 +101,36 @@ else
     
     private async Task Submit()
     {
-        string imagepath;
+        
         _postContent = await this._quillHtml!.GetHTML()!;
         StateHasChanged();
 
         if (_titleImageName == "")
         {
             // use old image
-            imagepath = "bucket/images/" + "Imagename.png";
+            Newimagepath = _post![0].TitleImage!;
         }
         else
         {   
-            imagepath = "bucket/images/" + _titleImageName;
+            // use the new one
+            Newimagepath = "bucket/images/" + _titleImageName;
         }
         
         if (_postDesc is not null && _postContent is not "" && _postContent is not null && _titleImageName is not null && _postTitle is not "")
         {
             // to database
+            
         }
         else
         {
             await Js.InvokeVoidAsync("alert", "Alle Felder müssen ausgefüllt sein!");
         }
+    }
+    
+    
+    public static MarkupString ToRawHtml(string html)
+    {
+        return (MarkupString)html;
     }
 }
 
