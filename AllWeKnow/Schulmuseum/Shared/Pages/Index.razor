@@ -8,18 +8,11 @@
 @inject IConfiguration Config
 
 @* @attribute [Authorize(Roles = "Administrator,User")] // this site is only accessible for Users and admins*@
-
-@if (_settings == null || _subjects == null || _posts == null || Time > 0 || _randomPost == null)
-{
-  <PageTitle>Home - Lädt</PageTitle>
-  <Loader Joke="@_joke"></Loader>
-}
-else
-{
+<LazyLoader Load="Load" Text="@_joke">
   <HeadTitle>Home</HeadTitle>
-  
-  string RPostLink = "/artikel/" + _randomPost.Id.ToString();
-  
+  @{
+    string RPostLink = "/artikel/" + _randomPost.Id.ToString();
+  }
   <Hero Title="@_settingsDict["page-title"]" PostTitle="@_randomPost.Title" PostDesc="@_randomPost.Description" ImageUrl="@_randomPost.TitleImage" PostLink="@RPostLink"/>
   
   
@@ -43,7 +36,7 @@ else
           }
         }
   </div>
-    
+</LazyLoader>
 @code
 {
   List<SettingsModel>? _settings;
@@ -53,25 +46,11 @@ else
   readonly IDictionary<string, string?> _settingsDict = new Dictionary<string, string?>();
       
   private const int MaxBlogCount = 6; // Max number of displayed blogs on title page
-  readonly string _joke = @JokeGenerator.GetShortJoke();
+  readonly string _joke = JokeGenerator.GetShortJoke();
   public int Time = 10;
-
   
-  public async void StartTimerAsync()
+  public async Task Load(LazyLoader arg)
   {
-    while (Time > 0)
-    {
-      Time--;
-      StateHasChanged();
-      await Task.Delay(100);
-    }
-  }
-  protected override void OnInitialized()
-    => StartTimerAsync();
-
-  protected override async Task OnInitializedAsync()
-  {
-    
     // Get all the subjects form the database
     _subjects = await Data.LoadData<SubjectModel, dynamic>("SELECT * FROM subjects", new { }, Config.GetConnectionString("main"));
     
@@ -94,6 +73,5 @@ else
     
     _randomPost = temporary[0];
     string RPostLink = "/artikel/" + _randomPost.Id.ToString();
-  }
   }
 }
