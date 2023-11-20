@@ -165,8 +165,10 @@ else
         
         if (_postDesc is not null && _postContent is not "" && _postContent is not null && _titleImageName is not null && _postTitle is not "")
         {
-            // to database
-            
+            string sql = "update posts set Title = Title, Description = @Description, TitleImage = @TitleImage, Content = @Content where id = @ID";
+            if (_post != null) await Data.SaveData(sql, new { Title = _postTitle, Description = _postDesc, TitleImage = Newimagepath, Content = _postContent, @ID = _post[0].Id }, Config.GetConnectionString("main"));
+            await Js.InvokeVoidAsync("alert", "Erfolgreich gespeichert");
+            NavManager.NavigateTo("/meine-artikel", true);
         }
         else
         {
