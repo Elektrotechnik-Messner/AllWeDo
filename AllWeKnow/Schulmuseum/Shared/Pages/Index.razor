@@ -11,7 +11,7 @@
 <LazyLoader Load="Load" Text="@_joke">
   <HeadTitle>Home</HeadTitle>
   @{
-    string RPostLink = "/artikel/" + _randomPost.Id.ToString();
+    string RPostLink = "/artikel/" + _randomPost!.Id.ToString();
   }
   <Hero Title="@_settingsDict["page-title"]" PostTitle="@_randomPost.Title" PostDesc="@_randomPost.Description" ImageUrl="@_randomPost.TitleImage" PostLink="@RPostLink"/>
   
@@ -19,12 +19,12 @@
   <h2>Die neusten Artikel</h2>
   <br/>
   <div class="posts">
-    @if (_posts.Count <= MaxBlogCount)
+    @if (_posts!.Count <= MaxBlogCount)
         {
           @foreach (var t in _posts)
           {
             string link = "/artikel/" + @t.Id;
-            <Post Category="@_subjects[t.CategoryId].Name" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="0" Link="@link"/>
+            <Post Category="@_subjects![t.CategoryId].Name" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="0" Link="@link"/>
           }
         }
         else
@@ -32,7 +32,7 @@
           @for (var i = 0; i < MaxBlogCount; i++)
           {
             string link = "/artikel/" + @_posts[i].Id;
-            <Post Category="@_subjects[_posts[i].CategoryId].Name" Title="@_posts[i].Title" ImageUrl="@_posts[i].TitleImage" CategoryId="@_posts[i].CategoryId" VisibleId="0" Link="@link"/>
+            <Post Category="@_subjects![_posts[i].CategoryId].Name" Title="@_posts[i].Title" ImageUrl="@_posts[i].TitleImage" CategoryId="@_posts[i].CategoryId" VisibleId="0" Link="@link"/>
           }
         }
   </div>

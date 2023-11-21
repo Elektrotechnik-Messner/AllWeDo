@@ -21,6 +21,7 @@
       <_ContentIncludedByDefault Remove="wwwroot\css\open-iconic\ICON-LICENSE" />
       <_ContentIncludedByDefault Remove="wwwroot\css\open-iconic\README.md" />
       <_ContentIncludedByDefault Remove="Shared\Components\Partials\LazyLoader.razor" />
+      <_ContentIncludedByDefault Remove="Shared\Pages\Loading\LoadingScreen.razor" />
 
 
     </ItemGroup>

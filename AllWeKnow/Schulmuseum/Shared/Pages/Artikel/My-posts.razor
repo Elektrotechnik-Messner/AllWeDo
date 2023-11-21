@@ -13,11 +13,11 @@
 <LazyLoader Load="Load" Text="Wird geladen">
 <h3 class="m-b">Meine Artikel</h3>
   <a href="/new" ><button class="m-b">Artikel erstellen</button></a>
-  @foreach (var t in _posts)
+  @foreach (var t in _posts!)
       {
         if (t.CreatorId == _creatorId){
           string link = "/artikel/" + @t.Id;
-          <PostUserView Id="@t.Id" Category="@_subjects[t.CategoryId].Name" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Qualified="@t.Qualified"/>
+          <PostUserView Id="@t.Id" Category="@_subjects![t.CategoryId].Name" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Qualified="@t.Qualified"/>
         }
       }
 </LazyLoader>
