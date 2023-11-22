@@ -319,6 +319,15 @@ label {
   }
 }
 
+hr {
+  border: none;
+  height: 2px;
+  /* Set the hr color */
+  color: lighten($color: $text, $amount: 70);
+  background-color: lighten($color: $text, $amount: 70);
+  margin-bottom: 2rem;
+}
+
 .container {
   width: 100%;
   min-height: 50vh;
@@ -655,13 +664,6 @@ div.edit-post {
         text-align: right;
       }
     }
-    & hr {
-      border: none;
-      height: 2px;
-      /* Set the hr color */
-      color: lighten($color: $text, $amount: 70);
-      background-color: lighten($color: $text, $amount: 70);
-    }
   }
 }
 
@@ -821,6 +823,7 @@ div.edit-post {
 }
 .container .postview .content {
   // quill classes DO NOT CHANGE
+  font-size: 16px;
   p,
   ol,
   ul,
@@ -1172,5 +1175,36 @@ div.edit-post {
     pointer-events: none;
     position: absolute;
     right: 15px;
+  }
+  img {
+    width: 100%;
+    max-width: calc($main-width / 2);
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .container .postview .content {
+    // quill classes DO NOT CHANGE
+    font-size: calc(5px + 1.5vw);
+  }
+
+  .container {
+    & .postview {
+      & div {
+        padding: 1rem;
+        &.title-div {
+          padding: 0;
+          padding-bottom: 1rem;
+        }
+        &.text {
+          padding: 0;
+        }
+
+        &.content {
+          padding: 0;
+        }
+      }
+    }
   }
 }
