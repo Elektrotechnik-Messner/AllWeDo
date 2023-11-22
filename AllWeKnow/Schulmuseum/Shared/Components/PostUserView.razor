@@ -38,9 +38,12 @@
   [Parameter]
   public int Qualified { get; set; } = 0;
 
-  public void Delete()
+  private async Task Delete()
   {
     int id = Id;
-    Js.InvokeVoidAsync("alert", "Noch nicht implementiert.");
+    await Js.InvokeVoidAsync("alert", $"Sind Sie sicher, dass Sie diesen Post löschen möchten? Die Datei ist nachher nicht wiederherstellbar!");
+    string sql = "delete from posts where id = @ID";
+    await Data.SaveData(sql, new { @ID = Id }, Config.GetConnectionString("main"));
+    NavManager.NavigateTo("/meine-artikel", true);
   }
 }

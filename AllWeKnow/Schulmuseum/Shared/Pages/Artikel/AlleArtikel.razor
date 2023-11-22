@@ -64,7 +64,7 @@
       _categoryFilter.Add(false);
     }
   // Get all the posts form the database
-    _posts = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE qualified='1' ORDER BY id DESC ", new { }, Config.GetConnectionString("main"));
+    _posts = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE status='1' ORDER BY id DESC ", new { }, Config.GetConnectionString("main"));
   }
 
   public void UpdateFilter(int value)

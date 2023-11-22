@@ -20,13 +20,29 @@
                 <h3 class="post-title">@Title</h3>
             </div>
             
-            @if (Convert.ToBoolean(Qualified))
+            @if (Status == 1)
             {
+                <p>@_statusOptions[2]</p>
                 <button @onclick="args => Dequalify(Idp)">Genehmigung entziehen</button>
+            }
+            else if (Status == 5)
+            {
+                <p>@_statusOptions[5]</p>
+                <button @onclick="args => Nicetry()">Genehmigung entziehen</button>
             }
             else
             {
-                <button @onclick="args => Qualify(Idp)">Genehmigen</button>
+                if (Status > 10)
+                {
+                    <p>@_statusOptions[3]</p>
+                    <button @onclick="args => BeeingEdited()">Genehmigen</button> 
+                }
+                else
+                {
+                    <p>@_statusOptions[1]</p>
+                    <button @onclick="args => Qualify(Idp)">Genehmigen</button> 
+                    //<button @onclick="args => SendBack(Idp)">Muss überarbeitet werden</button>    //Ui overflow problems but functional
+                }
             }
         </div>
     </div>
@@ -38,7 +54,7 @@
     private async Task Qualify(int idc)
     {
         Console.WriteLine(idc);
-        string sql = "update posts set qualified = 1 where id = @Id";
+        string sql = "update posts set status = 1 where id = @Id";
         await Data.SaveData(sql, new {Id = idc}, Config.GetConnectionString("main"));
         navMan.NavigateTo("/teacher", true);
     }
@@ -46,11 +62,30 @@
     private async Task Dequalify(int idc)
     {
         Console.WriteLine(idc);
-        string sql = "update posts set qualified = 0 where id = @Id";
+        string sql = "update posts set status = 0 where id = @Id";
         await Data.SaveData(sql, new {Id = idc}, Config.GetConnectionString("main"));
         navMan.NavigateTo("/teacher", true);
     }
     
+    private async Task SendBack(int idc)
+    {
+        Console.WriteLine(idc);
+        string sql = "update posts set status = -1 where id = @Id";
+        await Data.SaveData(sql, new {Id = idc}, Config.GetConnectionString("main"));
+        navMan.NavigateTo("/teacher", true);
+    }
+
+    private async Task Nicetry()
+    {
+        await Js.InvokeVoidAsync("alert", "Dieser Post wurde von einem Administrator genehmigt. Sie haben keine Freigabe, um diesen Post zu bearbeiten.");
+    }
+    
+    private async Task BeeingEdited()
+    {
+        await Js.InvokeVoidAsync("alert", "Dieser Post wird gerade vom Autor bearbeitet. Versuchen Sie es später nochmals.");
+    }
+    
+    string[] _statusOptions = {"Nicht genehmigt (verboten)", "Noch nicht genehmigt", "Genehmigt", "Wird bearbeitet", "Wird korrigiert", "Durch Administrator genehmight"};
     
     [Parameter]
     public string Title { get; set; } = "";
@@ -74,5 +109,5 @@
     public int VisibleId { get; set; } = 0;
   
     [Parameter]
-    public int Qualified { get; set; } = 0;
+    public int Status { get; set; } = 0;
 }

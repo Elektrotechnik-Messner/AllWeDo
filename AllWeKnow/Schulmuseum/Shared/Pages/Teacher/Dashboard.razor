@@ -31,9 +31,9 @@
     {
       @foreach (var t in _posts)
       {
-        if (t.Qualified == 0){
+        if (t.Status >= -2 && t.Status != 5 && t.Status != 1){
           string link = "/artikel/" + @t.Id;
-          <PostTeacherView Category="@_subjects[t.CategoryId].Name" Idp="@t.Id" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Qualified="@t.Qualified"/>
+          <PostTeacherView Category="@_subjects[t.CategoryId].Name" Idp="@t.Id" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Status="@t.Status"/>
         }
       }
     }
@@ -41,10 +41,10 @@
     {
       @for (var i = 0; i < MaxBlogCount; i++)
       {
-        if (_posts[i].Qualified == 0)
+        if (_posts[i].Status >= 0 && _posts[i].Status != 5 && _posts[i].Status != 1)
         {
           string link = "/artikel/" + @_posts[i].Id;
-          <PostTeacherView Category="@_subjects[_posts[i].CategoryId].Name" Idp="@_posts[i].Id" Title="@_posts[i].Title" ImageUrl="@_posts[i].TitleImage" CategoryId="@_posts[i].CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Qualified="@_posts[i].Qualified"/>
+          <PostTeacherView Category="@_subjects[_posts[i].CategoryId].Name" Idp="@_posts[i].Id" Title="@_posts[i].Title" ImageUrl="@_posts[i].TitleImage" CategoryId="@_posts[i].CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Status="@_posts[i].Status"/>
         }
       }
     }
@@ -56,9 +56,9 @@
     {
       @foreach (var t in _posts)
       {
-        if (t.Qualified == 1){
+        if (t.Status == 1 || t.Status == 5){
           string link = "/artikel/" + @t.Id;
-          <PostTeacherView Category="@_subjects[t.CategoryId].Name" Idp="@t.Id" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Qualified="@t.Qualified"/>
+          <PostTeacherView Category="@_subjects[t.CategoryId].Name" Idp="@t.Id" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Status="@t.Status"/>
         }
       }
     }
@@ -66,10 +66,10 @@
     {
       @for (var i = 0; i < MaxBlogCount; i++)
       {
-        if (_posts[i].Qualified == 1)
+        if (_posts[i].Status == 1 || _posts[i].Status == 5)
         {
           string link = "/artikel/" + @_posts[i].Id;
-          <PostTeacherView Category="@_subjects[_posts[i].CategoryId].Name" Idp="@_posts[i].Id" Title="@_posts[i].Title" ImageUrl="@_posts[i].TitleImage" CategoryId="@_posts[i].CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Qualified="@_posts[i].Qualified"/>
+          <PostTeacherView Category="@_subjects[_posts[i].CategoryId].Name" Idp="@_posts[i].Id" Title="@_posts[i].Title" ImageUrl="@_posts[i].TitleImage" CategoryId="@_posts[i].CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Status="@_posts[i].Status"/>
         }
       }
     }
