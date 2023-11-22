@@ -609,50 +609,59 @@ div.edit-post {
   }
 }
 
-.container.post-view {
-  & div {
-    padding: 1rem;
+.container {
+  & .postview {
+    & div {
+      padding: 1rem;
 
-    gap: 1rem;
-    &.title-div {
-      .text {
-        img {
-          width: 100%;
-          max-width: calc($main-width/4 * 3);
-        }
-        h1.title {
-          display: flex;
-          align-items: center;
-          & span.gray {
-            font-size: 1.2rem;
-            font-weight: 400;
+      &.content {
+        padding: 2rem;
+      }
+
+      gap: 1rem;
+      &.title-div {
+        .text {
+          img {
+            width: 100%;
+            max-width: calc($main-width/4 * 3);
+          }
+          h1.title {
             display: flex;
             align-items: center;
-            color: lighten($color: $text, $amount: 50) !important;
-            a i {
+            & span.gray {
+              font-size: 1.2rem;
+              font-weight: 400;
+              display: flex;
+              align-items: center;
               color: lighten($color: $text, $amount: 50) !important;
+              a i {
+                color: lighten($color: $text, $amount: 50) !important;
+              }
             }
           }
         }
+        & img {
+          width: 100%;
+          height: auto;
+          max-height: 20rem;
+          object-fit: cover;
+          border-radius: 1rem;
+          margin-bottom: 1rem;
+          border-radius: 1rem;
+        }
       }
-      & img {
-        width: 100%;
-        height: 20rem;
-        object-fit: cover;
-        border-radius: 1rem;
-      }
-    }
 
-    & .links {
-      text-align: right;
+      & .links {
+        text-align: right;
+      }
     }
-  }
-  & hr {
-    border: none;
-    height: 2px;
-    /* Set the hr color */
-    color: lighten($color: $text, $amount: 70);
-    background-color: lighten($color: $text, $amount: 70);
+    & hr {
+      border: none;
+      height: 2px;
+      /* Set the hr color */
+      color: lighten($color: $text, $amount: 70);
+      background-color: lighten($color: $text, $amount: 70);
+    }
   }
 }
 
@@ -809,4 +818,48 @@ div.edit-post {
 
 .components-reconnect-modal {
   z-index: 10000000000;
+}
+
+// quill classes DO NOT CHANGE
+.ql-font-serif {
+  font-family: serif;
+}
+.ql-font-monospace {
+  font-family: monospace;
+}
+.ql-size-small {
+  font-size: 0.7rem;
+}
+.ql-size-large {
+  font-size: 1.3rem;
+}
+.ql-size-huge {
+  font-size: 2rem;
+}
+blockquote {
+  border-left: 5px solid lighten($color: $text, $amount: 50);
+  padding-left: 1rem;
+}
+pre::-webkit-scrollbar {
+  background: #b3bccc;
+}
+pre::-webkit-scrollbar-thumb {
+  background: #eee;
+  border-radius: 5px;
+}
+pre {
+  margin: 1rem 0;
+  background: #414449;
+  overflow-x: auto;
+  color: #b3bccc;
+  padding: 15px;
+  font-size: 13pt;
+  tab-size: 4;
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
+}
+ol,
+ul {
+  padding-left: 1rem;
 }
