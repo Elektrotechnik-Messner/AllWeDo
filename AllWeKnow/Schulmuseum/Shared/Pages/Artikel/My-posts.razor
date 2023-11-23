@@ -52,14 +52,5 @@
   // Get all the posts form the database
     _posts = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts ORDER BY id DESC", new { }, Config.GetConnectionString("main"));
   }
-
-  public void UpdateFilter(int value)
-  {
-    for (int i = 0; i < _categoryFilter.Count; i++)
-    {
-      _categoryFilter[i] = false;
-    }
-    _categoryFilter[value] = true;
-    VisibleCategoryId = value;
-  }
+  
 }

@@ -86,8 +86,8 @@
         string imagepath = "bucket/images/" + _titleImageName;
         if (_postDesc is not null && _postContent is not "" && _postContent is not null && _titleImageName is not null && _postTitle is not "")
         {
-            string sql = "insert into posts (Status, CategoryId, CreatorId, Title, Description, TitleImage, Username, Date, Content) values (@Status, @CategoryId, @CreatorId, @Title, @Description, @TitleImage, @Username, @Date, @Content);";
-            await Data.SaveData(sql, new { Status = 0, CategoryId = 1, CreatorId = _creatorId, Title = _postTitle, Description = _postDesc, TitleImage = imagepath, Username = "Test", Date = DateTime.Now, Content = _postContent}, Config.GetConnectionString("main"));
+            string sql = "insert into posts (Status, CategoryId, CreatorId, Title, Description, TitleImage, Date, Content) values (@Status, @CategoryId, @CreatorId, @Title, @Description, @TitleImage, @Date, @Content);";
+            await Data.SaveData(sql, new { Status = 0, CategoryId = 1, CreatorId = _creatorId, Title = _postTitle, Description = _postDesc, TitleImage = imagepath, Date = DateTime.Now, Content = _postContent}, Config.GetConnectionString("main"));
             await Js.InvokeVoidAsync("alert", "Erfolgreich gespeichert");
             NavManager.NavigateTo("/meine-artikel", true);
         }

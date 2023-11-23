@@ -41,9 +41,17 @@
   private async Task Delete()
   {
     int id = Id;
-    await Js.InvokeVoidAsync("alert", $"Sind Sie sicher, dass Sie diesen Post löschen möchten? Die Datei ist nachher nicht wiederherstellbar!");
-    string sql = "delete from posts where id = @ID";
-    await Data.SaveData(sql, new { @ID = Id }, Config.GetConnectionString("main"));
-    NavManager.NavigateTo("/meine-artikel", true);
+    bool confirmed = await Js.InvokeAsync<bool>("confirm", "Sind Sie sicher, dass Sie diesen Artikel löschen möchten? Der Artikel ist nachher nicht wiederherstellbar!");
+    if (confirmed)
+    {
+      string sql = "delete from posts where id = @ID";
+      await Data.SaveData(sql, new { @ID = Id }, Config.GetConnectionString("main"));
+      NavManager.NavigateTo("/meine-artikel", true);
+    }
+    else
+    {
+      return;
+    }
+    
   }
 }
