@@ -21,7 +21,7 @@
   <span class="tag@(_categoryFilter[0] ? " active" : "")" @onclick="() => UpdateFilter(0)">All</span>
   @foreach (var subject in _subjects)
   {
-    <span class="tag@(_categoryFilter[(int)subject.Id!] ? " active" : "")" @onclick="() => UpdateFilter((int)subject.Id)">@subject.Name</span>
+    <span class="tag@(_categoryFilter[(int)subject.Id!] ? " active" : "")" @onclick="() => UpdateFilter((int)subject.Id!)">@subject.Name</span>
   }
    </div>
   <h3>Artikel ohne Genehmigung</h3>

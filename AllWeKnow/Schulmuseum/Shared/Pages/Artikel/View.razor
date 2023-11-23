@@ -1,68 +1,13 @@
-
-@page "/artikel/{PostId}"
-
-@using DatabaseLibrary
-@using Schulmuseum.Models
+@page "/artikel/{Id}"
 @using Microsoft.Extensions.Configuration
 
-@inject DataAccess Data
 
 
 
-@if (string.IsNullOrEmpty(PostId))
-{
-    <NotFound/>
-}
-else
-{
-    <LazyLoader Load="Load" Text="Wird geladen...">
-        <div class="postview">
-                <div class="title-div">
-                  <div class="text">
-                    <img
-                      src="@_content![0].TitleImage"
-                    />
-                    <h1 class="title">
-                    @_content![0].Title
-                    </h1>
-                    <p>
-                      @_content![0].Description
-                    </p>
-                  </div>
-                </div>
-                <hr />
-                <div class="content">
-                    @{
-                        var content = _content![0].Content;
-                        @if (content != null)
-                        {
-                            @ToRawHtml(content)
-                        }
-                    }
-                </div>
-              </div>
-        
-    </LazyLoader>
-}
+
+<ViewComp PostId="Id"/>
 
 @code {
-
     [Parameter]
-    public string? PostId { get; set; }
-
-    List<BlogPost>? _content;
-    
-
-    private async Task Load(LazyLoader arg)
-    {
-    // Get all the content of the blog by id from the database
-        _content = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE id = " + PostId, new { }, Config.GetConnectionString("main"));
-        
-    }
-
-    public static MarkupString ToRawHtml(string html)
-    {
-        return (MarkupString)html;
-    }
-
+    public string Id { get; set; }
 }

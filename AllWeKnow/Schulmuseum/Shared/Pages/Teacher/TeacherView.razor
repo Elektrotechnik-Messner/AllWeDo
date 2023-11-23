@@ -1,0 +1,11 @@
+@page "/teacher/artikel/{Id}"
+@attribute [Authorize(Roles = "admin,teacher")]
+
+
+<ViewComp PostId="Id"/>
+
+@code {
+    [Parameter]
+    public string? Id { get; set; }
+}
+
