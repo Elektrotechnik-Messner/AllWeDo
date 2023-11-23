@@ -1,13 +1,9 @@
 @page "/artikel/{Id}"
 @using Microsoft.Extensions.Configuration
 
-
-
-
-
-<ViewComp PostId="Id"/>
+<ViewComp PostId="@Id"/>
 
 @code {
     [Parameter]
-    public string Id { get; set; }
+    public string? Id { get; set; }
 }

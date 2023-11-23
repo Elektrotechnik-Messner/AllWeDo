@@ -1,4 +1,5 @@
 @page "/edit/{PostId}"
+@using System.Text
 @attribute [Authorize(Roles = "admin,teacher,student")]
 
 @*
@@ -105,16 +106,13 @@ else
     private async Task Load(LazyLoader arg)
     {
     // Get all the content of the blog by id from the database
-        _post = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE id = " + PostId, new { }, Config.GetConnectionString("main"));
+        _post = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE id = " + DecryptString(PostId!), new { }, Config.GetConnectionString("main"));
         _previewImage = "<img src='"+ _post[0].TitleImage +"'></img>";
         _postTitle = _post[0].Title;
         _postDesc = _post[0].Description;
         
         Loaded = true;
     }
-    
-
-    
     
     TextEditor? _quillHtml;
         
@@ -178,6 +176,23 @@ else
     {
         return (MarkupString)html;
     }
+
+    public string DecryptString(string cipherText)
+    {
+        string incoming = cipherText.Replace('_', '/').Replace('-', '+');
+        switch (cipherText.Length % 4)
+        {
+            case 2:
+                incoming += "==";
+                break;
+            case 3:
+                incoming += "=";
+                break;
+        }
+        byte[] bytes = Convert.FromBase64String(incoming);
+        return Encoding.ASCII.GetString(bytes).Replace("Ka0T91Gi$f", "");
+    }
+
 }
 
     

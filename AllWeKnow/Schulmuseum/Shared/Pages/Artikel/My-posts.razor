@@ -16,7 +16,7 @@
   @foreach (var t in _posts!)
       {
         if (t.CreatorId == _creatorId){
-          string link = "/artikel/" + @t.Id;
+          string link = EncryptString(t.Id.ToString());
           <PostUserView Id="@t.Id" Category="@_subjects![t.CategoryId].Name" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Qualified="@t.Status"/>
         }
       }
@@ -50,7 +50,12 @@
       _categoryFilter.Add(false);
     }
   // Get all the posts form the database
-    _posts = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts ORDER BY id DESC", new { }, Config.GetConnectionString("main"));
+    _posts = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE creatorid = " + _creatorId, new { }, Config.GetConnectionString("main"));
   }
-  
+  public string EncryptString(string plainText)
+  {
+    char padding = Convert.ToChar("=");
+    byte[] toEncodeAsBytes = System.Text.Encoding.ASCII.GetBytes(plainText + "Ka0T91Gi$f");
+    return System.Convert.ToBase64String(toEncodeAsBytes).TrimEnd(padding).Replace('+', '-').Replace('/', '_');
+  }
 }

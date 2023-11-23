@@ -16,7 +16,7 @@
   <Loader Joke="Noch zu implementieren..."></Loader>
 } else
 {
-  <h2>Alle Artikel</h2>
+  <h3>Alle Artikel</h3>
   <div class="tags">
   <span class="tag@(_categoryFilter[0] ? " active" : "")" @onclick="() => UpdateFilter(0)">All</span>
   @foreach (var subject in _subjects)
@@ -26,13 +26,12 @@
    </div>
   <h3>Artikel ohne Genehmigung</h3>
   <br>
-  <div class="posts">
     @if (_posts.Count <= MaxBlogCount)
     {
       @foreach (var t in _posts)
       {
-        if (t.Status >= -2 && t.Status != 5 && t.Status != 1){
-          string link = "/artikel/" + @t.Id;
+        if (t.Status >= 0 && t.Status != 5 && t.Status != 1){
+          string link = EncryptString(t.Id.ToString());
           <PostTeacherView Category="@_subjects[t.CategoryId].Name" Idp="@t.Id" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Status="@t.Status"/>
         }
       }
@@ -43,21 +42,19 @@
       {
         if (_posts[i].Status >= 0 && _posts[i].Status != 5 && _posts[i].Status != 1)
         {
-          string link = "/artikel/" + @_posts[i].Id;
+          string link = EncryptString(_posts[i].Id.ToString());
           <PostTeacherView Category="@_subjects[_posts[i].CategoryId].Name" Idp="@_posts[i].Id" Title="@_posts[i].Title" ImageUrl="@_posts[i].TitleImage" CategoryId="@_posts[i].CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Status="@_posts[i].Status"/>
         }
       }
     }
-  </div>
   <h3>Artikel mit Genehmigung</h3>
   <br>
-  <div class="posts">
     @if (_posts.Count <= MaxBlogCount)
     {
       @foreach (var t in _posts)
       {
         if (t.Status == 1 || t.Status == 5){
-          string link = "/artikel/" + @t.Id;
+          string link = EncryptString(t.Id.ToString());
           <PostTeacherView Category="@_subjects[t.CategoryId].Name" Idp="@t.Id" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Status="@t.Status"/>
         }
       }
@@ -68,12 +65,11 @@
       {
         if (_posts[i].Status == 1 || _posts[i].Status == 5)
         {
-          string link = "/artikel/" + @_posts[i].Id;
+          string link = EncryptString(_posts[i].Id.ToString());
           <PostTeacherView Category="@_subjects[_posts[i].CategoryId].Name" Idp="@_posts[i].Id" Title="@_posts[i].Title" ImageUrl="@_posts[i].TitleImage" CategoryId="@_posts[i].CategoryId" VisibleId="@VisibleCategoryId" Link="@link" Status="@_posts[i].Status"/>
         }
       }
     }
-  </div>
 }
 
 @code 
@@ -106,5 +102,11 @@
     }
     _categoryFilter[value] = true;
     VisibleCategoryId = value;
+  }
+  public string EncryptString(string plainText)
+  {
+    char padding = Convert.ToChar("=");
+    byte[] toEncodeAsBytes = System.Text.Encoding.ASCII.GetBytes(plainText + "Ka0T91Gi$f");
+    return System.Convert.ToBase64String(toEncodeAsBytes).TrimEnd(padding).Replace('+', '-').Replace('/', '_');
   }
 }

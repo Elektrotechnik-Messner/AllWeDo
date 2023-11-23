@@ -2,6 +2,8 @@
 
 @using DatabaseLibrary
 @using Schulmuseum.Models
+@using System.Security.Cryptography;
+@using System.Text;
 @using Microsoft.Extensions.Configuration
 
 @inject DataAccess Data
@@ -11,7 +13,7 @@
 <LazyLoader Load="Load" Text="@_joke">
   <HeadTitle>Home</HeadTitle>
   @{
-    string rPostLink = "/artikel/" + _randomPost!.Id.ToString();
+    string rPostLink = "/artikel/" + EncryptString(_randomPost!.Id.ToString());
   }
   <Hero Title="@_settingsDict["page-title"]" PostTitle="@_randomPost.Title" PostDesc="@_randomPost.Description" ImageUrl="@_randomPost.TitleImage" PostLink="@rPostLink"/>
   
@@ -23,16 +25,20 @@
         {
           @foreach (var t in _posts)
           {
-            string link = "/artikel/" + @t.Id;
-            <Post Category="@_subjects![t.CategoryId].Name" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="0" Link="@link"/>
+            if (t.Id != _randomPost.Id){
+            string link = "/artikel/" + EncryptString(t.Id.ToString());
+              <Post Category="@_subjects![t.CategoryId].Name" Title="@t.Title" ImageUrl="@t.TitleImage" CategoryId="@t.CategoryId" VisibleId="0" Link="@link"/>
+            }
           }
         }
         else
         {
           @for (var i = 0; i < MaxBlogCount; i++)
           {
-            string link = "/artikel/" + @_posts[i].Id;
-            <Post Category="@_subjects![_posts[i].CategoryId].Name" Title="@_posts[i].Title" ImageUrl="@_posts[i].TitleImage" CategoryId="@_posts[i].CategoryId" VisibleId="0" Link="@link"/>
+            if (_posts[i].Id != _randomPost.Id){
+            string link = "/artikel/" + EncryptString(_posts[i].Id.ToString());
+              <Post Category="@_subjects![_posts[i].CategoryId].Name" Title="@_posts[i].Title" ImageUrl="@_posts[i].TitleImage" CategoryId="@_posts[i].CategoryId" VisibleId="0" Link="@link"/>
+            }
           }
         }
   </div>
@@ -64,9 +70,16 @@
     }
     
     // Get all the posts form the database
-    _posts = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE status='1' ORDER BY id DESC ", new { }, Config.GetConnectionString("main"));
+    _posts = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE status = 1 or status = 5 ORDER BY id DESC ", new { }, Config.GetConnectionString("main"));
     // Get random post
-    List<BlogPost>? temporary = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE status = 1 ORDER BY RAND() LIMIT 1", new { }, Config.GetConnectionString("main"));
+    List<BlogPost>? temporary = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE status = 1 or status = 5 ORDER BY RAND() LIMIT 1", new { }, Config.GetConnectionString("main"));
     _randomPost = temporary[0];
+  }
+  
+  public string EncryptString(string plainText)
+  {
+    char padding = Convert.ToChar("=");
+    byte[] toEncodeAsBytes = System.Text.Encoding.ASCII.GetBytes(plainText + "Ka0T91Gi$f");
+    return System.Convert.ToBase64String(toEncodeAsBytes).TrimEnd(padding).Replace('+', '-').Replace('/', '_');
   }
 }

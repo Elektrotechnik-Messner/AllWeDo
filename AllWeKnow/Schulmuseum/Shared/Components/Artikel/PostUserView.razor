@@ -4,13 +4,12 @@
     <span class="title">@Title, @Category</span>
     <span class="actions">
       <p>@(Convert.ToBoolean(Qualified) ? "Genehmigt" : "Nicht Genehmigt")</p>
-      <a href="/edit/@Id">🖊️</a>
-      <a href="/artikel/@Id">👁️</a>
+      <a href="/edit/@Link">🖊️</a>
+      <a href="/artikel/@Link">👁️</a>
       <button @onclick="Delete">🗑️</button>
     </span>
   </div>
 }
-
 
 @code {
   
@@ -52,6 +51,5 @@
     {
       return;
     }
-    
   }
 }

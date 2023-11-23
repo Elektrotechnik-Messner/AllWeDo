@@ -1,3 +1,6 @@
+@using System.Security.Cryptography;
+@using System.Text;
+
 @if (string.IsNullOrEmpty(PostId))
 {
     <NotFound/>
@@ -9,8 +12,7 @@ else
             <div class="title-div">
                 <div class="text">
                     <img
-                        src="@_content![0].TitleImage"
-                    />
+                        src="@_content![0].TitleImage"/>
                     <h1 class="title">
                         @_content![0].Title
                     </h1>
@@ -19,7 +21,7 @@ else
                     </p>
                 </div>
             </div>
-            <hr />
+            <hr/>
             <div class="content">
                 @{
                     var content = _content![0].Content;
@@ -30,7 +32,7 @@ else
                 }
             </div>
         </div>
-        
+
     </LazyLoader>
 }
 
@@ -44,9 +46,12 @@ else
 
     private async Task Load(LazyLoader arg)
     {
-    // Get all the content of the blog by id from the database
-        _content = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE id = " + PostId, new { }, Config.GetConnectionString("main"));
-        
+        string id = "";
+        if (PostId != null)
+        {
+            id = DecryptString(PostId);
+        }
+        _content = await Data.LoadData<BlogPost, dynamic>("SELECT * FROM posts WHERE id = " + id, new { }, Config.GetConnectionString("main"));
     }
 
     public static MarkupString ToRawHtml(string html)
@@ -54,4 +59,14 @@ else
         return (MarkupString)html;
     }
 
+    public string DecryptString(string cipherText)
+    {
+        string incoming = cipherText.Replace('_', '/').Replace('-', '+');
+        switch(cipherText.Length % 4) {
+            case 2: incoming += "=="; break;
+            case 3: incoming += "="; break;
+        }
+        byte[] bytes = Convert.FromBase64String(incoming);
+        return Encoding.ASCII.GetString(bytes).Replace("Ka0T91Gi$f", "");
+    }
 }

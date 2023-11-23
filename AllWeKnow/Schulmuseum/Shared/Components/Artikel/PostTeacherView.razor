@@ -8,6 +8,112 @@
 
 @if (CategoryId + 1 == VisibleId || VisibleId == 0)
 {
+    <div class="edit-post">
+        <span class="title">@Title, @Category</span>
+        <span class="actions">
+            @if (Status == 1)
+                {
+                    <p>@_statusOptions[2]</p>
+                    <a href="/edit/@Link">🖊️</a>
+                    <a href="/artikel/@Link">👁️</a>
+                    <button>✅</button>
+                    <button @onclick="args => Dequalify(Idp)">❎</button>
+                }
+                else if (Status == 5)
+                {
+                    <p>@_statusOptions[5]</p>
+                    <a href="/teacher">🖊️</a>
+                    <a href="/artikel/@Link">👁️</a>
+                    <button @onclick="args => Nicetry()">✅</button>
+                    <button @onclick="args => Nicetry()">❌</button>
+                }
+                else
+                {
+                    if (Status > 10)
+                    {
+                        <p>@_statusOptions[3]</p>
+                        <a href="/edit/@Link">🖊️</a>
+                        <a href="/artikel/@Link">👁️</a>
+                        <button @onclick="args => BeeingEdited()">✅</button>
+                        <button>❌</button>
+                    }
+                    else
+                    {
+                        <p>@_statusOptions[1]</p>
+                        <a href="/edit/@Link">🖊️</a>
+                        <a href="/artikel/@Link">👁️</a>
+                        <button @onclick="args => Qualify(Idp)">✅</button>
+                        <button @onclick="args => SendBack(Idp)">❌</button>
+                    }
+                }
+        </span>
+    </div>
+}
+    
+@code {
+
+    private async Task Qualify(int idc)
+    {
+        Console.WriteLine(idc);
+        string sql = "update posts set status = 1 where id = @Id";
+        await Data.SaveData(sql, new { Id = idc }, Config.GetConnectionString("main"));
+        navMan.NavigateTo("/teacher", true);
+    }
+
+    private async Task Dequalify(int idc)
+    {
+        Console.WriteLine(idc);
+        string sql = "update posts set status = 0 where id = @Id";
+        await Data.SaveData(sql, new { Id = idc }, Config.GetConnectionString("main"));
+        navMan.NavigateTo("/teacher", true);
+    }
+
+    private async Task SendBack(int idc)
+    {
+        Console.WriteLine(idc);
+        string sql = "update posts set status = -1 where id = @Id";
+        await Data.SaveData(sql, new { Id = idc }, Config.GetConnectionString("main"));
+        navMan.NavigateTo("/teacher", true);
+    }
+
+    private async Task Nicetry()
+    {
+        await Js.InvokeVoidAsync("alert", "Dieser Post wurde von einem Administrator genehmigt. Sie haben keine Freigabe, um diesen Post zu bearbeiten.");
+    }
+
+    private async Task BeeingEdited()
+    {
+        await Js.InvokeVoidAsync("alert", "Dieser Post wird gerade vom Autor bearbeitet. Versuchen Sie es später nochmals.");
+    }
+
+    string[] _statusOptions = { "Nicht genehmigt (verboten)", "Noch nicht genehmigt", "Genehmigt", "Wird bearbeitet", "Wird korrigiert", "Durch Administrator genehmight" };
+
+    [Parameter]
+    public string Title { get; set; } = "";
+
+    [Parameter]
+    public int Idp { get; set; } = 0;
+
+    [Parameter]
+    public string Category { get; set; } = "";
+
+    [Parameter]
+    public string Link { get; set; } = "";
+
+    [Parameter]
+    public string ImageUrl { get; set; } = "resources/images/not-found.jpg";
+
+    [Parameter]
+    public int CategoryId { get; set; } = 0;
+
+    [Parameter]
+    public int VisibleId { get; set; } = 0;
+
+    [Parameter]
+    public int Status { get; set; } = 0;
+    
+    
+    /*
     <div class="post">
         <img
             src="@ImageUrl"
@@ -48,66 +154,6 @@
     </div>
 }
 
+*/
 
-@code {
-    
-    private async Task Qualify(int idc)
-    {
-        Console.WriteLine(idc);
-        string sql = "update posts set status = 1 where id = @Id";
-        await Data.SaveData(sql, new {Id = idc}, Config.GetConnectionString("main"));
-        navMan.NavigateTo("/teacher", true);
-    }
-    
-    private async Task Dequalify(int idc)
-    {
-        Console.WriteLine(idc);
-        string sql = "update posts set status = 0 where id = @Id";
-        await Data.SaveData(sql, new {Id = idc}, Config.GetConnectionString("main"));
-        navMan.NavigateTo("/teacher", true);
-    }
-    
-    private async Task SendBack(int idc)
-    {
-        Console.WriteLine(idc);
-        string sql = "update posts set status = -1 where id = @Id";
-        await Data.SaveData(sql, new {Id = idc}, Config.GetConnectionString("main"));
-        navMan.NavigateTo("/teacher", true);
-    }
-
-    private async Task Nicetry()
-    {
-        await Js.InvokeVoidAsync("alert", "Dieser Post wurde von einem Administrator genehmigt. Sie haben keine Freigabe, um diesen Post zu bearbeiten.");
-    }
-    
-    private async Task BeeingEdited()
-    {
-        await Js.InvokeVoidAsync("alert", "Dieser Post wird gerade vom Autor bearbeitet. Versuchen Sie es später nochmals.");
-    }
-    
-    string[] _statusOptions = {"Nicht genehmigt (verboten)", "Noch nicht genehmigt", "Genehmigt", "Wird bearbeitet", "Wird korrigiert", "Durch Administrator genehmight"};
-    
-    [Parameter]
-    public string Title { get; set; } = "";
-    
-    [Parameter]
-    public int Idp { get; set; } = 0;
-  
-    [Parameter]
-    public string Category { get; set; } = "";
-  
-    [Parameter]
-    public string Link { get; set; } = "";
-
-    [Parameter]
-    public string ImageUrl { get; set; } = "resources/images/not-found.jpg";
-  
-    [Parameter]
-    public int CategoryId { get; set; } = 0;
-  
-    [Parameter]
-    public int VisibleId { get; set; } = 0;
-  
-    [Parameter]
-    public int Status { get; set; } = 0;
 }
