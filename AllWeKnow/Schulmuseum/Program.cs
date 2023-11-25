@@ -3,11 +3,16 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.EntityFrameworkCore;
 using Schulmuseum.Authentication;
+using Schulmuseum.Data;
+using Schulmuseum.Services;
 using Syncfusion.Blazor;
 
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionstring = builder.Configuration.GetConnectionString("dev") ??
+                       throw new NullReferenceException("No Connection string");
 
 // Add services to the container.
 builder.Services.AddRazorPages();
@@ -19,6 +24,10 @@ builder.Services.AddSyncfusionBlazor();
 // Database
 builder.Services.AddSingleton<DataAccess>();
 
+builder.Services.AddDbContextFactory<Database>((DbContextOptionsBuilder options) => options.UseMySql(connectionstring, ServerVersion.AutoDetect(connectionstring)));
+
+// Services
+builder.Services.AddTransient<UserService>();
 
 // Users
 builder.Services.AddAuthenticationCore();
@@ -50,3 +59,6 @@ app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
 app.Run();
+
+
+
