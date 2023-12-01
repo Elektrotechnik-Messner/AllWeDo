@@ -2651,19 +2651,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\morit\\.nuget\\packages\\": {}
+    "C:\\Users\\adria\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\DatabaseLibrary\\DatabaseLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\DatabaseLibrary\\DatabaseLibrary.csproj",
       "projectName": "DatabaseLibrary",
-      "projectPath": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\DatabaseLibrary\\DatabaseLibrary.csproj",
-      "packagesPath": "C:\\Users\\morit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\morit\\Documents\\Coding\\C#\\AllWeKnow\\AllWeKnow\\DatabaseLibrary\\obj\\",
+      "projectPath": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\DatabaseLibrary\\DatabaseLibrary.csproj",
+      "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\adria\\Desktop\\Coding\\C\\AllWeKnow\\AllWeKnow\\DatabaseLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\morit\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -2715,26 +2715,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.16, 6.0.16]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.16, 6.0.16]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.16, 6.0.16]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.412\\RuntimeIdentifierGraph.json"
       }
     }
   }
